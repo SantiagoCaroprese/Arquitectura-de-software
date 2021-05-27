@@ -1,12 +1,12 @@
-﻿using Grpc.Net.Client;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Net.Http;
-using PaymentServiceContractClient;
+using Grpc.Net.Client;
+using PaymentServiceContract;
 
 namespace PaymentWebAPI.Controllers
 {
@@ -32,6 +32,9 @@ namespace PaymentWebAPI.Controllers
             using var channel = GrpcChannel.ForAddress("https://localhost:5001");
             var client = new Payer.PayerClient(channel);
             var reply = client.SayHelloAsync(new HelloRequest { Name = "GreeterClient" });
+            Console.WriteLine("Greeting: " + reply);
+            Console.WriteLine("Press any key to exit...");
+            Console.ReadKey();
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {

@@ -261,6 +261,16 @@
         "runtime": {
           "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
+      },
+      "PaymentServiceContract/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/PaymentServiceContract.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PaymentServiceContract.dll": {}
+        }
       }
     }
   },
@@ -685,11 +695,17 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "PaymentServiceContract/1.0.0": {
+      "type": "project",
+      "path": "../PaymentServiceContract/PaymentServiceContract.csproj",
+      "msbuildProject": "../PaymentServiceContract/PaymentServiceContract.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Grpc.AspNetCore >= 2.34.0"
+      "Grpc.AspNetCore >= 2.34.0",
+      "PaymentServiceContract >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -718,7 +734,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\PaymentServiceContract\\PaymentServiceContract.csproj": {
+              "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\PaymentServiceContract\\PaymentServiceContract.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

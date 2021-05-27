@@ -59,3 +59,5 @@ C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\obj\Debug\net5.0\ref\PaymentServiceImplementation.dll
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\obj\Debug\net5.0\PaymentServiceImplementation.pdb
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\obj\Debug\net5.0\PaymentServiceImplementation.genruntimeconfig.cache
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\PaymentServiceContract.dll
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\PaymentServiceContract.pdb
