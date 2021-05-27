@@ -1,2 +1,0 @@
-obj\Debug\net5.0/Accessor.cs \
-obj\Debug\net5.0/AccessorGrpc.cs: ../PaymentServiceContract/Protos/accessor.proto

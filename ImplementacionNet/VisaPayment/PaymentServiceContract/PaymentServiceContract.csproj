@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Update="Protos\accessor.proto">
+    <None Update="Protos\access.proto">
       <GrpcServices>Server</GrpcServices>
     </None>
     <None Update="Protos\pay.proto">

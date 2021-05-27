@@ -28,6 +28,10 @@ C:\Users\Danny\source\repos\VisaPayment\PaymentServiceImplementation\obj\Debug\n
 C:\Users\Danny\source\repos\VisaPayment\PaymentServiceImplementation\obj\Debug\net5.0\ref\PaymentServiceImplementation.dll
 C:\Users\Danny\source\repos\VisaPayment\PaymentServiceImplementation\obj\Debug\net5.0\PaymentServiceImplementation.pdb
 C:\Users\Danny\source\repos\VisaPayment\PaymentServiceImplementation\obj\Debug\net5.0\PaymentServiceImplementation.genruntimeconfig.cache
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\PaymentDataAccess.deps.json
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\PaymentDataAccess.runtimeconfig.json
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\PaymentDataAccess.runtimeconfig.dev.json
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\PaymentDataAccess.exe
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\appsettings.json
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\PaymentServiceImplementation.exe
@@ -44,6 +48,12 @@ C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\Grpc.Net.Client.dll
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\Grpc.Net.ClientFactory.dll
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\Grpc.Net.Common.dll
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\Entities.dll
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\PaymentDataAccess.dll
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\PaymentServiceContract.dll
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\Entities.pdb
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\PaymentDataAccess.pdb
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\PaymentServiceContract.pdb
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\obj\Debug\net5.0\PaymentServiceImplementation.csprojAssemblyReference.cache
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\obj\Debug\net5.0\PaymentServiceImplementation.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\obj\Debug\net5.0\PaymentServiceImplementation.AssemblyInfoInputs.cache
@@ -59,7 +69,3 @@ C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\obj\Debug\net5.0\ref\PaymentServiceImplementation.dll
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\obj\Debug\net5.0\PaymentServiceImplementation.pdb
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\obj\Debug\net5.0\PaymentServiceImplementation.genruntimeconfig.cache
-C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\PaymentServiceContract.dll
-C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\PaymentServiceContract.pdb
-C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\Entities.dll
-C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceImplementation\bin\Debug\net5.0\Entities.pdb

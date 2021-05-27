@@ -1,9 +1,3 @@
-C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\obj\Debug\net5.0\DataAccess.csprojAssemblyReference.cache
-C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
-C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
-C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\obj\Debug\net5.0\DataAccess.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\bin\Debug\net5.0\appsettings.json
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\bin\Debug\net5.0\DataAccess.exe
@@ -24,6 +18,12 @@ C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\bin\Debug\net5.0\PaymentServiceContract.dll
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\bin\Debug\net5.0\Entities.pdb
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\bin\Debug\net5.0\PaymentServiceContract.pdb
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\obj\Debug\net5.0\DataAccess.csprojAssemblyReference.cache
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\obj\Debug\net5.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\obj\Debug\net5.0\DataAccess.AssemblyInfo.cs
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\obj\Debug\net5.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\obj\Debug\net5.0\DataAccess.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\obj\Debug\net5.0\staticwebassets\DataAccess.StaticWebAssets.Manifest.cache
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\obj\Debug\net5.0\staticwebassets\DataAccess.StaticWebAssets.xml
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\DataAccess\obj\Debug\net5.0\scopedcss\bundle\DataAccess.styles.css

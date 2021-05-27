@@ -13,6 +13,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentWebAPI", "PaymentWeb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{239607BB-A893-48C6-B2A7-515629E5B71D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E3C224B6-4249-40BE-9ACA-6F388C34979B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentDataAccess", "PaymentDataAccess\PaymentDataAccess.csproj", "{D4DE03E3-7910-4928-A130-9F52EF7A4A29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,9 +43,18 @@ Global
 		{239607BB-A893-48C6-B2A7-515629E5B71D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{239607BB-A893-48C6-B2A7-515629E5B71D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{239607BB-A893-48C6-B2A7-515629E5B71D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4DE03E3-7910-4928-A130-9F52EF7A4A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4DE03E3-7910-4928-A130-9F52EF7A4A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4DE03E3-7910-4928-A130-9F52EF7A4A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4DE03E3-7910-4928-A130-9F52EF7A4A29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{57CC6868-51BF-44E9-8195-FF5C45DBE5F6} = {E3C224B6-4249-40BE-9ACA-6F388C34979B}
+		{1D90EF13-7080-4899-B2FA-DC7D6F5BC274} = {E3C224B6-4249-40BE-9ACA-6F388C34979B}
+		{D4DE03E3-7910-4928-A130-9F52EF7A4A29} = {E3C224B6-4249-40BE-9ACA-6F388C34979B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C6E8F210-E55B-45C1-B611-47C7F2511797}

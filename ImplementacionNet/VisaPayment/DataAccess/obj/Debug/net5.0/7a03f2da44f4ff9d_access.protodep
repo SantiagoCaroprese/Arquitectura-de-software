@@ -1,0 +1,2 @@
+obj\Debug\net5.0/Access.cs \
+obj\Debug\net5.0/AccessGrpc.cs: ../PaymentServiceContract/Protos/access.proto
