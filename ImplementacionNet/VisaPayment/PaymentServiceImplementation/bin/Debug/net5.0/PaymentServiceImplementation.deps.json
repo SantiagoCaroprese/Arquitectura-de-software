@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "PaymentServiceImplementation/1.0.0": {
         "dependencies": {
+          "Entities": "1.0.0",
           "Grpc.AspNetCore": "2.34.0",
           "PaymentServiceContract": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
@@ -484,6 +485,14 @@
       "System.Diagnostics.DiagnosticSource/4.5.1": {},
       "System.Memory/4.5.3": {},
       "System.Runtime.CompilerServices.Unsafe/4.5.2": {},
+      "Entities/1.0.0": {
+        "runtime": {
+          "Entities.dll": {}
+        },
+        "compile": {
+          "Entities.dll": {}
+        }
+      },
       "PaymentServiceContract/1.0.0": {
         "runtime": {
           "PaymentServiceContract.dll": {}
@@ -2351,6 +2360,11 @@
       "sha512": "sha512-wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
       "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
+    },
+    "Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "PaymentServiceContract/1.0.0": {
       "type": "project",
