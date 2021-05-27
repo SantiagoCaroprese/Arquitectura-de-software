@@ -1,0 +1,2 @@
+obj\Debug\net5.0\Protos/Accessor.cs \
+obj\Debug\net5.0\Protos/AccessorGrpc.cs: Protos/accessor.proto

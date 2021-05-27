@@ -9,3 +9,4 @@ C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceContract\obj\Debug\net5.0\PaymentServiceContract.dll
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceContract\obj\Debug\net5.0\ref\PaymentServiceContract.dll
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceContract\obj\Debug\net5.0\PaymentServiceContract.pdb
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceContract\obj\Debug\net5.0\PaymentServiceContract.csprojAssemblyReference.cache
