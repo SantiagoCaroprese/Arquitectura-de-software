@@ -36,6 +36,7 @@
           "Google.Protobuf": "3.17.2",
           "Grpc.Net.Client": "2.37.0",
           "Grpc.Tools": "2.38.0",
+          "PaymentServiceContract": "1.0.0",
           "Swashbuckle.AspNetCore": "6.1.4",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "5.0.0.0",
@@ -444,6 +445,14 @@
         }
       },
       "System.Memory/4.5.3": {},
+      "PaymentServiceContract/1.0.0": {
+        "runtime": {
+          "PaymentServiceContract.dll": {}
+        },
+        "compile": {
+          "PaymentServiceContract.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Antiforgery.dll": {}
@@ -2240,6 +2249,11 @@
       "sha512": "sha512-3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
       "path": "system.memory/4.5.3",
       "hashPath": "system.memory.4.5.3.nupkg.sha512"
+    },
+    "PaymentServiceContract/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/5.0.0.0": {
       "type": "referenceassembly",

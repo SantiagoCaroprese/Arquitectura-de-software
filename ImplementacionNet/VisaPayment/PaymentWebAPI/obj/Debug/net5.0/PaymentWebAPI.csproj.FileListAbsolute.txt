@@ -31,3 +31,5 @@ C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentWebAPI\obj\Debug\net5.0\ref\PaymentWebAPI.dll
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentWebAPI\obj\Debug\net5.0\PaymentWebAPI.pdb
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentWebAPI\obj\Debug\net5.0\PaymentWebAPI.genruntimeconfig.cache
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentWebAPI\bin\Debug\net5.0\PaymentServiceContract.dll
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentWebAPI\bin\Debug\net5.0\PaymentServiceContract.pdb

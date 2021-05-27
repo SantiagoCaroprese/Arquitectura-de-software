@@ -29,12 +29,6 @@ namespace PaymentWebAPI.Controllers
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
-            using var channel = GrpcChannel.ForAddress("https://localhost:5001");
-            var client = new Payer.PayerClient(channel);
-            var reply = client.SayHelloAsync(new HelloRequest { Name = "GreeterClient" });
-            Console.WriteLine("Greeting: " + reply);
-            Console.WriteLine("Press any key to exit...");
-            Console.ReadKey();
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
