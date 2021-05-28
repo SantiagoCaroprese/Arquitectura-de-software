@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Net.Http;
 using WebAPIServicesAccess;
+using System.Net;
 
 namespace PaymentWebAPI.Controllers
 {
@@ -30,12 +31,12 @@ namespace PaymentWebAPI.Controllers
         }
 
         [HttpPost("Pay")]
-        public ActionResult<string> GetUserByUsername(PaymentRequest request)
+        public HttpResponseMessage GetUserByUsername(PaymentRequest request)
         {
             ServicesAccess services = new();
             if (services.Pay(request.CardNumber,request.ExpirationDate,request.SecurityCode,request.Owner,request.PaymentMonto))
-                return "success";
-            return "faild";
+                return new HttpResponseMessage(HttpStatusCode.OK);
+            return new HttpResponseMessage(HttpStatusCode.Conflict);
         }
     }
 }
