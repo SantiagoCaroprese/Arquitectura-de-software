@@ -20,6 +20,13 @@ namespace DataAccess.Data
         }
 
         public virtual DbSet<VisaCard> VisaCard { get; set; }
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                optionsBuilder.UseSqlServer(@"Server=DESKTOP-5KIS3PN;Database=Cards;Trusted_Connection=true");
+            }
+        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

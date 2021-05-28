@@ -11,11 +11,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entities", "Entities\Entiti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentWebAPI", "PaymentWebAPI\PaymentWebAPI.csproj", "{E4F54994-1DE9-46A3-9AE7-546C8D9DDA40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{239607BB-A893-48C6-B2A7-515629E5B71D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{239607BB-A893-48C6-B2A7-515629E5B71D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{E3C224B6-4249-40BE-9ACA-6F388C34979B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentDataAccess", "PaymentDataAccess\PaymentDataAccess.csproj", "{D4DE03E3-7910-4928-A130-9F52EF7A4A29}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaymentDataAccess", "PaymentDataAccess\PaymentDataAccess.csproj", "{D4DE03E3-7910-4928-A130-9F52EF7A4A29}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{0C57E521-05BD-449C-82F8-10C507F865B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,7 +55,7 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{57CC6868-51BF-44E9-8195-FF5C45DBE5F6} = {E3C224B6-4249-40BE-9ACA-6F388C34979B}
-		{1D90EF13-7080-4899-B2FA-DC7D6F5BC274} = {E3C224B6-4249-40BE-9ACA-6F388C34979B}
+		{1D90EF13-7080-4899-B2FA-DC7D6F5BC274} = {0C57E521-05BD-449C-82F8-10C507F865B9}
 		{D4DE03E3-7910-4928-A130-9F52EF7A4A29} = {E3C224B6-4249-40BE-9ACA-6F388C34979B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution

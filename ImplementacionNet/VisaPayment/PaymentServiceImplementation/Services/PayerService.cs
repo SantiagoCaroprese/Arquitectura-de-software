@@ -1,3 +1,4 @@
+using DataAccess;
 using Grpc.Core;
 using Microsoft.Extensions.Logging;
 using PaymentServiceContract;
@@ -15,13 +16,18 @@ namespace PaymentServiceImplementation
         {
             _logger = logger;
         }
-
-        public override Task<HelloReply> SayHello(HelloRequest request, ServerCallContext context)
+        public override Task<ActionResult> Pay(CardRequest request, ServerCallContext context)
         {
-            return Task.FromResult(new HelloReply
+            return Task.FromResult(new ActionResult
             {
-                Message = "Hello " + request.Name
+                Exito=false
             });
+        }
+        private VisaCard getCard(string cardNumber)
+        {
+            var data=new PaymentDataAccess.ServiceDataAccess();
+            VisaCard card=data.getCard(cardNumber);
+            return card;
         }
     }
 }

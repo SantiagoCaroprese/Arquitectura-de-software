@@ -4,18 +4,28 @@ option csharp_namespace = "DataAccessService";
 
 package access;
 
-// The greeting service definition.
+
 service DataAccessor {
-  // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc GetCard (CardNumberRequest) returns (CardReply);
+  rpc SaveCard(SaveCardRequest) returns (CardReply);
 }
 
-// The request message containing the user's name.
-message HelloRequest {
-  string name = 1;
+message CardNumberRequest{
+	string cardNumber=1;
 }
 
-// The response message containing the greetings.
-message HelloReply {
-  string message = 1;
+message CardReply{
+	oneof result{
+		string card=1;
+		ErrorReply error=2;
+	}
+}
+
+message SaveCardRequest{
+	string card=1;
+}
+
+
+message ErrorReply{
+	string error=1;
 }

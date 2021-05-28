@@ -8,9 +8,6 @@
 using grpc = global::Grpc.Core;
 
 namespace PaymentServiceContract {
-  /// <summary>
-  /// The greeting service definition.
-  /// </summary>
   public static partial class Payer
   {
     static readonly string __ServiceName = "pay.Payer";
@@ -45,15 +42,15 @@ namespace PaymentServiceContract {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
-    static readonly grpc::Marshaller<global::PaymentServiceContract.HelloRequest> __Marshaller_pay_HelloRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::PaymentServiceContract.HelloRequest.Parser));
-    static readonly grpc::Marshaller<global::PaymentServiceContract.HelloReply> __Marshaller_pay_HelloReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::PaymentServiceContract.HelloReply.Parser));
+    static readonly grpc::Marshaller<global::PaymentServiceContract.CardRequest> __Marshaller_pay_CardRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::PaymentServiceContract.CardRequest.Parser));
+    static readonly grpc::Marshaller<global::PaymentServiceContract.ActionResult> __Marshaller_pay_ActionResult = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::PaymentServiceContract.ActionResult.Parser));
 
-    static readonly grpc::Method<global::PaymentServiceContract.HelloRequest, global::PaymentServiceContract.HelloReply> __Method_SayHello = new grpc::Method<global::PaymentServiceContract.HelloRequest, global::PaymentServiceContract.HelloReply>(
+    static readonly grpc::Method<global::PaymentServiceContract.CardRequest, global::PaymentServiceContract.ActionResult> __Method_Pay = new grpc::Method<global::PaymentServiceContract.CardRequest, global::PaymentServiceContract.ActionResult>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "SayHello",
-        __Marshaller_pay_HelloRequest,
-        __Marshaller_pay_HelloReply);
+        "Pay",
+        __Marshaller_pay_CardRequest,
+        __Marshaller_pay_ActionResult);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -84,49 +81,21 @@ namespace PaymentServiceContract {
       {
       }
 
-      /// <summary>
-      /// Sends a greeting
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::PaymentServiceContract.HelloReply SayHello(global::PaymentServiceContract.HelloRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::PaymentServiceContract.ActionResult Pay(global::PaymentServiceContract.CardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SayHello(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return Pay(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      /// <summary>
-      /// Sends a greeting
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      public virtual global::PaymentServiceContract.HelloReply SayHello(global::PaymentServiceContract.HelloRequest request, grpc::CallOptions options)
+      public virtual global::PaymentServiceContract.ActionResult Pay(global::PaymentServiceContract.CardRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_SayHello, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_Pay, null, options, request);
       }
-      /// <summary>
-      /// Sends a greeting
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::PaymentServiceContract.HelloReply> SayHelloAsync(global::PaymentServiceContract.HelloRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::PaymentServiceContract.ActionResult> PayAsync(global::PaymentServiceContract.CardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return SayHelloAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return PayAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      /// <summary>
-      /// Sends a greeting
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      public virtual grpc::AsyncUnaryCall<global::PaymentServiceContract.HelloReply> SayHelloAsync(global::PaymentServiceContract.HelloRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::PaymentServiceContract.ActionResult> PayAsync(global::PaymentServiceContract.CardRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_SayHello, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_Pay, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       protected override PayerClient NewInstance(ClientBaseConfiguration configuration)

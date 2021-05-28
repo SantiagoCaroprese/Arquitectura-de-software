@@ -8,9 +8,6 @@
 using grpc = global::Grpc.Core;
 
 namespace DataAccessService {
-  /// <summary>
-  /// The greeting service definition.
-  /// </summary>
   public static partial class DataAccessor
   {
     static readonly string __ServiceName = "access.DataAccessor";
@@ -45,15 +42,23 @@ namespace DataAccessService {
       return parser.ParseFrom(context.PayloadAsNewBuffer());
     }
 
-    static readonly grpc::Marshaller<global::DataAccessService.HelloRequest> __Marshaller_access_HelloRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataAccessService.HelloRequest.Parser));
-    static readonly grpc::Marshaller<global::DataAccessService.HelloReply> __Marshaller_access_HelloReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataAccessService.HelloReply.Parser));
+    static readonly grpc::Marshaller<global::DataAccessService.CardNumberRequest> __Marshaller_access_CardNumberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataAccessService.CardNumberRequest.Parser));
+    static readonly grpc::Marshaller<global::DataAccessService.CardReply> __Marshaller_access_CardReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataAccessService.CardReply.Parser));
+    static readonly grpc::Marshaller<global::DataAccessService.SaveCardRequest> __Marshaller_access_SaveCardRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataAccessService.SaveCardRequest.Parser));
 
-    static readonly grpc::Method<global::DataAccessService.HelloRequest, global::DataAccessService.HelloReply> __Method_SayHello = new grpc::Method<global::DataAccessService.HelloRequest, global::DataAccessService.HelloReply>(
+    static readonly grpc::Method<global::DataAccessService.CardNumberRequest, global::DataAccessService.CardReply> __Method_GetCard = new grpc::Method<global::DataAccessService.CardNumberRequest, global::DataAccessService.CardReply>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "SayHello",
-        __Marshaller_access_HelloRequest,
-        __Marshaller_access_HelloReply);
+        "GetCard",
+        __Marshaller_access_CardNumberRequest,
+        __Marshaller_access_CardReply);
+
+    static readonly grpc::Method<global::DataAccessService.SaveCardRequest, global::DataAccessService.CardReply> __Method_SaveCard = new grpc::Method<global::DataAccessService.SaveCardRequest, global::DataAccessService.CardReply>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SaveCard",
+        __Marshaller_access_SaveCardRequest,
+        __Marshaller_access_CardReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -65,13 +70,12 @@ namespace DataAccessService {
     [grpc::BindServiceMethod(typeof(DataAccessor), "BindService")]
     public abstract partial class DataAccessorBase
     {
-      /// <summary>
-      /// Sends a greeting
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      public virtual global::System.Threading.Tasks.Task<global::DataAccessService.HelloReply> SayHello(global::DataAccessService.HelloRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::DataAccessService.CardReply> GetCard(global::DataAccessService.CardNumberRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      public virtual global::System.Threading.Tasks.Task<global::DataAccessService.CardReply> SaveCard(global::DataAccessService.SaveCardRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -83,7 +87,8 @@ namespace DataAccessService {
     public static grpc::ServerServiceDefinition BindService(DataAccessorBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_SayHello, serviceImpl.SayHello).Build();
+          .AddMethod(__Method_GetCard, serviceImpl.GetCard)
+          .AddMethod(__Method_SaveCard, serviceImpl.SaveCard).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -92,7 +97,8 @@ namespace DataAccessService {
     /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DataAccessorBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_SayHello, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::DataAccessService.HelloRequest, global::DataAccessService.HelloReply>(serviceImpl.SayHello));
+      serviceBinder.AddMethod(__Method_GetCard, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::DataAccessService.CardNumberRequest, global::DataAccessService.CardReply>(serviceImpl.GetCard));
+      serviceBinder.AddMethod(__Method_SaveCard, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::DataAccessService.SaveCardRequest, global::DataAccessService.CardReply>(serviceImpl.SaveCard));
     }
 
   }

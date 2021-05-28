@@ -4,18 +4,19 @@ option csharp_namespace = "PaymentServiceContract";
 
 package pay;
 
-// The greeting service definition.
+
 service Payer {
-  // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc Pay(CardRequest) returns (ActionResult);
 }
 
-// The request message containing the user's name.
-message HelloRequest {
-  string name = 1;
+message CardRequest{
+	string card=1;
 }
 
-// The response message containing the greetings.
-message HelloReply {
-  string message = 1;
+message ActionResult{
+	bool exito=1;
+}
+
+message ErrorReply{
+	string error=1;
 }

@@ -1,0 +1,2 @@
+obj\Debug\net5.0/Pay.cs \
+obj\Debug\net5.0/PayGrpc.cs: ../ServicesContracts/Protos/pay.proto
