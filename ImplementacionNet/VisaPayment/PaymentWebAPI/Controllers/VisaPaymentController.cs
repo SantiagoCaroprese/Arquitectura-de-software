@@ -9,22 +9,33 @@ using WebAPIServicesAccess;
 
 namespace PaymentWebAPI.Controllers
 {
+    public class PaymentRequest
+    {
+        public string CardNumber { get; set; }
+        public DateTime ExpirationDate { get; set; }
+        public string SecurityCode { get; set; }
+        public string Owner { get; set; }
+        public int PaymentMonto { get; set; }
+    }
+
     [ApiController]
     [Route("[controller]")]
     public class VisaPaymentController : ControllerBase
     {
-       private readonly ILogger<VisaPaymentController> _logger;
+        private readonly ILogger<VisaPaymentController> _logger;
 
         public VisaPaymentController(ILogger<VisaPaymentController> logger)
         {
             _logger = logger;
         }
 
-        [HttpGet("username")]
-        public ActionResult<string> getUserByUsername(String name)
+        [HttpPost("Pay")]
+        public ActionResult<string> GetUserByUsername(PaymentRequest request)
         {
-            ServicesAccess services = new ServicesAccess();
-            return "success";
+            ServicesAccess services = new();
+            if (services.Pay(request.CardNumber,request.ExpirationDate,request.SecurityCode,request.Owner,request.PaymentMonto))
+                return "success";
+            return "faild";
         }
     }
 }
