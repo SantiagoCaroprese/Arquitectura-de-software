@@ -48,13 +48,6 @@
           "lib/net5.0/Grpc.Net.Common.dll": {}
         }
       },
-      "Grpc.Tools/2.38.0": {
-        "type": "package",
-        "build": {
-          "build/Grpc.Tools.props": {},
-          "build/Grpc.Tools.targets": {}
-        }
-      },
       "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
         "type": "package",
         "build": {
@@ -163,6 +156,22 @@
         "runtime": {
           "bin/placeholder/PaymentServiceContract.dll": {}
         }
+      },
+      "WebAPIServicesAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Entities": "1.0.0",
+          "Google.Protobuf": "3.17.2",
+          "Grpc.Net.Client": "2.37.0",
+          "PaymentServiceContract": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebAPIServicesAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebAPIServicesAccess.dll": {}
+        }
       }
     }
   },
@@ -250,54 +259,6 @@
         "lib/netstandard2.1/Grpc.Net.Common.pdb",
         "lib/netstandard2.1/Grpc.Net.Common.xml",
         "packageIcon.png"
-      ]
-    },
-    "Grpc.Tools/2.38.0": {
-      "sha512": "jeaD9UGnuthwSclhoazNXsBBLkJVS7O1VNOTRZUUyWTTiwf26qdCX45eVMrGt7tqBFZTFOEqWFGQ8sf1HTxB0Q==",
-      "type": "package",
-      "path": "grpc.tools/2.38.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "build/Grpc.Tools.props",
-        "build/Grpc.Tools.targets",
-        "build/_grpc/Grpc.CSharp.xml",
-        "build/_grpc/_Grpc.Tools.props",
-        "build/_grpc/_Grpc.Tools.targets",
-        "build/_protobuf/Google.Protobuf.Tools.props",
-        "build/_protobuf/Google.Protobuf.Tools.targets",
-        "build/_protobuf/Protobuf.CSharp.xml",
-        "build/_protobuf/net45/Protobuf.MSBuild.dll",
-        "build/_protobuf/net45/Protobuf.MSBuild.pdb",
-        "build/_protobuf/netstandard1.3/Protobuf.MSBuild.dll",
-        "build/_protobuf/netstandard1.3/Protobuf.MSBuild.pdb",
-        "build/native/Grpc.Tools.props",
-        "build/native/include/google/protobuf/any.proto",
-        "build/native/include/google/protobuf/api.proto",
-        "build/native/include/google/protobuf/descriptor.proto",
-        "build/native/include/google/protobuf/duration.proto",
-        "build/native/include/google/protobuf/empty.proto",
-        "build/native/include/google/protobuf/field_mask.proto",
-        "build/native/include/google/protobuf/source_context.proto",
-        "build/native/include/google/protobuf/struct.proto",
-        "build/native/include/google/protobuf/timestamp.proto",
-        "build/native/include/google/protobuf/type.proto",
-        "build/native/include/google/protobuf/wrappers.proto",
-        "grpc.tools.2.38.0.nupkg.sha512",
-        "grpc.tools.nuspec",
-        "tools/linux_arm64/grpc_csharp_plugin",
-        "tools/linux_arm64/protoc",
-        "tools/linux_x64/grpc_csharp_plugin",
-        "tools/linux_x64/protoc",
-        "tools/linux_x86/grpc_csharp_plugin",
-        "tools/linux_x86/protoc",
-        "tools/macosx_x64/grpc_csharp_plugin",
-        "tools/macosx_x64/protoc",
-        "tools/windows_x64/grpc_csharp_plugin.exe",
-        "tools/windows_x64/protoc.exe",
-        "tools/windows_x86/grpc_csharp_plugin.exe",
-        "tools/windows_x86/protoc.exe"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/3.0.0": {
@@ -460,16 +421,18 @@
       "type": "project",
       "path": "../PaymentServiceContract/PaymentServiceContract.csproj",
       "msbuildProject": "../PaymentServiceContract/PaymentServiceContract.csproj"
+    },
+    "WebAPIServicesAccess/1.0.0": {
+      "type": "project",
+      "path": "../WebAPIServicesAccess/WebAPIServicesAccess.csproj",
+      "msbuildProject": "../WebAPIServicesAccess/WebAPIServicesAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
       "Entities >= 1.0.0",
-      "Google.Protobuf >= 3.17.2",
-      "Grpc.Net.Client >= 2.37.0",
-      "Grpc.Tools >= 2.38.0",
-      "PaymentServiceContract >= 1.0.0",
-      "Swashbuckle.AspNetCore >= 6.1.4"
+      "Swashbuckle.AspNetCore >= 6.1.4",
+      "WebAPIServicesAccess >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -502,8 +465,8 @@
             "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\Entities\\Entities.csproj"
             },
-            "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\PaymentServiceContract\\PaymentServiceContract.csproj": {
-              "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\PaymentServiceContract\\PaymentServiceContract.csproj"
+            "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\WebAPIServicesAccess\\WebAPIServicesAccess.csproj": {
+              "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\WebAPIServicesAccess\\WebAPIServicesAccess.csproj"
             }
           }
         }
@@ -518,20 +481,6 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
-          "Google.Protobuf": {
-            "target": "Package",
-            "version": "[3.17.2, )"
-          },
-          "Grpc.Net.Client": {
-            "target": "Package",
-            "version": "[2.37.0, )"
-          },
-          "Grpc.Tools": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[2.38.0, )"
-          },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
             "version": "[6.1.4, )"

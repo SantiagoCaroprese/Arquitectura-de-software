@@ -139,6 +139,76 @@
               "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\Entities\\Entities.csproj"
               },
+              "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\WebAPIServicesAccess\\WebAPIServicesAccess.csproj": {
+                "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\WebAPIServicesAccess\\WebAPIServicesAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\WebAPIServicesAccess\\WebAPIServicesAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\WebAPIServicesAccess\\WebAPIServicesAccess.csproj",
+        "projectName": "WebAPIServicesAccess",
+        "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\WebAPIServicesAccess\\WebAPIServicesAccess.csproj",
+        "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\WebAPIServicesAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\Entities\\Entities.csproj"
+              },
               "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\PaymentServiceContract\\PaymentServiceContract.csproj": {
                 "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\VisaPayment\\PaymentServiceContract\\PaymentServiceContract.csproj"
               }
@@ -168,10 +238,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[2.38.0, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.1.4, )"
             }
           },
           "imports": [
@@ -185,9 +251,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

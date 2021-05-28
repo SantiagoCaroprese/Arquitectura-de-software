@@ -1,0 +1,21 @@
+﻿using Grpc.Net.Client;
+using PaymentServiceContract;
+using System;
+
+namespace WebAPIServicesAccess
+{
+    public class ServicesAccess
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+        }
+
+        public bool pay()
+        {
+            using var channel = GrpcChannel.ForAddress("https://localhost:5001");
+            var client = new Payer.PayerClient(channel);
+            return false;
+        }
+    }
+}

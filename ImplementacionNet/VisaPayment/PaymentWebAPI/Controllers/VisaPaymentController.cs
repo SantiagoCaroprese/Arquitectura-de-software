@@ -5,8 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Net.Http;
-using Grpc.Net.Client;
-using PaymentServiceContract;
+using WebAPIServicesAccess;
 
 namespace PaymentWebAPI.Controllers
 {
@@ -22,11 +21,10 @@ namespace PaymentWebAPI.Controllers
         }
 
         [HttpGet("username")]
-        public ActionResult<bool> getUserByUsername(String name)
+        public ActionResult<string> getUserByUsername(String name)
         {
-            using var channel = GrpcChannel.ForAddress("https://localhost:5001");
-            var client = new Payer.PayerClient(channel);
-            return false;
+            ServicesAccess services = new ServicesAccess();
+            return "success";
         }
     }
 }
