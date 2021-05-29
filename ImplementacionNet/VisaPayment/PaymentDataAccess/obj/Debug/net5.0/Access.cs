@@ -27,17 +27,20 @@ namespace DataAccessService {
             "CgxhY2Nlc3MucHJvdG8SBmFjY2VzcyInChFDYXJkTnVtYmVyUmVxdWVzdBIS",
             "CgpjYXJkTnVtYmVyGAEgASgJIkoKCUNhcmRSZXBseRIOCgRjYXJkGAEgASgJ",
             "SAASIwoFZXJyb3IYAiABKAsyEi5hY2Nlc3MuRXJyb3JSZXBseUgAQggKBnJl",
-            "c3VsdCIfCg9TYXZlQ2FyZFJlcXVlc3QSDAoEY2FyZBgBIAEoCSIbCgpFcnJv",
-            "clJlcGx5Eg0KBWVycm9yGAEgASgJMn8KDERhdGFBY2Nlc3NvchI3CgdHZXRD",
-            "YXJkEhkuYWNjZXNzLkNhcmROdW1iZXJSZXF1ZXN0GhEuYWNjZXNzLkNhcmRS",
-            "ZXBseRI2CghTYXZlQ2FyZBIXLmFjY2Vzcy5TYXZlQ2FyZFJlcXVlc3QaES5h",
-            "Y2Nlc3MuQ2FyZFJlcGx5QhSqAhFEYXRhQWNjZXNzU2VydmljZWIGcHJvdG8z"));
+            "c3VsdCIfCg9TYXZlQ2FyZFJlcXVlc3QSDAoEY2FyZBgBIAEoCSJPCgtBY3Rp",
+            "b25SZXBseRIRCgdzdWNjZXNzGAEgASgISAASIwoFZXJyb3IYAiABKAsyEi5h",
+            "Y2Nlc3MuRXJyb3JSZXBseUgAQggKBnJlc3VsdCIbCgpFcnJvclJlcGx5Eg0K",
+            "BWVycm9yGAEgASgJMoEBCgxEYXRhQWNjZXNzb3ISNwoHR2V0Q2FyZBIZLmFj",
+            "Y2Vzcy5DYXJkTnVtYmVyUmVxdWVzdBoRLmFjY2Vzcy5DYXJkUmVwbHkSOAoI",
+            "U2F2ZUNhcmQSFy5hY2Nlc3MuU2F2ZUNhcmRSZXF1ZXN0GhMuYWNjZXNzLkFj",
+            "dGlvblJlcGx5QhSqAhFEYXRhQWNjZXNzU2VydmljZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::DataAccessService.CardNumberRequest), global::DataAccessService.CardNumberRequest.Parser, new[]{ "CardNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::DataAccessService.CardReply), global::DataAccessService.CardReply.Parser, new[]{ "Card", "Error" }, new[]{ "Result" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::DataAccessService.SaveCardRequest), global::DataAccessService.SaveCardRequest.Parser, new[]{ "Card" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::DataAccessService.ActionReply), global::DataAccessService.ActionReply.Parser, new[]{ "Success", "Error" }, new[]{ "Result" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::DataAccessService.ErrorReply), global::DataAccessService.ErrorReply.Parser, new[]{ "Error" }, null, null, null, null)
           }));
     }
@@ -641,6 +644,258 @@ namespace DataAccessService {
 
   }
 
+  public sealed partial class ActionReply : pb::IMessage<ActionReply>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ActionReply> _parser = new pb::MessageParser<ActionReply>(() => new ActionReply());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<ActionReply> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::DataAccessService.AccessReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ActionReply() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ActionReply(ActionReply other) : this() {
+      switch (other.ResultCase) {
+        case ResultOneofCase.Success:
+          Success = other.Success;
+          break;
+        case ResultOneofCase.Error:
+          Error = other.Error.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ActionReply Clone() {
+      return new ActionReply(this);
+    }
+
+    /// <summary>Field number for the "success" field.</summary>
+    public const int SuccessFieldNumber = 1;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Success {
+      get { return resultCase_ == ResultOneofCase.Success ? (bool) result_ : false; }
+      set {
+        result_ = value;
+        resultCase_ = ResultOneofCase.Success;
+      }
+    }
+
+    /// <summary>Field number for the "error" field.</summary>
+    public const int ErrorFieldNumber = 2;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::DataAccessService.ErrorReply Error {
+      get { return resultCase_ == ResultOneofCase.Error ? (global::DataAccessService.ErrorReply) result_ : null; }
+      set {
+        result_ = value;
+        resultCase_ = value == null ? ResultOneofCase.None : ResultOneofCase.Error;
+      }
+    }
+
+    private object result_;
+    /// <summary>Enum of possible cases for the "result" oneof.</summary>
+    public enum ResultOneofCase {
+      None = 0,
+      Success = 1,
+      Error = 2,
+    }
+    private ResultOneofCase resultCase_ = ResultOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public ResultOneofCase ResultCase {
+      get { return resultCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void ClearResult() {
+      resultCase_ = ResultOneofCase.None;
+      result_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as ActionReply);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(ActionReply other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Success != other.Success) return false;
+      if (!object.Equals(Error, other.Error)) return false;
+      if (ResultCase != other.ResultCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (resultCase_ == ResultOneofCase.Success) hash ^= Success.GetHashCode();
+      if (resultCase_ == ResultOneofCase.Error) hash ^= Error.GetHashCode();
+      hash ^= (int) resultCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (resultCase_ == ResultOneofCase.Success) {
+        output.WriteRawTag(8);
+        output.WriteBool(Success);
+      }
+      if (resultCase_ == ResultOneofCase.Error) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Error);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (resultCase_ == ResultOneofCase.Success) {
+        output.WriteRawTag(8);
+        output.WriteBool(Success);
+      }
+      if (resultCase_ == ResultOneofCase.Error) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Error);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (resultCase_ == ResultOneofCase.Success) {
+        size += 1 + 1;
+      }
+      if (resultCase_ == ResultOneofCase.Error) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(ActionReply other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.ResultCase) {
+        case ResultOneofCase.Success:
+          Success = other.Success;
+          break;
+        case ResultOneofCase.Error:
+          if (Error == null) {
+            Error = new global::DataAccessService.ErrorReply();
+          }
+          Error.MergeFrom(other.Error);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Success = input.ReadBool();
+            break;
+          }
+          case 18: {
+            global::DataAccessService.ErrorReply subBuilder = new global::DataAccessService.ErrorReply();
+            if (resultCase_ == ResultOneofCase.Error) {
+              subBuilder.MergeFrom(Error);
+            }
+            input.ReadMessage(subBuilder);
+            Error = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Success = input.ReadBool();
+            break;
+          }
+          case 18: {
+            global::DataAccessService.ErrorReply subBuilder = new global::DataAccessService.ErrorReply();
+            if (resultCase_ == ResultOneofCase.Error) {
+              subBuilder.MergeFrom(Error);
+            }
+            input.ReadMessage(subBuilder);
+            Error = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
   public sealed partial class ErrorReply : pb::IMessage<ErrorReply>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -653,7 +908,7 @@ namespace DataAccessService {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::DataAccessService.AccessReflection.Descriptor.MessageTypes[3]; }
+      get { return global::DataAccessService.AccessReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -7,6 +7,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
 
 namespace DataAccess
 {
@@ -20,26 +23,79 @@ namespace DataAccess
 
         public override Task<CardReply> GetCard(CardNumberRequest request, ServerCallContext context)
         {
+            VisaCard card = null;
+            if (CheckForExistingCard(request.CardNumber))
+            {
+                card = GetCard(request.CardNumber);
+            }
+            else
+            {
+                return Task.FromResult(new CardReply
+                {
+                    Error = new ErrorReply
+                    {
+                        Error = "Card with number "+request.CardNumber+" not found"
+                    }
+                });
+            }
+
+            if (card != null)
+            {
+                String message = JsonSerializer.Serialize(card);
+                return Task.FromResult(new CardReply
+                {
+                    Card = message
+                });;
+            }
+
             return Task.FromResult(new CardReply{
                 Error = new ErrorReply
                 {
-                    Error = "Not implemented"
+                    Error = "Error at getting card"
                 }
             });
         }
 
-        public override Task<CardReply> SaveCard(SaveCardRequest request, ServerCallContext context)
+        public override Task<ActionReply> SaveCard(SaveCardRequest request, ServerCallContext context)
         {
-            return Task.FromResult(new CardReply
+            VisaCard card = JsonSerializer.Deserialize<VisaCard>(request.Card);
+            bool save = false;
+            if (CheckForExistingCard(card.Number))
             {
-                Error = new ErrorReply
+                using (var dbContext = new CardsContext())
                 {
-                    Error = "Not implemented"
+                    if (dbContext.Update(card) != null)
+                    {
+                        dbContext.SaveChanges();
+                        save = true;
+                    }
+                    
                 }
-            });
+            }
+            else
+            {
+                return Task.FromResult(new ActionReply
+                {
+                    Error = new ErrorReply
+                    {
+                        Error = "Card with number " + card.Number + " not found"
+                    }
+                });
+            }
+            if (save)
+            {
+                return Task.FromResult(new ActionReply
+                {
+                    Success = true
+                }); ;
+            }
+            return Task.FromResult(new ActionReply
+            {
+                Success = false
+            }); ;
         }
 
-        static bool CheckForExistingUser(string cardNumber)
+        static bool CheckForExistingCard(string cardNumber)
         {
             bool exists = false;
             using (var context = new CardsContext())
@@ -52,18 +108,14 @@ namespace DataAccess
             }
             return exists;
         }
-        static bool validateUser(string cardNumber, string securityCode)
+        static VisaCard GetCard(string cardNumber)
         {
-            bool exists = false;
-            using (var context = new CardsContext())
+            VisaCard card = null;
+            using (var dbContext = new CardsContext())
             {
-                var os = context.VisaCard.Where(o => o.Number.Equals(cardNumber) && o.SecurityCode.Equals(securityCode));
-                if (os.Count() > 0)
-                {
-                    exists = true;
-                }
+                card = dbContext.VisaCard.Where(o => o.Number.Equals(cardNumber)).First();
             }
-            return exists;
+            return card;
         }
     }
 }

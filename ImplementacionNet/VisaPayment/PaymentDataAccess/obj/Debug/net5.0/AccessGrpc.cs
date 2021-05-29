@@ -45,6 +45,7 @@ namespace DataAccessService {
     static readonly grpc::Marshaller<global::DataAccessService.CardNumberRequest> __Marshaller_access_CardNumberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataAccessService.CardNumberRequest.Parser));
     static readonly grpc::Marshaller<global::DataAccessService.CardReply> __Marshaller_access_CardReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataAccessService.CardReply.Parser));
     static readonly grpc::Marshaller<global::DataAccessService.SaveCardRequest> __Marshaller_access_SaveCardRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataAccessService.SaveCardRequest.Parser));
+    static readonly grpc::Marshaller<global::DataAccessService.ActionReply> __Marshaller_access_ActionReply = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::DataAccessService.ActionReply.Parser));
 
     static readonly grpc::Method<global::DataAccessService.CardNumberRequest, global::DataAccessService.CardReply> __Method_GetCard = new grpc::Method<global::DataAccessService.CardNumberRequest, global::DataAccessService.CardReply>(
         grpc::MethodType.Unary,
@@ -53,12 +54,12 @@ namespace DataAccessService {
         __Marshaller_access_CardNumberRequest,
         __Marshaller_access_CardReply);
 
-    static readonly grpc::Method<global::DataAccessService.SaveCardRequest, global::DataAccessService.CardReply> __Method_SaveCard = new grpc::Method<global::DataAccessService.SaveCardRequest, global::DataAccessService.CardReply>(
+    static readonly grpc::Method<global::DataAccessService.SaveCardRequest, global::DataAccessService.ActionReply> __Method_SaveCard = new grpc::Method<global::DataAccessService.SaveCardRequest, global::DataAccessService.ActionReply>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SaveCard",
         __Marshaller_access_SaveCardRequest,
-        __Marshaller_access_CardReply);
+        __Marshaller_access_ActionReply);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -105,19 +106,19 @@ namespace DataAccessService {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCard, null, options, request);
       }
-      public virtual global::DataAccessService.CardReply SaveCard(global::DataAccessService.SaveCardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::DataAccessService.ActionReply SaveCard(global::DataAccessService.SaveCardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SaveCard(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual global::DataAccessService.CardReply SaveCard(global::DataAccessService.SaveCardRequest request, grpc::CallOptions options)
+      public virtual global::DataAccessService.ActionReply SaveCard(global::DataAccessService.SaveCardRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SaveCard, null, options, request);
       }
-      public virtual grpc::AsyncUnaryCall<global::DataAccessService.CardReply> SaveCardAsync(global::DataAccessService.SaveCardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::DataAccessService.ActionReply> SaveCardAsync(global::DataAccessService.SaveCardRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SaveCardAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      public virtual grpc::AsyncUnaryCall<global::DataAccessService.CardReply> SaveCardAsync(global::DataAccessService.SaveCardRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::DataAccessService.ActionReply> SaveCardAsync(global::DataAccessService.SaveCardRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SaveCard, null, options, request);
       }

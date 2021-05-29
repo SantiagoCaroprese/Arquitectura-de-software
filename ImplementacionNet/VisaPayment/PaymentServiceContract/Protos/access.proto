@@ -7,7 +7,7 @@ package access;
 
 service DataAccessor {
   rpc GetCard (CardNumberRequest) returns (CardReply);
-  rpc SaveCard(SaveCardRequest) returns (CardReply);
+  rpc SaveCard(SaveCardRequest) returns (ActionReply);
 }
 
 message CardNumberRequest{
@@ -23,6 +23,13 @@ message CardReply{
 
 message SaveCardRequest{
 	string card=1;
+}
+
+message ActionReply{
+	oneof result{
+		bool success=1;
+		ErrorReply error=2;
+	}
 }
 
 
