@@ -26,18 +26,31 @@ namespace PaymentServiceImplementation
             VisaCard dbCard = GetCard(requestCard.Number);
             if (dbCard!=null)
             {
-                if (VerifyPayment(requestCard, dbCard,request.Monto)){
+                if (VerifyPayment(requestCard, dbCard, request.Monto))
+                {
                     dbCard.Balance = dbCard.Balance + request.Monto;
                     if (PersistPayment(dbCard))
                     {
                         operation = true;
                     }
+                    else
+                    {
+                        return Task.FromResult(new ActionResult { Error = new ErrorReply { Error = "Error at saveing changes" } });
+                    }
                 }
+                else
+                {
+                    return Task.FromResult(new ActionResult { Error = new ErrorReply { Error = "Error validating transation: "} });
+                }
+            }
+            else
+            {
+                return Task.FromResult(new ActionResult {Error=new ErrorReply { Error="Card with number " + requestCard.Number + " not found" } });
             }
 
             return Task.FromResult(new ActionResult
             {
-                Exito=operation
+                Success=operation
             });
         }
         private VisaCard GetCard(string cardNumber)
@@ -46,14 +59,14 @@ namespace PaymentServiceImplementation
             VisaCard card= service.getCard(cardNumber);
             return card;
         }
-        private bool VerifyPayment(VisaCard propectCard, VisaCard originalCard, int monto)
+        private bool VerifyPayment(VisaCard prospectCard, VisaCard originalCard, int monto)
         {
             bool posible = false;
-            if (propectCard.Number.Equals(originalCard.Number) && propectCard.ExpirationDate.Equals(originalCard.ExpirationDate) && propectCard.Owner.Equals(originalCard.Owner))
+            if (prospectCard.Number.Equals(originalCard.Number) && prospectCard.ExpirationDate.Equals(originalCard.ExpirationDate) && prospectCard.Owner.Equals(originalCard.Owner))
             {
-                if (propectCard.SecurityCode.Equals(originalCard.SecurityCode))
+                if (prospectCard.SecurityCode.Equals(originalCard.SecurityCode))
                 {
-                    if ((originalCard.Balance + monto) <= originalCard.Quota)
+                    if ((originalCard.Balance + monto) <= originalCard.Quota && monto>0)
                     {
                         posible = true;
                     }

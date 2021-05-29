@@ -2,7 +2,6 @@ C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceContract\bin\Debug\net5.0\PaymentServiceContract.dll
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceContract\bin\Debug\net5.0\ref\PaymentServiceContract.dll
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceContract\bin\Debug\net5.0\PaymentServiceContract.pdb
-C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceContract\obj\Debug\net5.0\PaymentServiceContract.csprojAssemblyReference.cache
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceContract\obj\Debug\net5.0\PaymentServiceContract.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceContract\obj\Debug\net5.0\PaymentServiceContract.AssemblyInfoInputs.cache
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\PaymentServiceContract\obj\Debug\net5.0\PaymentServiceContract.AssemblyInfo.cs

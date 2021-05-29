@@ -46,11 +46,17 @@ namespace WebAPIServicesAccess
             using var channel = GrpcChannel.ForAddress("https://localhost:5001");
             var client = new Payer.PayerClient(channel);
             var reply = client.Pay(new CardRequest { Card=message,Monto=paymentMonto});
-            if (reply.Exito)
+            switch (reply.ResultCase)
             {
-                transaction=true;
+                case ActionResult.ResultOneofCase.None:
+                    return false;
+                case ActionResult.ResultOneofCase.Error:
+                    Console.WriteLine(reply.Error);
+                    return false;
+                case ActionResult.ResultOneofCase.Success:
+                    return reply.Success;
             }
-            return transaction;
+            return false;
         }
     }
 }

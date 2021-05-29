@@ -15,5 +15,13 @@ message CardRequest{
 }
 
 message ActionResult{
-	bool exito=1;
+	oneof result{
+		bool success=1;
+		ErrorReply error=2;
+	}
+}
+
+
+message ErrorReply{
+	string error=1;
 }
