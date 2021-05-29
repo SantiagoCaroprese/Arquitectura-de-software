@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "E+l14BOdzsR99K0p1Dzjt+Duc4Vb8+fFYE7cdjT9k4cPOvDrgK4/m/VOsPiQbHk+1ueHeADDQy+SHQCvJFK9iw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\PaymentServiceImplementation\\PaymentServiceImplementation.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Danny\\.nuget\\packages\\google.protobuf\\3.17.2\\google.protobuf.3.17.2.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\grpc.aspnetcore\\2.34.0\\grpc.aspnetcore.2.34.0.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\grpc.aspnetcore.server\\2.34.0\\grpc.aspnetcore.server.2.34.0.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\grpc.aspnetcore.server.clientfactory\\2.34.0\\grpc.aspnetcore.server.clientfactory.2.34.0.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\grpc.core.api\\2.37.0\\grpc.core.api.2.37.0.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\grpc.net.client\\2.37.0\\grpc.net.client.2.37.0.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\grpc.net.clientfactory\\2.34.0\\grpc.net.clientfactory.2.34.0.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\grpc.net.common\\2.37.0\\grpc.net.common.2.37.0.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\grpc.tools\\2.34.0\\grpc.tools.2.34.0.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\microsoft.extensions.configuration\\3.0.3\\microsoft.extensions.configuration.3.0.3.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.0.3\\microsoft.extensions.configuration.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.0.3\\microsoft.extensions.configuration.binder.3.0.3.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.0.3\\microsoft.extensions.dependencyinjection.3.0.3.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.0.3\\microsoft.extensions.dependencyinjection.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\microsoft.extensions.http\\3.0.3\\microsoft.extensions.http.3.0.3.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\microsoft.extensions.logging\\3.0.3\\microsoft.extensions.logging.3.0.3.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.3\\microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\microsoft.extensions.options\\3.0.3\\microsoft.extensions.options.3.0.3.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.3\\microsoft.extensions.primitives.3.0.3.nupkg.sha512",
+    "C:\\Users\\Danny\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}

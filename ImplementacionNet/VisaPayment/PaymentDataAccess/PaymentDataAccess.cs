@@ -13,7 +13,7 @@ namespace PaymentDataAccess
 {
     public class ServiceDataAccess
     {
-        public VisaCard getCard(string cardNumebr)
+        public VisaCard GetCard(string cardNumebr)
         {
             VisaCard card;
             using var channel = GrpcChannel.ForAddress("https://localhost:5003");
@@ -33,7 +33,7 @@ namespace PaymentDataAccess
             return null;
         }
 
-        public bool saveCard(VisaCard card)
+        public bool SaveCard(VisaCard card)
         {
             String message = JsonSerializer.Serialize(card);
             using var channel = GrpcChannel.ForAddress("https://localhost:5003");

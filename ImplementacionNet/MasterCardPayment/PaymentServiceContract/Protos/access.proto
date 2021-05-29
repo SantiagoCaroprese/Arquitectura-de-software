@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option csharp_namespace = "DataAccessService";
+
+package access;
+
+
+service DataAccessor {
+  rpc GetCard (CardNumberRequest) returns (CardReply);
+  rpc SaveCard(SaveCardRequest) returns (ActionReply);
+}
+
+message CardNumberRequest{
+	string cardNumber=1;
+}
+
+message CardReply{
+	oneof result{
+		string card=1;
+		ErrorReply error=2;
+	}
+}
+
+message SaveCardRequest{
+	string card=1;
+}
+
+message ActionReply{
+	oneof result{
+		bool success=1;
+		ErrorReply error=2;
+	}
+}
+
+
+message ErrorReply{
+	string error=1;
+}

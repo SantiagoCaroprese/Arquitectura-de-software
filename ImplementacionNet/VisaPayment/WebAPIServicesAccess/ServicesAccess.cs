@@ -22,8 +22,6 @@ namespace WebAPIServicesAccess
             Console.WriteLine("owner: " + owner);
             Console.WriteLine("paymentMonto: " + paymentMonto);
 
-            bool transaction = false;
-
             VisaCard card = new();
             card.Number = cardNumber;
             if (cardNumber.Length == 16)
