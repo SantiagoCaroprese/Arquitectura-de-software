@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+            
+    
+    <wb-module deploy-name="CatalogoEAR">
+                        
+        
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+                        
+        
+        <dependent-module archiveName="EntidadesCatalogo.jar" deploy-path="/lib" handle="module:/resource/EntidadesCatalogo/EntidadesCatalogo">
+                                    
+            
+            <dependency-type>uses</dependency-type>
+                                
+        
+        </dependent-module>
+                
+        <dependent-module archiveName="AccesoDatosCatalogo.jar" deploy-path="/" handle="module:/resource/AccesoDatosCatalogo/AccesoDatosCatalogo">
+                        
+            <dependent-object/>
+                        
+            <dependency-type>uses</dependency-type>
+                    
+        </dependent-module>
+        <dependent-module archiveName="LogicaNegocioCatalogo.jar" deploy-path="/" handle="module:/resource/LogicaNegocioCatalogo/LogicaNegocioCatalogo">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="APICatalogo.war" deploy-path="/" handle="module:/resource/APICatalogo/APICatalogo">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+                    
+    
+    </wb-module>
+        
+
+</project-modules>

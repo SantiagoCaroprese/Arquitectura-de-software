@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="AccesoDatosCatalogo">
+        <wb-resource deploy-path="/" source-path="/src" tag="defaultRootSource"/>
+        <property name="java-output-path" value="/AccesoDatosCatalogo/src"/>
+        <property name="ClientProject" value="IAccesoDatosCatalogo"/>
+        <property name="ClientJARURI" value="IAccesoDatosCatalogo.jar"/>
+    </wb-module>
+</project-modules>
