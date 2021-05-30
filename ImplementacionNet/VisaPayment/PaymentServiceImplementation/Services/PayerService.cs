@@ -56,7 +56,7 @@ namespace PaymentServiceImplementation
         private VisaCard GetCard(string cardNumber)
         {
             ServiceDataAccess service =new();
-            VisaCard card= service.getCard(cardNumber);
+            VisaCard card= service.GetCard(cardNumber);
             return card;
         }
         private bool VerifyPayment(VisaCard prospectCard, VisaCard originalCard, int monto)
@@ -79,7 +79,7 @@ namespace PaymentServiceImplementation
         {
             bool accepted = false;
             ServiceDataAccess service = new ServiceDataAccess();
-            if (service.saveCard(card))
+            if (service.SaveCard(card))
             {
                 accepted= true;
             }

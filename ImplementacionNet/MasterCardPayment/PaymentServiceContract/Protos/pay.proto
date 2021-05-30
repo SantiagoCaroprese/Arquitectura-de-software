@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option csharp_namespace = "PaymentServiceContract";
+
+package pay;
+
+
+service Payer {
+  rpc Pay(CardRequest) returns (ActionResult);
+}
+
+message CardRequest{
+	string card=1;
+	int32 monto=2;
+}
+
+message ActionResult{
+	oneof result{
+		bool success=1;
+		ErrorReply error=2;
+	}
+}
+
+
+message ErrorReply{
+	string error=1;
+}

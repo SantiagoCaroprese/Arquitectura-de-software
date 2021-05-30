@@ -1,0 +1,263 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\PaymentWebAPI\\PaymentWebAPI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\Entities\\Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\Entities\\Entities.csproj",
+        "projectName": "Entities",
+        "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\Entities\\Entities.csproj",
+        "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\PaymentServiceContract\\PaymentServiceContract.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\PaymentServiceContract\\PaymentServiceContract.csproj",
+        "projectName": "PaymentServiceContract",
+        "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\PaymentServiceContract\\PaymentServiceContract.csproj",
+        "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\PaymentServiceContract\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\PaymentWebAPI\\PaymentWebAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\PaymentWebAPI\\PaymentWebAPI.csproj",
+        "projectName": "PaymentWebAPI",
+        "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\PaymentWebAPI\\PaymentWebAPI.csproj",
+        "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\PaymentWebAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\Entities\\Entities.csproj"
+              },
+              "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\WebAPIServicesAccess\\WebAPIServicesAccess.csproj": {
+                "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\WebAPIServicesAccess\\WebAPIServicesAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\WebAPIServicesAccess\\WebAPIServicesAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\WebAPIServicesAccess\\WebAPIServicesAccess.csproj",
+        "projectName": "WebAPIServicesAccess",
+        "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\WebAPIServicesAccess\\WebAPIServicesAccess.csproj",
+        "packagesPath": "C:\\Users\\Danny\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\WebAPIServicesAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Danny\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\Entities\\Entities.csproj"
+              },
+              "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\PaymentServiceContract\\PaymentServiceContract.csproj": {
+                "projectPath": "C:\\Users\\Danny\\Documents\\Arquitectura-de-software\\ImplementacionNet\\MasterCardPayment\\PaymentServiceContract\\PaymentServiceContract.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.17.2, )"
+            },
+            "Grpc.Net.Client": {
+              "target": "Package",
+              "version": "[2.37.0, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.38.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
