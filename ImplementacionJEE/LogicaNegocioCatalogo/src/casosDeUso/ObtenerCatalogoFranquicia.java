@@ -30,6 +30,7 @@ public class ObtenerCatalogoFranquicia implements ObtenerCatalogoFranquiciaLocal
 			boolean disponible = true;
 			for(Ingrediente ingrediente : producto.getIngredientes()) {
 				if(fachadaAccesoDatos.obtenerExistencias(idFranquicia, ingrediente.getId()) < 50) {
+					System.out.println("No esta disponible producto " + producto.getNombre() + " porque solo hay " + fachadaAccesoDatos.obtenerExistencias(idFranquicia, ingrediente.getId()) + " existencias de " + ingrediente.getNombre());
 					disponible = false;
 					break;
 				}

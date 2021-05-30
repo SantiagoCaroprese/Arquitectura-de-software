@@ -33,7 +33,7 @@ public class RepositorioInventariosJPA implements RepositorioInventarios {
 		InventarioFranquiciaPK llavePrimaria = new InventarioFranquiciaPK();
 		llavePrimaria.setIdFranquicia(idFranquicia);
 		llavePrimaria.setIdIngrediente(idIngrediente);
-		return entityManager.find(InventarioFranquicia.class, new InventarioFranquiciaPK());
+		return entityManager.find(InventarioFranquicia.class, llavePrimaria);
 	}
 
 }

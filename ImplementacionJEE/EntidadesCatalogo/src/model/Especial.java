@@ -36,7 +36,7 @@ public class Especial implements Serializable {
 	//uni-directional many-to-many association to Producto
 	@ManyToMany
 	@JoinColumn(name="id")
-	@JoinTable(name = "EspecialProducto", joinColumns = @JoinColumn(name = "id_especial", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "id_producto", referencedColumnName = "id"))
+	@JoinTable(name = "ESPECIALPRODUCTO", joinColumns = @JoinColumn(name = "id_especial", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "id_producto", referencedColumnName = "id"))
 	private List<Producto> productos;
 
 	public Especial() {
