@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../AccesoDatosPedidos/AccesoDatosPedidos.iml" filepath="$PROJECT_DIR$/../AccesoDatosPedidos/AccesoDatosPedidos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../EntidadesPedidos/EntidadesPedidos.iml" filepath="$PROJECT_DIR$/../EntidadesPedidos/EntidadesPedidos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Logica.iml" filepath="$PROJECT_DIR$/Logica.iml" />
+    </modules>
+  </component>
+</project>
