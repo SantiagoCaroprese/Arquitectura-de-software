@@ -10,5 +10,21 @@
 			<from-outcome>iniciarSesion</from-outcome>
 			<to-view-id>/iniciarSesion.xhtml</to-view-id>
 		</navigation-case>
+		<navigation-case>
+			<from-outcome>inicio</from-outcome>
+			<to-view-id>/inicio.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>catalogo</from-outcome>
+			<to-view-id>/verCatalogo.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>pedidoDomicilio</from-outcome>
+			<to-view-id>/iniciarPedidoDomicilio.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>pedidoRecoger</from-outcome>
+			<to-view-id>/iniciarPedidoRecoger.xhtml</to-view-id>
+		</navigation-case>
 	</navigation-rule>
 </faces-config>

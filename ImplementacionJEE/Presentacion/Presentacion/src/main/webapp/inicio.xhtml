@@ -102,15 +102,15 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:body>
 <h:form>
 	<div class="topnav" id="myTopnav">
-	  <h:outputLink class="active" value="/Presentacion/faces/inicio.xhtml">UpWay</h:outputLink>
-	  <h:outputLink value="/Presentacion/faces/iniciarSesion.xhtml">Iniciar Sesion</h:outputLink>
-	  <h:outputLink value="/Presentacion/faces/verCatalogo.xhtml">Catalogo</h:outputLink>
+	  <h:commandLink action="inicio" class="active" value="UpWay"></h:commandLink>
+	  <h:commandLink action="iniciarSesion" value="Iniciar Sesion"></h:commandLink>
+	  <h:commandLink action="catalogo" value="Catalogo"></h:commandLink>
 	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
 	    <i class="fa fa-bars"></i>
 	  </a>
 	</div>
 	<div class="center">
-		<h:commandButton styleClass="centerbutton" value="Entrega a Domicilio" action="iniciarSesion"></h:commandButton>
+		<h:commandButton styleClass="centerbutton" value="Entrega a Domicilio" action="pedidoDomicilio"></h:commandButton>
 		<h:commandButton styleClass="centerbutton" value="Recoger en Tienda" action="pedidoRecoger"></h:commandButton>
 	</div>
 </h:form>
