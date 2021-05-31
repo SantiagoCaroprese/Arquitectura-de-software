@@ -1,0 +1,55 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="PedidosAPI_EAR">
+    <output-path>$PROJECT_DIR$/out/artifacts/PedidosAPI_EAR</output-path>
+    <root id="archive" name="PedidosAPI_EAR.ear">
+      <element id="module-output" name="AccesoDatosPedidos" />
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="Java EE 6-Java EE 6" />
+        <element id="library" level="project" name="Maven: org.eclipse.persistence:eclipselink:2.7.8" />
+        <element id="library" level="project" name="Maven: org.eclipse.persistence:jakarta.persistence:2.2.3" />
+        <element id="library" level="project" name="Maven: org.eclipse.persistence:commonj.sdo:2.1.1" />
+        <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.47" />
+        <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-servlet-initializer:4.6.0.Final" />
+        <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-core:4.6.0.Final" />
+        <element id="library" level="project" name="Maven: org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec:1.0.1.Final" />
+        <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-core-spi:4.6.0.Final" />
+        <element id="library" level="project" name="Maven: org.reactivestreams:reactive-streams:1.0.3" />
+        <element id="library" level="project" name="Maven: jakarta.validation:jakarta.validation-api:2.0.2" />
+        <element id="library" level="project" name="Maven: com.ibm.async:asyncutil:0.1.0" />
+        <element id="library" level="project" name="Maven: org.jboss.spec.javax.annotation:jboss-annotations-api_1.3_spec:2.0.1.Final" />
+        <element id="library" level="project" name="Maven: com.sun.activation:jakarta.activation:1.2.1" />
+        <element id="library" level="project" name="Maven: io.smallrye.config:smallrye-config:2.0.1" />
+        <element id="library" level="project" name="Maven: io.smallrye.config:smallrye-config-core:2.0.1" />
+        <element id="library" level="project" name="Maven: org.eclipse.microprofile.config:microprofile-config-api:2.0" />
+        <element id="library" level="project" name="Maven: io.smallrye.common:smallrye-common-annotation:1.5.0" />
+        <element id="library" level="project" name="Maven: io.smallrye.common:smallrye-common-expression:1.5.0" />
+        <element id="library" level="project" name="Maven: io.smallrye.common:smallrye-common-function:1.5.0" />
+        <element id="library" level="project" name="Maven: io.smallrye.common:smallrye-common-constraint:1.5.0" />
+        <element id="library" level="project" name="Maven: io.smallrye.common:smallrye-common-classloader:1.5.0" />
+        <element id="library" level="project" name="Maven: org.ow2.asm:asm:9.0" />
+        <element id="library" level="project" name="Maven: io.smallrye.config:smallrye-config-common:2.0.1" />
+        <element id="library" level="project" name="Maven: org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec:2.0.1.Final" />
+        <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.4.1.Final" />
+        <element id="library" level="project" name="Maven: org.jboss.resteasy:resteasy-jackson2-provider:4.6.0.Final" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.11.4" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.11.4" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.4" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider:2.11.4" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.jaxrs:jackson-jaxrs-base:2.11.4" />
+        <element id="library" level="project" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.11.4" />
+        <element id="library" level="project" name="Maven: jakarta.activation:jakarta.activation-api:1.2.1" />
+        <element id="library" level="project" name="Maven: com.github.java-json-tools:json-patch:1.13" />
+        <element id="library" level="project" name="Maven: com.github.java-json-tools:msg-simple:1.2" />
+        <element id="library" level="project" name="Maven: com.github.java-json-tools:btf:1.3" />
+        <element id="library" level="project" name="Maven: com.github.java-json-tools:jackson-coreutils:2.0" />
+      </element>
+      <element id="jpa-descriptors" facet="AccesoDatosPedidos/jpa/JPA" />
+      <element id="module-output" name="EntidadesPedidos" />
+      <element id="jpa-descriptors" facet="EntidadesPedidos/jpa/JPA" />
+      <element id="module-output" name="Logica" />
+      <element id="jpa-descriptors" facet="Logica/jpa/JPA" />
+      <element id="module-output" name="PedidosAPI" />
+      <element id="javaee-facet-resources" facet="PedidosAPI/web/Web" />
+    </root>
+  </artifact>
+</component>
