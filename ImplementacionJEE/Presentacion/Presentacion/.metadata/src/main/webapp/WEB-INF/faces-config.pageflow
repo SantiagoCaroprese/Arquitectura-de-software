@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16224200752940" configfile="/Presentacion/src/main/webapp/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="verCatalogo.xhtml" x="72" y="252" id="pf16224298172551" path="/verCatalogo.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="iniciarSesion.xhtml" x="276" y="84" id="pf16224298172562" path="/iniciarSesion.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="verProducto.xhtml" x="264" y="252" id="pf16224298172563" path="/verProducto.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="verPedido.xhtml" x="492" y="252" id="pf16224298172564" path="/verPedido.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="confirmarPedido.xhtml" x="744" y="240" id="pf16224298172565" path="/confirmarPedido.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="verPedidosFranquicia.xhtml" x="701" y="104" id="pf16224298172566" path="/verPedidosFranquicia.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="verCatalogo.xhtml" x="156" y="432" id="pf16224298172551" path="/verCatalogo.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="iniciarSesion.xhtml" x="24" y="48" id="pf16224298172562" path="/iniciarSesion.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="confirmarPedido.xhtml" x="840" y="240" id="pf16224298172565" path="/confirmarPedido.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="verPedidosFranquicia.xhtml" x="324" y="48" id="pf16224298172566" path="/verPedidosFranquicia.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="verCatalogoFranquicia.xhtml" x="300" y="240" id="pf16224690093400" path="/verCatalogoFranquicia.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="inicio.xhtml" x="24" y="240" id="pf16224690093401" path="/inicio.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="IniciarPedidoRecoger.xhtml" x="132" y="288" id="pf16224690093402" path="/IniciarPedidoRecoger.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="iniciarPedidoDomicilio.xhtml" x="128" y="175" id="pf16224690093403" path="/iniciarPedidoDomicilio.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="seleccionarProducto.xhtml" x="492" y="240" id="pf16224690093404" path="/seleccionarProducto.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="verCarrito.xhtml" x="696" y="240" id="pf16224690093405" path="/verCarrito.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="estadoPedido.xhtml" x="1044" y="240" id="pf16224690093406" path="/estadoPedido.xhtml"/>
 </pageflow:Pageflow>

@@ -1,4 +1,4 @@
-package controladores.compartido;
+package controladores.cliente;
 
 public class ControladorIniciarSesion {
 

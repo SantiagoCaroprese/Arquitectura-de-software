@@ -1,4 +1,4 @@
-package modelos.franquicias;
+package modelos.pedidos;
 
 public class ObtenerPedidosFranquiciaBean {
 

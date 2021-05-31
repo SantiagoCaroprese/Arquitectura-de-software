@@ -1,10 +1,10 @@
-package controladores.compartido;
+package controladores.cliente;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.view.ViewScoped;
 
 @ManagedBean
 @ViewScoped
-public class ControladorObtenerProductos {
+public class ControladorObtenerProductosCatalogo {
 
 }
