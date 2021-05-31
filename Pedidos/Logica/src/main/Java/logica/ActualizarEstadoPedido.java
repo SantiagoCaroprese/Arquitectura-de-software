@@ -4,16 +4,21 @@ import IRepositorioPedidos.IRepositorioPedidos;
 import modelos.Pedido;
 import utils.EncontrarPedido;
 
+import javax.ejb.EJB;
+import javax.ejb.Local;
 import javax.ejb.LocalBean;
 
-@LocalBean
+@Local
 public class ActualizarEstadoPedido {
-    private IRepositorioPedidos repository;
-    private EncontrarPedido encontrarPedido;
+    private @EJB
+    IRepositorioPedidos repository;
 
-    public ActualizarEstadoPedido(IRepositorioPedidos repository) {
-        this.repository = repository;
-        this.encontrarPedido = new EncontrarPedido(repository);
+    private @EJB
+    EncontrarPedido encontrarPedido;
+
+    public ActualizarEstadoPedido() {
+        //this.repository = repository;
+        //this.encontrarPedido = new EncontrarPedido(repository);
     }
 
     public Pedido execute(String idPedido, String estado){

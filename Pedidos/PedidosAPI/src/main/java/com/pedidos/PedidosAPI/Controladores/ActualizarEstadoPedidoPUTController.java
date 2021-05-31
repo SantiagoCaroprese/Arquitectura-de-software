@@ -2,14 +2,17 @@ package com.pedidos.PedidosAPI.Controladores;
 
 import logica.ActualizarEstadoPedido;
 
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
 @Path("/pedidos")
+@Stateless
 public class ActualizarEstadoPedidoPUTController {
 
-    ActualizarEstadoPedido actualizarEstadoPedido;
+    private @EJB ActualizarEstadoPedido actualizarEstadoPedido;
 
     @PUT
     public Response actualizarEstadoPedido(RequestEstado requestEstado){

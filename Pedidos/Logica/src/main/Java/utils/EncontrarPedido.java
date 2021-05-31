@@ -4,12 +4,19 @@ package utils;
 import IRepositorioPedidos.IRepositorioPedidos;
 import modelos.Pedido;
 
-public class EncontrarPedido {
-    private IRepositorioPedidos repositorioPedidos;
+import javax.ejb.EJB;
+import javax.ejb.Local;
 
-    public EncontrarPedido(IRepositorioPedidos repositorioPedidos) {
+@Local
+public class EncontrarPedido {
+    private @EJB
+    IRepositorioPedidos repositorioPedidos;
+
+    public EncontrarPedido(){}
+
+    /*public EncontrarPedido(IRepositorioPedidos repositorioPedidos) {
         this.repositorioPedidos = repositorioPedidos;
-    }
+    }*/
 
     public Pedido execute(String id){
         Pedido p = repositorioPedidos.find(id);

@@ -2,8 +2,10 @@ package IRepositorioPedidos;
 
 import modelos.Pedido;
 
+import javax.ejb.Local;
 import java.util.List;
 
+@Local
 public interface IRepositorioPedidos {
     public Pedido addPedido(Pedido pedido);
     public Pedido delete(Pedido pedido);

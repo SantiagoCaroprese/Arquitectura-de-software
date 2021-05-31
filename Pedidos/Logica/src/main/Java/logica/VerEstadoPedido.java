@@ -3,16 +3,20 @@ package logica;
 import IRepositorioPedidos.IRepositorioPedidos;
 import utils.EncontrarPedido;
 
+import javax.ejb.EJB;
+import javax.ejb.Local;
 import javax.ejb.LocalBean;
 
-@LocalBean
+@Local
 public class VerEstadoPedido {
-    private IRepositorioPedidos repositorioPedidos;
-    private EncontrarPedido encontrarPedido;
+    private @EJB
+    IRepositorioPedidos repositorioPedidos;
+    private @EJB
+    EncontrarPedido encontrarPedido;
 
-    public VerEstadoPedido(IRepositorioPedidos repositorioPedidos) {
-        this.repositorioPedidos = repositorioPedidos;
-        encontrarPedido = new EncontrarPedido(repositorioPedidos);
+    public VerEstadoPedido() {
+        //this.repositorioPedidos = repositorioPedidos;
+        //encontrarPedido = new EncontrarPedido(repositorioPedidos);
     }
 
     public String execute(String idPedido){

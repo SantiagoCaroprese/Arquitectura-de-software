@@ -3,6 +3,7 @@ package RepositorioPedidos;
 import IRepositorioPedidos.IRepositorioPedidos;
 import modelos.Pedido;
 
+import javax.ejb.Local;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
@@ -10,7 +11,6 @@ import javax.persistence.Persistence;
 import java.util.List;
 
 @Stateless
-@LocalBean
 public class RepositorioPedidos implements IRepositorioPedidos {
 
 

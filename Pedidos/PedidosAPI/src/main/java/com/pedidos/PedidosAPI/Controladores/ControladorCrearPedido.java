@@ -4,6 +4,8 @@ import logica.CrearPedido;
 import modelos.Pedido;
 import modelos.ProductoPedido;
 
+import javax.ejb.EJB;
+import javax.ejb.Stateless;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -14,10 +16,12 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 @Path("/pedidos")
+@Stateless
 @Produces(MediaType.APPLICATION_JSON)
 public class ControladorCrearPedido {
 
-    private CrearPedido crearPedido;
+    private @EJB
+    CrearPedido crearPedido;
 
     @POST
     public Response crearNuevoPedido(RequestPedido requestPedido){

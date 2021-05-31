@@ -56,6 +56,7 @@
           <element id="library" level="project" name="Maven: org.eclipse.persistence:eclipselink:2.7.8" />
           <element id="library" level="project" name="Maven: org.eclipse.persistence:jakarta.persistence:2.2.3" />
           <element id="library" level="project" name="Maven: org.eclipse.persistence:commonj.sdo:2.1.1" />
+          <element id="library" level="project" name="Maven: jakarta.xml.bind:jakarta.xml.bind-api:2.3.2" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.47" />
           <element id="archive" name="AccesoDatosPedidos-1.0-SNAPSHOT.jar">
             <element id="module-output" name="AccesoDatosPedidos" />

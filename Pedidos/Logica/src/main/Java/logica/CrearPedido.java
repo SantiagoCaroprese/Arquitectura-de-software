@@ -4,15 +4,18 @@ import IRepositorioPedidos.IRepositorioPedidos;
 import modelos.Pedido;
 import modelos.ProductoPedido;
 
+import javax.ejb.EJB;
+import javax.ejb.Local;
 import javax.ejb.LocalBean;
 import java.util.List;
 
-@LocalBean
+@Local
 public class CrearPedido {
-    private IRepositorioPedidos repository;
+    private @EJB
+    IRepositorioPedidos repository;
 
-    public CrearPedido(IRepositorioPedidos repository){
-        this.repository = repository;
+    public CrearPedido(){
+        //this.repository = repository;
     }
 
     public Pedido execute(Pedido pedido, List<ProductoPedido> productosPedidos){
