@@ -21,12 +21,9 @@ public class ObtenerCatalogoFranquiciaGETController {
 	private @EJB ObtenerCatalogoFranquiciaLocal obtenerCatalogo;
 
 	@GET
-	//@Path("{id}")
-	@Path("hola")
-	//public Response execute(@PathParam("id") int idFranquicia){
-	public Response execute(){
-		//return Response.ok(obtenerCatalogo.execute(idFranquicia), MediaType.APPLICATION_JSON).build();
-		return Response.ok("hola").build();
+	@Path("{id}")
+	public Response execute(@PathParam("id") int idFranquicia){
+		return Response.ok(obtenerCatalogo.execute(idFranquicia), MediaType.APPLICATION_JSON).build();
 	}
 	
 }
