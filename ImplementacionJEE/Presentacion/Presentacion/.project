@@ -3,6 +3,7 @@
 	<name>Presentacion</name>
 	<comment></comment>
 	<projects>
+		<project>EntidadesCatalogo</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
