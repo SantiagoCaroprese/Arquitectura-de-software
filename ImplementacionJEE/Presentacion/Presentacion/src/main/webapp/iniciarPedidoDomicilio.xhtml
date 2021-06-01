@@ -79,5 +79,31 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 	</div>
 </h:form>
 <h1>Iniciar Pedido Domicilio</h1>
+	<div style="padding:14px;">
+		<h:commandButton value="Cambiar a Recoger Pedido" action="pedidoRecoger"></h:commandButton>
+		<br/><br/>
+		Departamento:
+		<h:selectOneMenu>
+			<c:selectItems value="#{controladorIniciarPedido.departamentos}" var="c"	itemLabel="#{c}" itemValue="#{c}" />
+		</h:selectOneMenu>
+		<br/><br/>
+		Ciudad:
+		<h:selectOneMenu>
+			<c:selectItems value="#{controladorIniciarPedido.departamentos}" var="c"	itemLabel="#{c}" itemValue="#{c}" />
+		</h:selectOneMenu>
+		<br/><br/>
+		Direccion:
+		<h:inputText value=""/>
+		<br/><br/>
+		Inmueble:
+		<h:selectOneMenu>
+			<c:selectItems value="#{controladorIniciarPedido.departamentos}" var="c"	itemLabel="#{c}" itemValue="#{c}" />
+		</h:selectOneMenu>
+		<br/><br/>
+		Observaciones:
+		<h:inputText style="width:500px; height:200px;" value=""/>
+		<br/><br/>
+		<h:commandButton value="Continuar" action="prueba"></h:commandButton>
+	</div>
 </h:body>
 </html>

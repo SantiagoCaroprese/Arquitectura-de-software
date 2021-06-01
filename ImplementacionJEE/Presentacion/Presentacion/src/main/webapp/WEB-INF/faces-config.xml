@@ -15,8 +15,14 @@
 			<to-view-id>/iniciarSesion.xhtml</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>catalogo</from-outcome>
+			<from-action>#{controladorObtenerProductosCatalogo.verCatalogo}</from-action>
+			<from-outcome>true</from-outcome>
 			<to-view-id>/verCatalogo.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{controladorObtenerProductosCatalogo.verCatalogo}</from-action>
+			<from-outcome>false</from-outcome>
+			<to-view-id>/Error.xhtml</to-view-id>
 		</navigation-case>
 		<navigation-case>
 			<from-outcome>pedidoDomicilio</from-outcome>
@@ -39,6 +45,10 @@
 		<navigation-case>
 			<from-outcome>inicio</from-outcome>
 			<to-view-id>/inicio.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>pedidoRecoger</from-outcome>
+			<to-view-id>/iniciarPedidoRecoger.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
