@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16224200752940" configfile="/Presentacion/src/main/webapp/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="iniciarSesion.xhtml" x="770" y="946" id="pf16224298172562" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf16224907846910" path="/iniciarSesion.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="iniciarSesion.xhtml" x="770" y="973" id="pf16224298172562" referenceLink="//@navigationRule.0/@navigationCase.1/@toViewId|" inlinks="pf16224907846910" path="/iniciarSesion.xhtml"/>
   <nodes xsi:type="pageflow:PFPage" name="confirmarPedido.xhtml" x="122" y="178" id="pf16224298172565" path="/confirmarPedido.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="verPedidosFranquicia.xhtml" x="122" y="562" id="pf16224298172566" path="/verPedidosFranquicia.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="verCatalogoFranquicia.xhtml" x="338" y="2148" id="pf16224690093400" referenceLink="//@navigationRule.4/@navigationCase.1/@toViewId|" inlinks="pf16225013421367 pf16225013421368" path="/verCatalogoFranquicia.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="inicio.xhtml" x="554" y="1138" id="pf16224690093401" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" outlinks="pf16224907846910 pf16224981551561 pf16224981572702 pf16224983946384 pf16224983946385 pf16225184198390" inlinks="pf16224981551561 pf16225013421369 pf162250134213611 pf162250134213613" path="/inicio.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="IniciarPedidoRecoger.xhtml" x="122" y="946" id="pf16224690093402" path="/IniciarPedidoRecoger.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="iniciarPedidoDomicilio.xhtml" x="122" y="1330" id="pf16224690093403" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf162250134213611 pf16225184198391" inlinks="pf16224983946384" path="/iniciarPedidoDomicilio.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="seleccionarProducto.xhtml" x="122" y="1739" id="pf16224690093404" path="/seleccionarProducto.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="verCarrito.xhtml" x="122" y="2148" id="pf16224690093405" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf16225013421367 pf16225013421368" path="/verCarrito.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="estadoPedido.xhtml" x="122" y="2532" id="pf16224690093406" path="/estadoPedido.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="verCatalogo.xhtml" x="338" y="744" id="pf16224981572703" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf16225013421369" inlinks="pf16224981572702" path="/verCatalogo.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="iniciarPedidoRecoger.xhtml" x="204" y="1092" id="pf16224983946386" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf162250134213613" inlinks="pf16224983946385 pf16225184198391" path="/iniciarPedidoRecoger.xhtml"/>
-  <nodes xsi:type="pageflow:PFPage" name="Error.xhtml" x="770" y="1330" id="pf16225184198392" referenceLink="//@navigationRule.0/@navigationCase.3/@toViewId|" inlinks="pf16225184198390" path="/Error.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="verPedidosFranquicia.xhtml" x="122" y="563" id="pf16224298172566" path="/verPedidosFranquicia.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="verCatalogoFranquicia.xhtml" x="408" y="1548" id="pf16224690093400" referenceLink="//@navigationRule.4/@navigationCase.1/@toViewId|" inlinks="pf16225013421367 pf16225013421368 pf16225739869882" path="/verCatalogoFranquicia.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="inicio.xhtml" x="600" y="1236" id="pf16224690093401" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" outlinks="pf16224907846910 pf16224981551561 pf16224981572702 pf16224983946384 pf16224983946385 pf16225184198390" inlinks="pf16224981551561 pf16225013421369 pf162250134213611 pf162250134213613" path="/inicio.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="IniciarPedidoRecoger.xhtml" x="122" y="949" id="pf16224690093402" path="/IniciarPedidoRecoger.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="iniciarPedidoDomicilio.xhtml" x="122" y="1336" id="pf16224690093403" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf162250134213611 pf16225184198391 pf16225739869882 pf16225739869883" inlinks="pf16224983946384" path="/iniciarPedidoDomicilio.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="seleccionarProducto.xhtml" x="122" y="1720" id="pf16224690093404" path="/seleccionarProducto.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="verCarrito.xhtml" x="192" y="1548" id="pf16224690093405" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf16225013421367 pf16225013421368" path="/verCarrito.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="estadoPedido.xhtml" x="122" y="2488" id="pf16224690093406" path="/estadoPedido.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="verCatalogo.xhtml" x="552" y="852" id="pf16224981572703" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf16225013421369" inlinks="pf16224981572702" path="/verCatalogo.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="iniciarPedidoRecoger.xhtml" x="338" y="1113" id="pf16224983946386" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf162250134213613" inlinks="pf16224983946385 pf16225184198391" path="/iniciarPedidoRecoger.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="Error.xhtml" x="770" y="1357" id="pf16225184198392" referenceLink="//@navigationRule.2/@navigationCase.3/@toViewId|" inlinks="pf16225184198390 pf16225739869883" path="/Error.xhtml"/>
   <links id="pf16224907846910" target="pf16224298172562" source="pf16224690093401" outcome="iniciarSesion"/>
   <links id="pf16224981572702" target="pf16224981572703" source="pf16224690093401" outcome="true" fromaction="#{controladorObtenerProductosCatalogo.verCatalogo}"/>
   <links id="pf16224983946384" target="pf16224690093403" source="pf16224690093401" outcome="pedidoDomicilio"/>
@@ -28,6 +28,8 @@
   <links id="pf16225013421368" target="pf16224690093400" source="pf16224690093405" outcome="catalogoFranquicia"/>
   <links id="pf16225184198390" target="pf16225184198392" source="pf16224690093401" outcome="false" fromaction="#{controladorObtenerProductosCatalogo.verCatalogo}"/>
   <links id="pf16225184198391" target="pf16224983946386" source="pf16224690093403" outcome="pedidoRecoger"/>
+  <links id="pf16225739869882" target="pf16224690093400" source="pf16224690093403" outcome="true" fromaction="#{controladorIniciarPedidoDomicilio.crearPedidoDomicilio}"/>
+  <links id="pf16225739869883" target="pf16225184198392" source="pf16224690093403" outcome="false" fromaction="#{controladorIniciarPedidoDomicilio.crearPedidoDomicilio}"/>
   <links id="pf16224981551561" target="pf16224690093401" source="pf16224690093401" outcome="inicio">
     <bendPoints d1Height="-36" d2Height="-36"/>
     <bendPoints d1Width="-64" d1Height="-36" d2Width="-64" d2Height="-36"/>
