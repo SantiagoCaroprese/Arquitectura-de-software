@@ -25,4 +25,14 @@ public class ControladorObtenerProductosCatalogo {
 		}
 		return "true";
 	}
+
+	public ArrayList<Producto> getProductos() {
+		return productos;
+	}
+
+	public void setProductos(ArrayList<Producto> productos) {
+		this.productos = productos;
+	}
+	
+	
 }
