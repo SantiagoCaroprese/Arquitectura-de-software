@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="EntidadesPedidos" />
+        <module name="PedidosAPI" />
+        <module name="AccesoDatosPedidos" />
+        <module name="Logica" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AccesoDatosPedidos" target="1.8" />
+      <module name="EntidadesPedidos" target="1.8" />
+      <module name="Logica" target="1.8" />
+      <module name="PedidosAPI" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="ear" name="PruebaEAR">
+    <output-path>$PROJECT_DIR$/out/artifacts/PruebaEAR</output-path>
+    <root id="archive" name="PruebaEAR.ear">
+      <element id="module-output" name="AccesoDatosPedidos" />
+      <element id="directory" name="lib">
+        <element id="library" level="project" name="Java EE 6-Java EE 6" />
+        <element id="library" level="project" name="Maven: org.eclipse.persistence:eclipselink:2.7.8" />
+        <element id="library" level="project" name="Maven: org.eclipse.persistence:jakarta.persistence:2.2.3" />
+        <element id="library" level="project" name="Maven: org.eclipse.persistence:commonj.sdo:2.1.1" />
+        <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.47" />
+      </element>
+      <element id="jpa-descriptors" facet="AccesoDatosPedidos/jpa/JPA" />
+      <element id="module-output" name="EntidadesPedidos" />
+      <element id="jpa-descriptors" facet="EntidadesPedidos/jpa/JPA" />
+      <element id="module-output" name="Logica" />
+      <element id="jpa-descriptors" facet="Logica/jpa/JPA" />
+    </root>
+  </artifact>
+</component>
