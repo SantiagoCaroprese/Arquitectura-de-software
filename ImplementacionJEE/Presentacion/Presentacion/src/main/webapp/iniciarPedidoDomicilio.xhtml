@@ -87,12 +87,12 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 		<br/><br/>
 		Departamento:
 		<h:selectOneMenu value="#{controladorIniciarPedidoDomicilio.departamento}">
-			<c:selectItems value="#{controladorIniciarPedidoDomicilio.departamentos}" var="c" itemLabel="#{c.departamento}" itemValue="#{c.departamento}" />
+			<c:selectItems value="#{controladorDepartamentos.departamentos}" var="c" itemLabel="#{c.departamento}" itemValue="#{c.departamento}" />
 		</h:selectOneMenu>
 		<br/><br/>
 		Ciudad:
-		<h:selectOneMenu>
-			<c:selectItems value="#{controladorIniciarPedidoDomicilio.ciudades}" var="d" itemLabel="#{d}" itemValue="#{d}" />
+		<h:selectOneMenu value="#{controladorIniciarPedidoDomicilio.ciudad}">
+			<c:selectItems value="#{controladorDepartamentos.ciudades}" var="d" itemLabel="#{d}" itemValue="#{d}" />
 		</h:selectOneMenu>
 		<br/><br/>
 		Direccion:
@@ -100,11 +100,11 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 		<br/><br/>
 		Inmueble:
 		<h:selectOneMenu>
-			<c:selectItems value="#{controladorIniciarPedidoDomicilio.inmuebles}" var="e"	itemLabel="#{e}" itemValue="#{e}" />
+			<c:selectItems value="#{controladorDepartamentos.inmuebles}" var="e"	itemLabel="#{e}" itemValue="#{e}" />
 		</h:selectOneMenu>
 		<br/><br/>
 		Observaciones:
-		<h:inputText style="width:500px; height:200px;" value="#{controladorIniciarPedidoDomicilio.observaciones}"/>
+		<h:inputText style="width:200px; height:200px;" value="#{controladorIniciarPedidoDomicilio.observaciones}"/>
 		<br/><br/>
 		<h:commandButton value="Continuar" action="#{controladorIniciarPedidoDomicilio.crearPedidoDomicilio}"></h:commandButton>
 	</h:form>
