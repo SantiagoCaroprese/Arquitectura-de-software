@@ -50,8 +50,7 @@ public class ControladorVerProducto {
 	@SuppressWarnings("unchecked")
 	private void cargarAdicionales(HttpSession session) {
 		try {
-			ArrayList<Ingrediente> adicionales=(ArrayList<Ingrediente>) session.getAttribute("adicionales");
-			this.adicionales=adicionales;
+			this.adicionales=(ArrayList<Ingrediente>) session.getAttribute("adicionales");
 		}catch(NullPointerException e) {
 			
 		}catch (Exception e) {
@@ -62,6 +61,7 @@ public class ControladorVerProducto {
 		 	//llamar Bean
 			ObtenerAdicionalesBean bean=new ObtenerAdicionalesBean();
 			this.adicionales=bean.ObtenerAdicionales();
+			
 			if(this.adicionales==null||adicionales.isEmpty()) {
 				Ingrediente ing=new Ingrediente();
 				ing.setId(0);
@@ -76,9 +76,9 @@ public class ControladorVerProducto {
 				ing2.setPrecioAdicion(new BigDecimal(2000));
 				ing2.setTipo("aburrido");
 				adicionales2.add(ing2);	
+				this.adicionales=adicionales2;
 			}			
-			session.setAttribute("adicionales", adicionales2);
-			this.adicionales=adicionales2;
+			session.setAttribute("adicionales", this.adicionales);
 		}
 	}
 

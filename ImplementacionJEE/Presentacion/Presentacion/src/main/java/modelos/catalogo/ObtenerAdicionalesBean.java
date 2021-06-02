@@ -17,12 +17,12 @@ public class ObtenerAdicionalesBean {
 	public ArrayList<Ingrediente> ObtenerAdicionales() {
 		try {
 			Client client = ClientBuilder.newClient();
-			ArrayList<Ingrediente> franquicias = client
+			ArrayList<Ingrediente> ingredientes = client
                     .target("http://25.43.202.212:8080/servicio-catalogo/complementos")
                     .request(MediaType.APPLICATION_JSON)
                     .get(Response.class)
                     .readEntity(new GenericType<ArrayList<Ingrediente>>() {});
-			return franquicias;
+			return ingredientes;
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
