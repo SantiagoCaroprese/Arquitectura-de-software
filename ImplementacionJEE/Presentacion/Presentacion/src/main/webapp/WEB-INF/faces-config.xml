@@ -78,6 +78,20 @@
 			<from-outcome>catalogoFranquicia</from-outcome>
 			<to-view-id>/verCatalogoFranquicia.xhtml</to-view-id>
 		</navigation-case>
+		<navigation-case>
+			<from-action>#{controladorCarrito.eliminarProducto(item.id)}</from-action>
+			<from-outcome>true</from-outcome>
+			<to-view-id>/verCarrito.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{controladorCarrito.eliminarProducto(item.id)}</from-action>
+			<from-outcome>false</from-outcome>
+			<to-view-id>/Error.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>confirmarPedido</from-outcome>
+			<to-view-id>/confirmarPedido.xhtml</to-view-id>
+		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<from-view-id>/verCatalogoFranquicia.xhtml</from-view-id>
@@ -96,6 +110,41 @@
 		<navigation-case>
 			<from-action>#{controladorCatalogoFranquicia.productosFranquicia()}</from-action>
 			<from-outcome>#{null}</from-outcome>
+			<to-view-id>/Error.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{controladorVerProducto.verProducto(item.id)}</from-action>
+			<from-outcome>true</from-outcome>
+			<to-view-id>/seleccionarProducto.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{controladorVerProducto.verProducto(item.id)}</from-action>
+			<from-outcome>false</from-outcome>
+			<to-view-id>/Error.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/seleccionarProducto.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>inicio</from-outcome>
+			<to-view-id>/verCatalogoFranquicia.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>catalogoFranquicia</from-outcome>
+			<to-view-id>/verCatalogoFranquicia.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>carrito</from-outcome>
+			<to-view-id>/verCarrito.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{controladorCarrito.agregarProducto()}</from-action>
+			<from-outcome>true</from-outcome>
+			<to-view-id>/verCarrito.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{controladorCarrito.agregarProducto()}</from-action>
+			<from-outcome>false</from-outcome>
 			<to-view-id>/Error.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>

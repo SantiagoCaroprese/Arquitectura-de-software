@@ -15,8 +15,6 @@ import entidadesPedidos.Pedido;
 @ViewScoped
 public class ControladorIniciarPedido {
 	
-	private Pedido pedidoActual;
-
 	public ControladorIniciarPedido() {
 	}
 	
@@ -44,13 +42,4 @@ public class ControladorIniciarPedido {
 	public String confirmarPedido(){
 		return "false";
 	}
-
-	public Pedido getPedidoActual() {
-		return pedidoActual;
-	}
-
-	public void setPedidoActual(Pedido pedidoActual) {
-		this.pedidoActual = pedidoActual;
-	}	
-	
 }

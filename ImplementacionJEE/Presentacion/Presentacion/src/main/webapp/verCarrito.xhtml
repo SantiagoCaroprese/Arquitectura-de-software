@@ -80,5 +80,34 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 	</div>
 </h:form>
 <h1>Carrito</h1>
+<br/>
+<h:form>
+	<h:commandButton value="Completar Pedido" action="confirmarPedido"></h:commandButton>
+</h:form>
+<h:form>
+	<h:dataTable var="item" value="#{controladorCarrito.carrito.productosPedidos}">
+		<h:column>
+			<c:facet name="header">
+				<h:outputLabel value="Eliminar"></h:outputLabel>
+			</c:facet>
+			<h:commandLink value="Eliminar" action="#{controladorCarrito.eliminarProducto(item.id)}"></h:commandLink>
+		</h:column>
+	 	<h:column>
+	 		<c:facet name="header">
+	        	<h:outputLabel value="Producto"></h:outputLabel>
+	     	 </c:facet>
+   			<h:outputLabel value="#{item.nombre}"/>				
+		</h:column>
+ 		<h:column>
+	 		<c:facet name="header">
+	        	<h:outputLabel value="Precio"></h:outputLabel>
+	     	 </c:facet>
+   			<h:outputLabel value="#{item.precioBase}"/>				
+		</h:column>
+	</h:dataTable>
+	<br/>
+	<h:outputText>Precio Total: </h:outputText>
+	<h:outputText value="#{controladorCarrito.carrito.totalPrecio}"></h:outputText>
+</h:form>
 </h:body>
 </html>

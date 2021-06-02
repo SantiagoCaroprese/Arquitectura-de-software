@@ -8,11 +8,10 @@ public class ProductoPedido {
     private int precioBase;
     private List<IngredientePedido> ingredientes;
 
-    public ProductoPedido(String id, String nombre, int precioBase, int precioTotal, List<IngredientePedido> ingredientes) {
+    public ProductoPedido(String id, String nombre, int precioBase, List<IngredientePedido> ingredientes) {
         this.id = id;
         this.nombre = nombre;
         this.precioBase = precioBase;
-
         this.ingredientes = ingredientes;
     }
 

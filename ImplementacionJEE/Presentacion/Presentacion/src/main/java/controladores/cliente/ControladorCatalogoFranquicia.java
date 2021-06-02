@@ -33,9 +33,9 @@ public class ControladorCatalogoFranquicia {
 		}
 	}
 	
+	@SuppressWarnings("unchecked")
 	private ArrayList<Producto> getProductosFranquicia(String idFranquicia, HttpSession session){
 		ArrayList<Producto> productos=new ArrayList<>();
-		ArrayList<Producto> productos2=new ArrayList<>();
 		try {
 			productos=(ArrayList<Producto>) session.getAttribute("productosFranquicia");
 		}catch(NullPointerException e) {
@@ -46,6 +46,7 @@ public class ControladorCatalogoFranquicia {
 		}
 		if(productos==null) {
 			//Obtener productos por bean
+			ArrayList<Producto> productos2=new ArrayList<>();
 			Producto pr=new Producto();
 			pr.setDescripcion("yummi");
 			pr.setId(0);
@@ -54,13 +55,31 @@ public class ControladorCatalogoFranquicia {
 			Ingrediente ing=new Ingrediente();
 			ing.setId(0);
 			ing.setNombre("Gommibayas");
-			ing.setPrecioAdicion(new BigDecimal(10000));
+			ing.setPrecioAdicion(new BigDecimal(5000));
 			ing.setTipo("Magico");
 			ings.add(ing);
+			pr.setPrecio(new BigDecimal(15000));
 			pr.setIngredientes(ings);
 			pr.setNombre("El Poderoso");
 			pr.setTipo("Magico");
 			productos2.add(pr);
+			
+			Producto pr2=new Producto();
+			pr2.setDescripcion("yami");
+			pr2.setId(1);
+			pr2.setImagen("resource/Sand1.png");
+			ArrayList<Ingrediente> ings2= new ArrayList<>();
+			Ingrediente ing2=new Ingrediente();
+			ing2.setId(2);
+			ing2.setNombre("Miel");
+			ing2.setPrecioAdicion(new BigDecimal(2000));
+			ing2.setTipo("Dulce");
+			ings2.add(ing2);
+			pr2.setPrecio(new BigDecimal(12000));
+			pr2.setIngredientes(ings2);
+			pr2.setNombre("Viscososos");
+			pr2.setTipo("Magico");
+			productos2.add(pr2);
 			session.setAttribute("productosFranquicia", productos2);
 			return productos2;
 		}
