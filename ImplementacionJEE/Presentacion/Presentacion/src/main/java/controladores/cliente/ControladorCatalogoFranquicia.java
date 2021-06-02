@@ -50,12 +50,13 @@ public class ControladorCatalogoFranquicia {
 			e.printStackTrace();
 			return null;
 		}
-		if(productos==null) {
+		if(productos==null || productos.isEmpty()) {
 			//Obtener productos por bean
 			ObtenerCatalogoFranquiciaBean bean=new ObtenerCatalogoFranquiciaBean();
 			ArrayList<Producto> productos2=new ArrayList<>();
 			productos2=bean.obtenerCatalogoFranquicia(idFranquicia);
 			if(productos2==null || productos2.isEmpty()) {
+				productos2=new ArrayList<>();
 				Producto pr=new Producto();
 				pr.setDescripcion("yummi");
 				pr.setId(0);
