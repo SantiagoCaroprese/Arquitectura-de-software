@@ -1,5 +1,7 @@
 package controladores.cliente;
 
+import java.time.LocalDateTime;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
@@ -28,6 +30,23 @@ public class ControladorConfirmarPedido {
 	}
 	
 	public String confirmarPedido() {
+		if(pedido.getCardNumber().length()!=16 &&pedido.getCardNumber().length()!=19) {
+			return "false";
+		}
+		if(pedido.getCorreoCliente().length()<5) {
+			return "false";
+		}
+		if(pedido.getNombreCliente().length()<5) {
+			return "false";
+		}
+		if(Integer.valueOf(mes)<1 || Integer.valueOf(mes)>12 || mes.length()!=2) {
+			return "false";
+		}
+		if(Integer.valueOf(year)<LocalDateTime.now().getYear() || year.length()!=4) {
+			return "false";
+		}
+		pedido.setExpDate(year+"-"+mes+"-"+"01");
+		//lamarBean
 		return "true";
 	}
 

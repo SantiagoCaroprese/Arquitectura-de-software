@@ -155,6 +155,10 @@
 			<to-view-id>/verCatalogoFranquicia.xhtml</to-view-id>
 		</navigation-case>
 		<navigation-case>
+			<from-outcome>carrito</from-outcome>
+			<to-view-id>/verCarrito.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
 			<from-outcome>catalogoFranquicia</from-outcome>
 			<to-view-id>/verCatalogoFranquicia.xhtml</to-view-id>
 		</navigation-case>
@@ -172,13 +176,7 @@
 	<navigation-rule>
 		<from-view-id>/confirmarPedido.xhtml</from-view-id>
 		<navigation-case>
-			<from-action>#{controladorTerminarPedido.iniciarPedido()}</from-action>
-			<from-outcome>true</from-outcome>
-			<to-view-id>/inicio.xhtml</to-view-id>
-		</navigation-case>
-		<navigation-case>
-			<from-action>#{controladorTerminarPedido.iniciarPedido()}</from-action>
-			<from-outcome>false</from-outcome>
+			<from-outcome>inicio</from-outcome>
 			<to-view-id>/inicio.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>

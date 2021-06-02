@@ -1,6 +1,5 @@
 package controladores.cliente;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,7 +14,6 @@ import entidadesCatalogo.Producto;
 import entidadesPedidos.IngredientePedido;
 import entidadesPedidos.Pedido;
 import entidadesPedidos.ProductoPedido;
-import java.math.*;
 
 @ManagedBean
 @ViewScoped

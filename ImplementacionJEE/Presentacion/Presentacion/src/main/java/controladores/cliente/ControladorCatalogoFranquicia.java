@@ -12,6 +12,7 @@ import entidadesCatalogo.Ingrediente;
 import entidadesCatalogo.Producto;
 import entidadesPedidos.IngredientePedido;
 import entidadesPedidos.Pedido;
+import modelos.catalogo.ObtenerCatalogoFranquiciaBean;
 
 @ManagedBean
 @ViewScoped
@@ -46,41 +47,50 @@ public class ControladorCatalogoFranquicia {
 		}
 		if(productos==null) {
 			//Obtener productos por bean
+			ObtenerCatalogoFranquiciaBean bean=new ObtenerCatalogoFranquiciaBean();
 			ArrayList<Producto> productos2=new ArrayList<>();
-			Producto pr=new Producto();
-			pr.setDescripcion("yummi");
-			pr.setId(0);
-			pr.setImagen("resource/Sand1.png");
-			ArrayList<Ingrediente> ings= new ArrayList<>();
-			Ingrediente ing=new Ingrediente();
-			ing.setId(0);
-			ing.setNombre("Gommibayas");
-			ing.setPrecioAdicion(new BigDecimal(5000));
-			ing.setTipo("Magico");
-			ings.add(ing);
-			pr.setPrecio(new BigDecimal(15000));
-			pr.setIngredientes(ings);
-			pr.setNombre("El Poderoso");
-			pr.setTipo("Magico");
-			productos2.add(pr);
-			
-			Producto pr2=new Producto();
-			pr2.setDescripcion("yami");
-			pr2.setId(1);
-			pr2.setImagen("resource/Sand1.png");
-			ArrayList<Ingrediente> ings2= new ArrayList<>();
-			Ingrediente ing2=new Ingrediente();
-			ing2.setId(2);
-			ing2.setNombre("Miel");
-			ing2.setPrecioAdicion(new BigDecimal(2000));
-			ing2.setTipo("Dulce");
-			ings2.add(ing2);
-			pr2.setPrecio(new BigDecimal(12000));
-			pr2.setIngredientes(ings2);
-			pr2.setNombre("Viscososos");
-			pr2.setTipo("Magico");
-			productos2.add(pr2);
-			session.setAttribute("productosFranquicia", productos2);
+			productos2=bean.obtenerCatalogoFranquicia(idFranquicia);
+			if(productos2==null || productos2.isEmpty()) {
+				Producto pr=new Producto();
+				pr.setDescripcion("yummi");
+				pr.setId(0);
+				pr.setImagen("resource/Sand2.png");
+				ArrayList<Ingrediente> ings= new ArrayList<>();
+				Ingrediente ing=new Ingrediente();
+				ing.setId(0);
+				ing.setNombre("Gommibayas");
+				ing.setPrecioAdicion(new BigDecimal(5000));
+				ing.setTipo("Magico");
+				ings.add(ing);
+				pr.setPrecio(new BigDecimal(15000));
+				pr.setIngredientes(ings);
+				pr.setNombre("El Poderoso");
+				pr.setTipo("Magico");
+				productos2.add(pr);
+				
+				Producto pr2=new Producto();
+				pr2.setDescripcion("yami");
+				pr2.setId(1);
+				pr2.setImagen("resource/Sand2.png");
+				ArrayList<Ingrediente> ings2= new ArrayList<>();
+				Ingrediente ing2=new Ingrediente();
+				ing2.setId(2);
+				ing2.setNombre("Miel");
+				ing2.setPrecioAdicion(new BigDecimal(2000));
+				ing2.setTipo("Dulce");
+				ings2.add(ing2);
+				pr2.setPrecio(new BigDecimal(12000));
+				pr2.setIngredientes(ings2);
+				pr2.setNombre("Viscososos");
+				pr2.setTipo("Magico");
+				productos2.add(pr2);
+				session.setAttribute("productosFranquicia", productos2);
+			}
+			for (Producto producto : productos2) {
+				if(producto.getImagen()==null||producto.getImagen().isBlank()||producto.getImagen().isEmpty()) {
+					producto.setImagen("resource/Sand2.png");
+				}
+			}
 			return productos2;
 		}
 		return productos;
