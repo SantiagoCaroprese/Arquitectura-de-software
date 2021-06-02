@@ -24,6 +24,7 @@ public class ControladorObtenerFranquicias {
 			ObtenerFranquiciasBean bean=new ObtenerFranquiciasBean();
 			this.franquicias=bean.ObtenerFranquicias();
 			if(this.franquicias==null || this.franquicias.isEmpty()) {
+				this.franquicias=new ArrayList<>();
 				for(int i=0;i<4;i++) {
 					Franquicia f=new Franquicia();
 					f.setCiudad("Ciudad "+i);

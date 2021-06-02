@@ -9,6 +9,7 @@ import jakarta.ws.rs.core.GenericType;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
+
 public class ObtenerFranquiciasBean {
 
 	public ObtenerFranquiciasBean() {
@@ -18,7 +19,7 @@ public class ObtenerFranquiciasBean {
 		try {
 			Client client = ClientBuilder.newClient();
 			ArrayList<Franquicia> franquicias = client
-                    .target("http://25.43.202.212:8085//servicio-franquicias/disponibles")
+                    .target("http://25.43.202.212:8085/servicio-franquicias/disponibles")
                     .request(MediaType.APPLICATION_JSON)
                     .get(Response.class)
                     .readEntity(new GenericType<ArrayList<Franquicia>>() {});

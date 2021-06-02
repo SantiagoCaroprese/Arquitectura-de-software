@@ -58,7 +58,7 @@ public class ControladorVerProducto {
 			e.printStackTrace();
 		}
 		ArrayList<Ingrediente> adicionales2=new ArrayList<>();
-		if(this.adicionales==null){
+		if(this.adicionales==null || this.adicionales.isEmpty()){
 		 	//llamar Bean
 			ObtenerAdicionalesBean bean=new ObtenerAdicionalesBean();
 			this.adicionales=bean.ObtenerAdicionales();

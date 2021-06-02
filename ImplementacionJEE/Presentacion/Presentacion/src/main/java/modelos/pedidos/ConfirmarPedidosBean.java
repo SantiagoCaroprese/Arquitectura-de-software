@@ -18,7 +18,7 @@ public class ConfirmarPedidosBean {
 		try {
 			Client client = ClientBuilder.newClient();
 			String response = client
-                    .target("http://25.107.47.80/pedidosApi/pedidos")
+                    .target("http://25.107.47.80:8080/pedidosApi/pedidos")
                     .request()
                     .accept(MediaType.TEXT_PLAIN)
                     .post(Entity.json(pedido),Pedido.class)

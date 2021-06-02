@@ -27,6 +27,7 @@ public class ControladorIniciarPedido {
 			FacesContext context = FacesContext.getCurrentInstance();
 			HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
 			session.setAttribute("pedido", pedido);
+			session.setAttribute("inicio", "1");
 			return "true";
 		}catch(Exception e) {
 			e.printStackTrace();
