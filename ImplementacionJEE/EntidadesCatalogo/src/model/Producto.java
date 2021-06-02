@@ -26,6 +26,8 @@ public class Producto implements Serializable {
 	private BigDecimal precio;
 
 	private String tipo;
+	
+	private String imagen;
 
 	//uni-directional many-to-many association to Ingrediente
 	@ManyToMany
@@ -74,6 +76,14 @@ public class Producto implements Serializable {
 
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
+	}
+
+	public String getImagen() {
+		return imagen;
+	}
+
+	public void setImagen(String imagen) {
+		this.imagen = imagen;
 	}
 
 	public List<Ingrediente> getIngredientes() {

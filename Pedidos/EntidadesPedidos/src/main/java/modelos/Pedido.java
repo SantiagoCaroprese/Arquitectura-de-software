@@ -1,10 +1,8 @@
 package modelos;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 
 @Entity
 public class Pedido {
@@ -20,6 +18,27 @@ public class Pedido {
     private String productoSerializado;
     private String idRepartidor;
 
+    @Transient
+    private String departamento;
+    @Transient
+    private String ciudad;
+    @Transient
+    private String observaciones;
+    @Transient
+    private ArrayList<ProductoPedido> productoPedidos;
+
+    @Transient
+    private String cardNumber;
+
+    @Transient
+    private String expDate;
+
+    @Transient
+    private String secCode;
+
+    @Transient
+    private String payments;
+
     public Pedido(String idPedido, String idFranquicia, String estado, Timestamp fechaHoraInicio, byte domicilio, String nombreCliente, String correoCliente) {
         this.idPedido = idPedido;
         this.idFranquicia = idFranquicia;
@@ -28,6 +47,10 @@ public class Pedido {
         this.domicilio = domicilio;
         this.nombreCliente = nombreCliente;
         this.correoCliente = correoCliente;
+    }
+
+    public Pedido() {
+
     }
 
     @Id
@@ -183,5 +206,85 @@ public class Pedido {
         result = 31 * result + (productoSerializado != null ? productoSerializado.hashCode() : 0);
         result = 31 * result + (idRepartidor != null ? idRepartidor.hashCode() : 0);
         return result;
+    }
+
+    @Transient
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+
+    @Transient
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
+
+    @Transient
+    public void setObservaciones(String observaciones) {
+        this.observaciones = observaciones;
+    }
+
+    @Transient
+    public void setProductoPedidos(ArrayList<ProductoPedido> productoPedidos) {
+        this.productoPedidos = productoPedidos;
+    }
+
+    @Transient
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    @Transient
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    @Transient
+    public String getObservaciones() {
+        return observaciones;
+    }
+
+    @Transient
+    public ArrayList<ProductoPedido> getProductoPedidos() {
+        return productoPedidos;
+    }
+
+    @Transient
+    public String getCardNumber() {
+        return cardNumber;
+    }
+
+    @Transient
+    public void setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
+    }
+
+    @Transient
+    public String getExpDate() {
+        return expDate;
+    }
+
+    @Transient
+    public void setExpDate(String expDate) {
+        this.expDate = expDate;
+    }
+
+    @Transient
+    public String getSecCode() {
+        return secCode;
+    }
+
+    @Transient
+    public void setSecCode(String secCode) {
+        this.secCode = secCode;
+    }
+
+    @Transient
+    public String getPayments() {
+        return payments;
+    }
+
+    @Transient
+    public void setPayments(String payments) {
+        this.payments = payments;
     }
 }

@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="EntidadesPedidos" />
         <module name="PedidosAPI" />
+        <module name="Conectores" />
         <module name="AccesoDatosPedidos" />
         <module name="Logica" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="AccesoDatosPedidos" target="1.8" />
+      <module name="Conectores" target="1.8" />
       <module name="EntidadesPedidos" target="1.8" />
       <module name="Logica" target="1.8" />
       <module name="PedidosAPI" target="1.8" />

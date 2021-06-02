@@ -1,5 +1,6 @@
 package com.pedidos.PedidosAPI.Controladores;
 
+import InterfazLogica.ActualizarEstadoPedidoLocal;
 import logica.ActualizarEstadoPedido;
 
 import javax.ejb.EJB;
@@ -12,7 +13,8 @@ import javax.ws.rs.core.Response;
 @Stateless
 public class ActualizarEstadoPedidoPUTController {
 
-    private @EJB ActualizarEstadoPedido actualizarEstadoPedido;
+    private @EJB
+    ActualizarEstadoPedidoLocal actualizarEstadoPedido;
 
     @PUT
     public Response actualizarEstadoPedido(RequestEstado requestEstado){

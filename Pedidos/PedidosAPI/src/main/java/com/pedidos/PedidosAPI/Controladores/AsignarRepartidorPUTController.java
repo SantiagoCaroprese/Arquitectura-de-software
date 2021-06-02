@@ -1,6 +1,7 @@
 package com.pedidos.PedidosAPI.Controladores;
 
 
+import InterfazLogica.AsignarRepartidorLocal;
 import logica.AsignarRepartidor;
 
 import javax.ejb.EJB;
@@ -17,7 +18,8 @@ import javax.ws.rs.core.Response;
 @Produces(MediaType.APPLICATION_JSON)
 public class AsignarRepartidorPUTController {
 
-    private @EJB AsignarRepartidor asignarRepartidor;
+    private @EJB
+    AsignarRepartidorLocal asignarRepartidor;
 
     @PUT
     @Path("/repartidores")
