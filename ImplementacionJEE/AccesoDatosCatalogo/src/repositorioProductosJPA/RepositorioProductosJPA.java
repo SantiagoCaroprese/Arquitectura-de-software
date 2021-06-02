@@ -25,9 +25,6 @@ public class RepositorioProductosJPA implements RepositorioProductos {
 	@Override
 	public List<Producto> obtenerTodos() {
 		Query query = entityManager.createNamedQuery("Producto.findAll");
-		if(query.getResultList().isEmpty()) {
-			System.out.println("No hay productos");
-		}
 		return (List<Producto>) query.getResultList();
 	}
 

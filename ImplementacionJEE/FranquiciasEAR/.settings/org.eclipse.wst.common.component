@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="FranquiciasEAR">
+        <wb-resource deploy-path="/" source-path="/" tag="defaultRootSource"/>
+        <dependent-module archiveName="EntidadesFranquicias.jar" deploy-path="/lib" handle="module:/resource/EntidadesFranquicias/EntidadesFranquicias">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="AccesoDatosFranquicias.jar" deploy-path="/" handle="module:/resource/AccesoDatosFranquicias/AccesoDatosFranquicias">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="LogicaNegocioFranquicias.jar" deploy-path="/" handle="module:/resource/LogicaNegocioFranquicias/LogicaNegocioFranquicias">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="APIFranquicias.war" deploy-path="/" handle="module:/resource/APIFranquicias/APIFranquicias">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
