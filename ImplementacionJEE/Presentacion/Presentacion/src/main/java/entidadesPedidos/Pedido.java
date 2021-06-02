@@ -16,70 +16,31 @@ public class Pedido {
     private String productoSerializado;
     private String idRepartidor;
     private String departamento;
-	private String ciudad;
-	private String observaciones;
-	private ArrayList<ProductoPedido> productosPedidos;
-	
+    private String ciudad;
+    private String observaciones;
+    private ArrayList<ProductoPedido> productoPedidos;
+    private String cardNumber;
+    private String expDate;
+    private String secCode;
+    private String payments;
 
-    public Pedido(String idPedido, String idFranquicia, String estado, Timestamp fechaHoraInicio, Double totalPrecio,
-			byte domicilio, String direccionEntrega, String nombreCliente, String correoCliente,
-			String productoSerializado, String idRepartidor, String departamento, String ciudad, String observaciones) {
-		this.idPedido = idPedido;
-		this.idFranquicia = idFranquicia;
-		this.estado = estado;
-		this.fechaHoraInicio = fechaHoraInicio;
-		this.totalPrecio = totalPrecio;
-		this.domicilio = domicilio;
-		this.direccionEntrega = direccionEntrega;
-		this.nombreCliente = nombreCliente;
-		this.correoCliente = correoCliente;
-		this.productoSerializado = productoSerializado;
-		this.idRepartidor = idRepartidor;
-		this.departamento = departamento;
-		this.ciudad = ciudad;
-		this.observaciones = observaciones;
-		this.productosPedidos=new ArrayList<>();
-	}
-    
-    
+    public Pedido(String idPedido, String idFranquicia, String estado, Timestamp fechaHoraInicio, byte domicilio, String nombreCliente, String correoCliente) {
+        this.idPedido = idPedido;
+        this.idFranquicia = idFranquicia;
+        this.estado = estado;
+        this.fechaHoraInicio = fechaHoraInicio;
+        this.domicilio = domicilio;
+        this.nombreCliente = nombreCliente;
+        this.correoCliente = correoCliente;
+        this.totalPrecio=(double) 0;
+        this.productoPedidos=new ArrayList<>();
+    }
 
-	public ArrayList<ProductoPedido> getProductosPedidos() {
-		return productosPedidos;
-	}
+    public Pedido() {
 
+    }
 
-
-	public void setProductosPedidos(ArrayList<ProductoPedido> productosPedidos) {
-		this.productosPedidos = productosPedidos;
-	}
-
-
-
-	public String getDepartamento() {
-		return departamento;
-	}
-
-	public void setDepartamento(String departamento) {
-		this.departamento = departamento;
-	}
-
-	public String getCiudad() {
-		return ciudad;
-	}
-
-	public void setCiudad(String ciudad) {
-		this.ciudad = ciudad;
-	}
-
-	public String getObservaciones() {
-		return observaciones;
-	}
-
-	public void setObservaciones(String observaciones) {
-		this.observaciones = observaciones;
-	}
-
-	public String getIdPedido() {
+    public String getIdPedido() {
         return idPedido;
     }
 
@@ -210,5 +171,69 @@ public class Pedido {
         result = 31 * result + (productoSerializado != null ? productoSerializado.hashCode() : 0);
         result = 31 * result + (idRepartidor != null ? idRepartidor.hashCode() : 0);
         return result;
+    }
+
+    public void setDepartamento(String departamento) {
+        this.departamento = departamento;
+    }
+
+    public void setCiudad(String ciudad) {
+        this.ciudad = ciudad;
+    }
+
+    public void setObservaciones(String observaciones) {
+        this.observaciones = observaciones;
+    }
+
+    public void setProductoPedidos(ArrayList<ProductoPedido> productoPedidos) {
+        this.productoPedidos = productoPedidos;
+    }
+
+    public String getDepartamento() {
+        return departamento;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public String getObservaciones() {
+        return observaciones;
+    }
+
+    public ArrayList<ProductoPedido> getProductoPedidos() {
+        return productoPedidos;
+    }
+
+    public String getCardNumber() {
+        return cardNumber;
+    }
+
+    public void setCardNumber(String cardNumber) {
+        this.cardNumber = cardNumber;
+    }
+
+    public String getExpDate() {
+        return expDate;
+    }
+
+    public void setExpDate(String expDate) {
+        this.expDate = expDate;
+    }
+
+    public String getSecCode() {
+        return secCode;
+    }
+
+    public void setSecCode(String secCode) {
+        this.secCode = secCode;
+    }
+
+    public String getPayments() {
+        return payments;
+    }
+
+    public void setPayments(String payments) {
+        this.payments = payments;
     }
 }

@@ -85,7 +85,7 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 	<h:commandButton value="Completar Pedido" action="confirmarPedido"></h:commandButton>
 </h:form>
 <h:form>
-	<h:dataTable var="item" value="#{controladorCarrito.carrito.productosPedidos}">
+	<h:dataTable var="item" value="#{controladorCarrito.carrito.productoPedidos}">
 		<h:column>
 			<c:facet name="header">
 				<h:outputLabel value="Eliminar"></h:outputLabel>

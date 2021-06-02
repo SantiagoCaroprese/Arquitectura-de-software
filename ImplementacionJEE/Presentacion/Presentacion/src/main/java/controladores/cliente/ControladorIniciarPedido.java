@@ -27,7 +27,7 @@ public class ControladorIniciarPedido {
 			boolean vIn = false;
 			byte vOut = (byte)(vIn?1:0);
 			Double precio=(double) 0;
-			Pedido pedido=new Pedido("idPedido", idFranquicia, "", Timestamp.valueOf(LocalDateTime.now()), precio,vOut, "", "", "", "", "", "", "", "");
+			Pedido pedido=new Pedido("idPedido", idFranquicia, "", null,vOut, "", "");
 			FacesContext context = FacesContext.getCurrentInstance();
 			HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
 			session.setAttribute("pedido", pedido);

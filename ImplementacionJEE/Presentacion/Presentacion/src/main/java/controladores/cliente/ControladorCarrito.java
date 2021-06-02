@@ -48,7 +48,7 @@ public class ControladorCarrito {
 		if(productoPedido==null) {
 			return "false";
 		}
-		this.carrito.getProductosPedidos().add(productoPedido);
+		this.carrito.getProductoPedidos().add(productoPedido);
 		this.carrito.setTotalPrecio(this.carrito.getTotalPrecio()+productoPedido.calcularPrecioProducto());
 		FacesContext context = FacesContext.getCurrentInstance();
 		HttpSession session = (HttpSession) context.getExternalContext().getSession(false);
@@ -64,7 +64,7 @@ public class ControladorCarrito {
 			return "false";
 		}
 		ProductoPedido pp=null;
-		for (ProductoPedido producto : this.carrito.getProductosPedidos()) {
+		for (ProductoPedido producto : this.carrito.getProductoPedidos()) {
 			if(producto.getId().equals(idProducto)) {
 				pp=producto;
 				break;
@@ -73,7 +73,7 @@ public class ControladorCarrito {
 		if(pp==null) {
 			return "false";
 		}
-		this.carrito.getProductosPedidos().remove(pp);
+		this.carrito.getProductoPedidos().remove(pp);
 		this.carrito.setTotalPrecio(this.carrito.getTotalPrecio()-pp.calcularPrecioProducto());
 		return "true"; 
 	}

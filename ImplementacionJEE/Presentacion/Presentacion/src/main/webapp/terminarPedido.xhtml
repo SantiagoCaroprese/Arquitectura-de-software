@@ -72,41 +72,12 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 	<div class="topnav" id="myTopnav">
 	  <h:commandLink action="inicio" class="active" value="UpWay"></h:commandLink>
 	  <h:commandLink value="Iniciar Sesion"></h:commandLink>
-	  <h:commandLink action="carrito" value="Carrito"></h:commandLink>
+	  <h:commandLink action="realizar otro pedido" value="inicio"></h:commandLink>
 	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
 	    <i class="fa fa-bars"></i>
 	  </a>
 	</div>
 </h:form>
-<h:form>
-	<h1>Confirmar Pedido</h1>
-	<br/>
-	<br/>
-	<h:outputText value="Correo electornico"></h:outputText>
-	<h:inputText value="#{controladorConfirmarPedido.pedido.correoCliente}"></h:inputText>
-	<br/>
-	<h3>Medio de pago</h3>
-	<br/>
-	<h:outputText value="Numero Tarjeta "></h:outputText>
-	<h:inputText value="#{controladorConfirmarPedido.pedido.cardNumber}"></h:inputText>
-	<br/>
-	<h:outputText value="Nombre y Apellidos "></h:outputText>
-	<h:inputText value="#{controladorConfirmarPedido.pedido.nombreCliente}"></h:inputText>
-	<br/>
-	<h:outputText value="Mes Vencimiento"></h:outputText>
-	<h:inputText value="#{controladorConfirmarPedido.mes}"></h:inputText>
-	<br/>
-	<h:outputText value="Año Vencimiento"></h:outputText>
-	<h:inputText value="#{controladorConfirmarPedido.year}"></h:inputText>
-	<br/>
-	<h:outputText value="Codigo Seguridad"></h:outputText>
-	<h:inputText value="#{controladorConfirmarPedido.pedido.secCode}"></h:inputText>
-	<br/>
-	<br/>
-	<h:outputText value="Valor Total"></h:outputText>
-	<h:outputText value="#{controladorConfirmarPedido.pedido.totalPrecio}"></h:outputText>
-	<br/>
-	<h:commandButton value="Confirmar" action="#{controladorConfirmarPedido.confirmarPedido()}"></h:commandButton>
-</h:form>
+<h1>Pedido Completado</h1>
 </h:body>
 </html>

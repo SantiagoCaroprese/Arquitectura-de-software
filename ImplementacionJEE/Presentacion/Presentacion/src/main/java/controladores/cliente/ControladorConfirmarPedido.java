@@ -11,6 +11,8 @@ import entidadesPedidos.Pedido;
 @ViewScoped
 public class ControladorConfirmarPedido {
 	 private Pedido pedido=null;
+	 private String mes;
+	 private String year;
 
 	public ControladorConfirmarPedido() {
 		this.pedido=cargarPedido();
@@ -24,6 +26,10 @@ public class ControladorConfirmarPedido {
 		}
 		return (Pedido) session.getAttribute("pedido");
 	}
+	
+	public String confirmarPedido() {
+		return "true";
+	}
 
 	public Pedido getPedido() {
 		return pedido;
@@ -32,6 +38,23 @@ public class ControladorConfirmarPedido {
 	public void setPedido(Pedido pedido) {
 		this.pedido = pedido;
 	}
-	 
+
+	public String getMes() {
+		return mes;
+	}
+
+	public void setMes(String mes) {
+		this.mes = mes;
+	}
+
+	public String getYear() {
+		return year;
+	}
+
+	public void setYear(String year) {
+		this.year = year;
+	}
+	
+	
 	 
 }
