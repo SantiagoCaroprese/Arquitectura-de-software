@@ -9,14 +9,14 @@ import javax.ejb.Local;
 
 @Local
 public class EncontrarPedido {
-    private @EJB
+
     IRepositorioPedidos repositorioPedidos;
 
     public EncontrarPedido(){}
 
-    /*public EncontrarPedido(IRepositorioPedidos repositorioPedidos) {
+    public EncontrarPedido(IRepositorioPedidos repositorioPedidos) {
         this.repositorioPedidos = repositorioPedidos;
-    }*/
+    }
 
     public Pedido execute(String id){
         Pedido p = repositorioPedidos.find(id);

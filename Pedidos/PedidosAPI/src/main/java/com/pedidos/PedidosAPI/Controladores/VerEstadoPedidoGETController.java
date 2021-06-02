@@ -1,5 +1,6 @@
 package com.pedidos.PedidosAPI.Controladores;
 
+import InterfazLogica.VerEstadoPedidoLocal;
 import logica.VerEstadoPedido;
 
 import javax.ejb.EJB;
@@ -14,7 +15,7 @@ import javax.ws.rs.core.Response;
 public class VerEstadoPedidoGETController {
 
     private @EJB
-    VerEstadoPedido verEstadoPedido;
+    VerEstadoPedidoLocal verEstadoPedido;
 
     @GET
     @Path("{idPedido}")

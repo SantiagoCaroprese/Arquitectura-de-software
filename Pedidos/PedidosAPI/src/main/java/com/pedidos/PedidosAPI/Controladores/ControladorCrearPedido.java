@@ -1,5 +1,6 @@
 package com.pedidos.PedidosAPI.Controladores;
 
+import InterfazLogica.CrearPedidoLocal;
 import logica.CrearPedido;
 import modelos.Pedido;
 import modelos.ProductoPedido;
@@ -21,15 +22,12 @@ import java.util.List;
 public class ControladorCrearPedido {
 
     private @EJB
-    CrearPedido crearPedido;
+    CrearPedidoLocal crearPedido;
 
     @POST
-    public Response crearNuevoPedido(RequestPedido requestPedido){
-        Pedido p = new Pedido("10","100",requestPedido.estado,
-                Timestamp.valueOf(LocalDateTime.now()),
-                (byte)(requestPedido.domicilio?1:0),
-                requestPedido.nombreCliente,requestPedido.correoCliente);
-        crearPedido.execute(p,requestPedido.productos);
+    public Response crearNuevoPedido(Pedido requestPedido){
+
+        crearPedido.execute(requestPedido);
         return Response
                 .status(Response.Status.OK)
                 .entity("")

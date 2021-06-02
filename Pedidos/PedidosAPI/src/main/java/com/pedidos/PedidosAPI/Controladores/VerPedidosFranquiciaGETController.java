@@ -1,5 +1,6 @@
 package com.pedidos.PedidosAPI.Controladores;
 
+import InterfazLogica.VerPedidosFranquiciaLocal;
 import logica.VerPedidosFranquicia;
 
 import javax.ejb.EJB;
@@ -14,7 +15,7 @@ import javax.ws.rs.core.Response;
 public class VerPedidosFranquiciaGETController {
 
     private @EJB
-    VerPedidosFranquicia verPedidosFranquicia;
+    VerPedidosFranquiciaLocal verPedidosFranquicia;
 
     @GET
     @Path("{idFranquicia}")
