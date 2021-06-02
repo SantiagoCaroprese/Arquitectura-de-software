@@ -71,7 +71,7 @@ public class ControladorVerProducto {
 				adicionales2.add(ing);
 				
 				Ingrediente ing2=new Ingrediente();
-				ing2.setId(0);
+				ing2.setId(1);
 				ing2.setNombre("Papas");
 				ing2.setPrecioAdicion(new BigDecimal(2000));
 				ing2.setTipo("aburrido");
