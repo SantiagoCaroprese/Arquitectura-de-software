@@ -72,12 +72,49 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:form>
 	<div class="topnav" id="myTopnav">
 	  <h:commandLink action="inicio" class="active" value="UpWay"></h:commandLink>
+	  <h:commandLink value="Iniciar Sesion"></h:commandLink>
 	  <h:commandLink action="inicio" value="Regresar"></h:commandLink>
 	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
 	    <i class="fa fa-bars"></i>
 	  </a>
 	</div>
 </h:form>
-<h1>Iniciar Pedido Recoger</h1>
+<h1>Iniciar Pedido para Recoger en Tienda</h1>
+<br/>
+<br/>
+	<div style="padding:14px;">
+	<h:form>
+		<h:commandButton value="Cambiar a Pedido a Domicilio" action="pedidoDomicilio"></h:commandButton>
+	</h:form>
+	<h:form>
+		<h:dataTable value="#{controladorObtenerFranquicias.franquicias}" var="franquicia" border="4" style="width:500px;">
+		   <h:column>
+		      <c:facet name="header">
+		         <h:outputLabel value="Franquicia"></h:outputLabel>
+		      </c:facet>
+		      <h:outputLabel value="#{franquicia.nombre}"></h:outputLabel>
+		      <h:outputLabel value="#{franquicia.id}" style="display:none;"/>
+	      </h:column>
+	      <h:column>
+		      <c:facet name="header">
+		         <h:outputLabel value="Ciudad"/>
+		      </c:facet>
+		      <h:outputLabel value="#{franquicia.ciudad}"></h:outputLabel>
+	      </h:column>
+	      <h:column>
+		      <c:facet name="header">
+		         <h:outputLabel value="Direccion"></h:outputLabel>
+		      </c:facet>
+		      <h:outputLabel value="#{franquicia.direccion}"></h:outputLabel>
+	      </h:column>
+	      <h:column>
+		      <c:facet name="header">
+		         <h:outputLabel value="Seleccionar"></h:outputLabel>
+		      </c:facet>		      
+		      <h:commandLink value="Elegir Franquicia" action="#{controladorIniciarPedido.iniciarPedidoRecoger(franquicia.id)}"></h:commandLink>
+		   </h:column>
+		</h:dataTable>
+	</h:form>
+	</div>
 </h:body>
 </html>

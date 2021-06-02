@@ -1,12 +1,8 @@
-package modelos;
+package entidadesPedidos;
 
-import javax.persistence.Basic;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 
-@Entity
 public class Pedido {
     private String idPedido;
     private String idFranquicia;
@@ -19,20 +15,71 @@ public class Pedido {
     private String correoCliente;
     private String productoSerializado;
     private String idRepartidor;
+    private String departamento;
+	private String ciudad;
+	private String observaciones;
+	private ArrayList<ProductoPedido> productosPedidos;
+	
 
-    public Pedido(String idPedido, String idFranquicia, String estado, Timestamp fechaHoraInicio, byte domicilio, String nombreCliente, String correoCliente) {
-        this.idPedido = idPedido;
-        this.idFranquicia = idFranquicia;
-        this.estado = estado;
-        this.fechaHoraInicio = fechaHoraInicio;
-        this.domicilio = domicilio;
-        this.nombreCliente = nombreCliente;
-        this.correoCliente = correoCliente;
-    }
+    public Pedido(String idPedido, String idFranquicia, String estado, Timestamp fechaHoraInicio, Double totalPrecio,
+			byte domicilio, String direccionEntrega, String nombreCliente, String correoCliente,
+			String productoSerializado, String idRepartidor, String departamento, String ciudad, String observaciones) {
+		this.idPedido = idPedido;
+		this.idFranquicia = idFranquicia;
+		this.estado = estado;
+		this.fechaHoraInicio = fechaHoraInicio;
+		this.totalPrecio = totalPrecio;
+		this.domicilio = domicilio;
+		this.direccionEntrega = direccionEntrega;
+		this.nombreCliente = nombreCliente;
+		this.correoCliente = correoCliente;
+		this.productoSerializado = productoSerializado;
+		this.idRepartidor = idRepartidor;
+		this.departamento = departamento;
+		this.ciudad = ciudad;
+		this.observaciones = observaciones;
+		this.productosPedidos=new ArrayList<>();
+	}
+    
+    
 
-    @Id
-    @Column(name = "idPedido")
-    public String getIdPedido() {
+	public ArrayList<ProductoPedido> getProductosPedidos() {
+		return productosPedidos;
+	}
+
+
+
+	public void setProductosPedidos(ArrayList<ProductoPedido> productosPedidos) {
+		this.productosPedidos = productosPedidos;
+	}
+
+
+
+	public String getDepartamento() {
+		return departamento;
+	}
+
+	public void setDepartamento(String departamento) {
+		this.departamento = departamento;
+	}
+
+	public String getCiudad() {
+		return ciudad;
+	}
+
+	public void setCiudad(String ciudad) {
+		this.ciudad = ciudad;
+	}
+
+	public String getObservaciones() {
+		return observaciones;
+	}
+
+	public void setObservaciones(String observaciones) {
+		this.observaciones = observaciones;
+	}
+
+	public String getIdPedido() {
         return idPedido;
     }
 
@@ -40,8 +87,6 @@ public class Pedido {
         this.idPedido = idPedido;
     }
 
-    @Basic
-    @Column(name = "idFranquicia")
     public String getIdFranquicia() {
         return idFranquicia;
     }
@@ -50,8 +95,6 @@ public class Pedido {
         this.idFranquicia = idFranquicia;
     }
 
-    @Basic
-    @Column(name = "estado")
     public String getEstado() {
         return estado;
     }
@@ -60,8 +103,6 @@ public class Pedido {
         this.estado = estado;
     }
 
-    @Basic
-    @Column(name = "fechaHoraInicio")
     public Timestamp getFechaHoraInicio() {
         return fechaHoraInicio;
     }
@@ -70,8 +111,6 @@ public class Pedido {
         this.fechaHoraInicio = fechaHoraInicio;
     }
 
-    @Basic
-    @Column(name = "totalPrecio")
     public Double getTotalPrecio() {
         return totalPrecio;
     }
@@ -80,8 +119,6 @@ public class Pedido {
         this.totalPrecio = totalPrecio;
     }
 
-    @Basic
-    @Column(name = "domicilio")
     public byte getDomicilio() {
         return domicilio;
     }
@@ -90,8 +127,6 @@ public class Pedido {
         this.domicilio = domicilio;
     }
 
-    @Basic
-    @Column(name = "direccionEntrega")
     public String getDireccionEntrega() {
         return direccionEntrega;
     }
@@ -100,8 +135,6 @@ public class Pedido {
         this.direccionEntrega = direccionEntrega;
     }
 
-    @Basic
-    @Column(name = "nombreCliente")
     public String getNombreCliente() {
         return nombreCliente;
     }
@@ -110,8 +143,6 @@ public class Pedido {
         this.nombreCliente = nombreCliente;
     }
 
-    @Basic
-    @Column(name = "correoCliente")
     public String getCorreoCliente() {
         return correoCliente;
     }
@@ -120,8 +151,6 @@ public class Pedido {
         this.correoCliente = correoCliente;
     }
 
-    @Basic
-    @Column(name = "productoSerializado")
     public String getProductoSerializado() {
         return productoSerializado;
     }
@@ -130,8 +159,6 @@ public class Pedido {
         this.productoSerializado = productoSerializado;
     }
 
-    @Basic
-    @Column(name = "idRepartidor")
     public String getIdRepartidor() {
         return idRepartidor;
     }

@@ -72,6 +72,7 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:form>
 	<div class="topnav" id="myTopnav">
 	  <h:commandLink action="inicio" class="active" value="UpWay"></h:commandLink>
+	  <h:commandLink value="Iniciar Sesion"></h:commandLink>
 	  <h:commandLink action="inicio" value="Regresar"></h:commandLink>
 	  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
 	    <i class="fa fa-bars"></i>
@@ -86,17 +87,17 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 	<h:form>
 		<br/><br/>
 		Departamento:
-		<h:selectOneMenu value="#{controladorIniciarPedidoDomicilio.departamento}">
+		<h:selectOneMenu>
 			<c:selectItems value="#{controladorDepartamentos.departamentos}" var="c" itemLabel="#{c.departamento}" itemValue="#{c.departamento}" />
 		</h:selectOneMenu>
 		<br/><br/>
 		Ciudad:
-		<h:selectOneMenu value="#{controladorIniciarPedidoDomicilio.ciudad}">
+		<h:selectOneMenu>
 			<c:selectItems value="#{controladorDepartamentos.ciudades}" var="d" itemLabel="#{d}" itemValue="#{d}" />
 		</h:selectOneMenu>
 		<br/><br/>
 		Direccion:
-		<h:inputText value="#{controladorIniciarPedidoDomicilio.direccion}"/>
+		<h:inputText/>
 		<br/><br/>
 		Inmueble:
 		<h:selectOneMenu>
@@ -104,9 +105,9 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 		</h:selectOneMenu>
 		<br/><br/>
 		Observaciones:
-		<h:inputText style="width:200px; height:200px;" value="#{controladorIniciarPedidoDomicilio.observaciones}"/>
+		<h:inputText style="width:200px; height:200px;"/>
 		<br/><br/>
-		<h:commandButton value="Continuar" action="#{controladorIniciarPedidoDomicilio.crearPedidoDomicilio}"></h:commandButton>
+		<h:commandButton value="Continuar" action="inicio"></h:commandButton>
 	</h:form>
 	</div>
 </h:body>

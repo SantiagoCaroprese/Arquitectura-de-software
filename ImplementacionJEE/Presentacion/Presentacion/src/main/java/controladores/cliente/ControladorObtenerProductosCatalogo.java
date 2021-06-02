@@ -33,6 +33,4 @@ public class ControladorObtenerProductosCatalogo {
 	public void setProductos(ArrayList<Producto> productos) {
 		this.productos = productos;
 	}
-	
-	
 }

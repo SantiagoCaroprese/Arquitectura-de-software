@@ -1,4 +1,4 @@
-package modelos;
+package entidadesPedidos;
 
 import java.util.List;
 

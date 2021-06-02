@@ -38,7 +38,7 @@ public class ControladorDepartamentos {
 	}
 
 	public ArrayList<String> getCiudades() {
-		return ciudades;
+		return departamentos.get(1).getCiudades();
 	}
 
 	public void setCiudades(ArrayList<String> ciudades) {

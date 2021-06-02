@@ -11,10 +11,6 @@
 			<to-view-id>/inicio.xhtml</to-view-id>
 		</navigation-case>
 		<navigation-case>
-			<from-outcome>iniciarSesion</from-outcome>
-			<to-view-id>/iniciarSesion.xhtml</to-view-id>
-		</navigation-case>
-		<navigation-case>
 			<from-action>#{controladorObtenerProductosCatalogo.verCatalogo}</from-action>
 			<from-outcome>true</from-outcome>
 			<to-view-id>/verCatalogo.xhtml</to-view-id>
@@ -37,7 +33,7 @@
 		<from-view-id>/verCatalogo.xhtml</from-view-id>
 		<navigation-case>
 			<from-outcome>inicio</from-outcome>
-			<to-view-id>/verCatalogo.xhtml</to-view-id>
+			<to-view-id>/inicio.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
@@ -50,22 +46,26 @@
 			<from-outcome>pedidoRecoger</from-outcome>
 			<to-view-id>/iniciarPedidoRecoger.xhtml</to-view-id>
 		</navigation-case>
-		<navigation-case>
-			<from-action>#{controladorIniciarPedidoDomicilio.crearPedidoDomicilio}</from-action>
-			<from-outcome>true</from-outcome>
-			<to-view-id>/verCatalogoFranquicia.xhtml</to-view-id>
-		</navigation-case>
-		<navigation-case>
-			<from-action>#{controladorIniciarPedidoDomicilio.crearPedidoDomicilio}</from-action>
-			<from-outcome>false</from-outcome>
-			<to-view-id>/Error.xhtml</to-view-id>
-		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
 		<from-view-id>/iniciarPedidoRecoger.xhtml</from-view-id>
 		<navigation-case>
 			<from-outcome>inicio</from-outcome>
 			<to-view-id>/inicio.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>pedidoDomicilio</from-outcome>
+			<to-view-id>/iniciarPedidoDomicilio.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{controladorIniciarPedido.iniciarPedidoRecoger(franquicia.id)}</from-action>
+			<from-outcome>true</from-outcome>
+			<to-view-id>/verCatalogoFranquicia.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{controladorIniciarPedido.iniciarPedidoRecoger(franquicia.id)}</from-action>
+			<from-outcome>false</from-outcome>
+			<to-view-id>/Error.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 	<navigation-rule>
@@ -78,9 +78,25 @@
 			<from-outcome>catalogoFranquicia</from-outcome>
 			<to-view-id>/verCatalogoFranquicia.xhtml</to-view-id>
 		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/verCatalogoFranquicia.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>inicio</from-outcome>
+			<to-view-id>/verCatalogoFranquicia.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>catalogoFranquicia</from-outcome>
+			<to-view-id>/verCatalogoFranquicia.xhtml</to-view-id>
+		</navigation-case>
 		<navigation-case>
 			<from-outcome>carrito</from-outcome>
 			<to-view-id>/verCarrito.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-action>#{controladorCatalogoFranquicia.productosFranquicia()}</from-action>
+			<from-outcome>#{null}</from-outcome>
+			<to-view-id>/Error.xhtml</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 </faces-config>

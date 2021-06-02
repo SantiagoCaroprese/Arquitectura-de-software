@@ -1,4 +1,4 @@
-package modelos;
+package entidadesPedidos;
 
 public class IngredientePedido {
     private String id;
