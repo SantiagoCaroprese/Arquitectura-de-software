@@ -11,6 +11,7 @@ import javax.servlet.http.HttpSession;
 import entidadesCatalogo.Ingrediente;
 import entidadesCatalogo.Producto;
 import entidadesPedidos.Pedido;
+import modelos.catalogo.ObtenerAdicionalesBean;
 
 @ManagedBean
 @ViewScoped
@@ -56,27 +57,29 @@ public class ControladorVerProducto {
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
-		ArrayList<Producto> adicionales2=new ArrayList<>();
-		ArrayList<Ingrediente> ings= new ArrayList<>();
-		if(adicionales==null){
+		ArrayList<Ingrediente> adicionales2=new ArrayList<>();
+		if(this.adicionales==null){
 		 	//llamar Bean
-			Ingrediente ing=new Ingrediente();
-			ing.setId(0);
-			ing.setNombre("El Poderosoito");
-			ing.setPrecioAdicion(new BigDecimal(2000));
-			ing.setTipo("...pero Sabroso");
-			ings.add(ing);
-			
-			Ingrediente ing2=new Ingrediente();
-			ing2.setId(0);
-			ing2.setNombre("Papas");
-			ing2.setPrecioAdicion(new BigDecimal(2000));
-			ing2.setTipo("aburrido");
-			ings.add(ing2);
-			
-			session.setAttribute("adicionales", ings);
+			ObtenerAdicionalesBean bean=new ObtenerAdicionalesBean();
+			this.adicionales=bean.ObtenerAdicionales();
+			if(this.adicionales==null||adicionales.isEmpty()) {
+				Ingrediente ing=new Ingrediente();
+				ing.setId(0);
+				ing.setNombre("El Poderosoito");
+				ing.setPrecioAdicion(new BigDecimal(2000));
+				ing.setTipo("...pero Sabroso");
+				adicionales2.add(ing);
+				
+				Ingrediente ing2=new Ingrediente();
+				ing2.setId(0);
+				ing2.setNombre("Papas");
+				ing2.setPrecioAdicion(new BigDecimal(2000));
+				ing2.setTipo("aburrido");
+				adicionales2.add(ing2);	
+			}			
+			session.setAttribute("adicionales", adicionales2);
+			this.adicionales=adicionales2;
 		}
-		this.adicionales=ings;
 	}
 
 	public Producto getProducto() {
