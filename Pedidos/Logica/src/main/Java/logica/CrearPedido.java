@@ -38,16 +38,16 @@ public class CrearPedido implements CrearPedidoLocal {
         pedido.setTotalPrecio(calcularPrecioPedido(pedido.getProductoPedidos()));
 
         //Se realiza el pago del pedido
-        if(!servicioExternoPagosLocal.realizarPago(pedido.getCardNumber(),pedido.getExpDate(),
+        /*if(!servicioExternoPagosLocal.realizarPago(pedido.getCardNumber(),pedido.getExpDate(),
                 pedido.getSecCode(),pedido.getNombreCliente(),pedido.getPayments()
                 , TipoTarjeta.execute(pedido.getCardNumber()))){
             return null;
-        }
+        }*/
 
         //Se envia la confirmación del pedido en base de datos
-        servicioExternoNotificacionesLocal.enviarCorreo(pedido.getCorreoCliente(),"Pedido confirmado!",
+        /*servicioExternoNotificacionesLocal.enviarCorreo(pedido.getCorreoCliente(),"Pedido confirmado!",
                 CreadorMensajes.crearHtmlConfirmacion(pedido.getNombreCliente(), pedido.getTotalPrecio())
-                );
+                );*/
 
         //Se guarda el pedido en base de datos
         repository.addPedido(pedido);

@@ -2,8 +2,8 @@
   <artifact type="exploded-ear" name="unEar">
     <output-path>$PROJECT_DIR$/out/artifacts/unEar</output-path>
     <root id="root">
-      <element id="directory" name="WarP.war">
-        <element id="artifact" artifact-name="WarP" />
+      <element id="directory" name="PedidosAPI.war">
+        <element id="artifact" artifact-name="PedidosAPI:war exploded3" />
       </element>
     </root>
   </artifact>

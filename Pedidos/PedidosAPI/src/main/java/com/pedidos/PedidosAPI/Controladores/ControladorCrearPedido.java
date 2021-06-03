@@ -42,11 +42,16 @@ public class ControladorCrearPedido {
     public Response crearNuevoPedido(Pedido pedido) throws NamingException {
         System.out.println("No pls");
         Context context = new InitialContext();
+        try{
+            CrearPedidoLocal mbean = (CrearPedidoLocal) context.lookup("java:module/CrearPedido");
+            mbean.execute(pedido);
+        }catch (Exception e){
+                System.out.println("Esta null");
+                System.out.println(context.getEnvironment());
 
-        /*CrearPedidoLocal mbean = (CrearPedidoLocal) context.lookup("java:global/CrearPedido");
-        if(mbean == null){
-            System.out.println("Esta null");
-        }*/
+        }
+
+
         //crearPedido.execute(requestPedido);
 
         JSONObject obj= new JSONObject();

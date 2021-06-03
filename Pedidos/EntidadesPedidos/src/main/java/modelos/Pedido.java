@@ -209,22 +209,27 @@ public class Pedido {
         return result;
     }
 
+    @Transient
     public String getDepartamento() {
         return departamento;
     }
 
+    @Transient
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
     }
 
+    @Transient
     public String getCiudad() {
         return ciudad;
     }
 
+    @Transient
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }
 
+    @Transient
     public String getObservaciones() {
         return observaciones;
     }
@@ -238,38 +243,47 @@ public class Pedido {
         return productoPedidos;
     }
 
+    @Transient
     public void setProductoPedidos(List<ProductoPedido> productoPedidos) {
         this.productoPedidos = productoPedidos;
     }
 
+    @Transient
     public String getCardNumber() {
         return cardNumber;
     }
 
+    @Transient
     public void setCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
     }
 
+    @Transient
     public String getExpDate() {
         return expDate;
     }
 
+    @Transient
     public void setExpDate(String expDate) {
         this.expDate = expDate;
     }
 
+    @Transient
     public String getSecCode() {
         return secCode;
     }
 
+    @Transient
     public void setSecCode(String secCode) {
         this.secCode = secCode;
     }
 
+    @Transient
     public String getPayments() {
         return payments;
     }
 
+    @Transient
     public void setPayments(String payments) {
         this.payments = payments;
     }
