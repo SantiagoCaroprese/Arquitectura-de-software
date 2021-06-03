@@ -73,6 +73,34 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 		    text-align: left;
 		  }
 		}
+		table {
+		  width:70%;
+		  margin-left: auto;
+  		  margin-right: auto;
+		}
+		.button1 {
+		  background-color: #4CAF50; /* Green */
+		  border: none;
+		  color: white;
+		  padding: 16px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  transition-duration: 0.4s;
+		  cursor: pointer;
+		  float: right;
+		}
+		.button5 {
+		  background-color: white;
+		  color: black;
+		  border: 2px solid #555555;
+		}
+		.button5:hover {
+		  background-color: #555555;
+		  color: white;
+		}
 		
 	</style>
 </h:head>
@@ -88,19 +116,15 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 	</div>
 </h:form>
 <div class="header">
-	<h1>Pedido</h1>
-	<p>Recoger en Tienda</p>
+	<h1>Seleccione una Franquicia</h1>
+	<p>Pedido par Recoger</p>
 </div>
 <br/>
 <br/>
+	
 	<div style="padding:14px;">
 	<h:form>
-		<h:commandButton value="Cambiar a Pedido a Domicilio" action="pedidoDomicilio"></h:commandButton>
-	</h:form>
-	<br/>
-	<br/>
-	<h:form>
-		<h:dataTable value="#{controladorObtenerFranquicias.franquicias}" var="franquicia" border="4" style="width:500px;">
+		<h:dataTable styleClass="table" value="#{controladorObtenerFranquicias.franquicias}" var="franquicia" border="4">
 		   <h:column>
 		      <c:facet name="header">
 		         <h:outputLabel value="Franquicia"></h:outputLabel>
@@ -126,6 +150,13 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 		      <h:commandLink value="Elegir Franquicia" action="#{controladorIniciarPedido.iniciarPedidoRecoger(franquicia.id)}"></h:commandLink>
 		   </h:column>
 		</h:dataTable>
+	</h:form>
+	</div>
+	<br/>
+	<br/>
+	<div style="margin:15px;">
+	<h:form>
+		<h:commandButton styleClass="button1 button5" value="Cambiar a Pedido a Domicilio" action="pedidoDomicilio"></h:commandButton>
 	</h:form>
 	</div>
 </h:body>
