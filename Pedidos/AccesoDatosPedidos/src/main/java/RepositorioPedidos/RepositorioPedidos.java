@@ -7,7 +7,9 @@ import javax.ejb.Local;
 import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.PersistenceUnit;
 import java.util.List;
 
 @Stateless
@@ -16,11 +18,11 @@ public class RepositorioPedidos implements IRepositorioPedidos {
 
     @Override
     public Pedido addPedido(Pedido pedido) {
-        EntityManager em = Persistence.createEntityManagerFactory("EntidadesPedidos").createEntityManager();
-        em.getTransaction().begin();
+        EntityManager em = Persistence.createEntityManagerFactory("AccesoDatosPedidos").createEntityManager();
+        //em.getTransaction().begin();
         em.persist(pedido);
-        em.getTransaction().commit();
-        em.close();
+        //em.getTransaction().commit();
+        //em.close();
         return pedido;
     }
 

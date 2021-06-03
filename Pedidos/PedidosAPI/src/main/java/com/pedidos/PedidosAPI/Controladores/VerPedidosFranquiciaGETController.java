@@ -1,4 +1,4 @@
-package com.pedidos.PedidosAPI.Controladores;
+/*package com.pedidos.PedidosAPI.Controladores;
 
 import InterfazLogica.VerPedidosFranquiciaLocal;
 import logica.VerPedidosFranquicia;
@@ -26,4 +26,4 @@ public class VerPedidosFranquiciaGETController {
                 .entity("")
                 .build();
     }
-}
+}*/

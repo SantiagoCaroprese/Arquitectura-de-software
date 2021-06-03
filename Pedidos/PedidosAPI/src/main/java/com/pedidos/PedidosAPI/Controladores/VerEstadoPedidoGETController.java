@@ -1,4 +1,4 @@
-package com.pedidos.PedidosAPI.Controladores;
+/*package com.pedidos.PedidosAPI.Controladores;
 
 import InterfazLogica.VerEstadoPedidoLocal;
 import logica.VerEstadoPedido;
@@ -14,8 +14,7 @@ import javax.ws.rs.core.Response;
 @Stateless
 public class VerEstadoPedidoGETController {
 
-    private @EJB
-    VerEstadoPedidoLocal verEstadoPedido;
+    private @EJB VerEstadoPedidoLocal verEstadoPedido;
 
     @GET
     @Path("{idPedido}")
@@ -28,4 +27,4 @@ public class VerEstadoPedidoGETController {
                 .entity("")
                 .build();
     }
-}
+}*/
