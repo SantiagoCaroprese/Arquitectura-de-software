@@ -5,6 +5,7 @@ import InterfazLogica.CrearPedidoLocal;
 import com.pedidos.Conectores.ServiciosExternosPedidosLocal.IServicioExternoNotificacionesLocal;
 import com.pedidos.Conectores.ServiciosExternosPedidosLocal.IServicioExternoPagosLocal;
 import logica.utils.CreadorMensajes;
+import logica.utils.TipoTarjeta;
 import modelos.IngredientePedido;
 import modelos.Pedido;
 import modelos.ProductoPedido;
@@ -37,11 +38,11 @@ public class CrearPedido implements CrearPedidoLocal {
         pedido.setTotalPrecio(calcularPrecioPedido(pedido.getProductoPedidos()));
 
         //Se realiza el pago del pedido
-        /*if(!servicioExternoPagosLocal.realizarPago(pedido.getCardNumber(),pedido.getExpDate(),
+        if(!servicioExternoPagosLocal.realizarPago(pedido.getCardNumber(),pedido.getExpDate(),
                 pedido.getSecCode(),pedido.getNombreCliente(),pedido.getPayments()
                 , TipoTarjeta.execute(pedido.getCardNumber()))){
             return null;
-        }*/
+        }
 
         //Se envia la confirmación del pedido en base de datos
         servicioExternoNotificacionesLocal.enviarCorreo(pedido.getCorreoCliente(),"Pedido confirmado!",
