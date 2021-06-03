@@ -43,10 +43,10 @@ public class ControladorCrearPedido {
         System.out.println("No pls");
         Context context = new InitialContext();
 
-        CrearPedidoLocal mbean = (CrearPedidoLocal) context.lookup("java:global/CrearPedido");
+        /*CrearPedidoLocal mbean = (CrearPedidoLocal) context.lookup("java:global/CrearPedido");
         if(mbean == null){
             System.out.println("Esta null");
-        }
+        }*/
         //crearPedido.execute(requestPedido);
 
         JSONObject obj= new JSONObject();
@@ -56,11 +56,13 @@ public class ControladorCrearPedido {
         obj.put("owner","lol");
         obj.put("paymentMonto","4");
 
+        System.out.println(pedido.getNombreCliente());
+
         Client client = ClientBuilder.newClient();
-        Response response = client
+        /*Response response = client
                 .target("http://25.46.31.205:44342/" + "VisaPayment" + "/Pay")
                 .request(MediaType.APPLICATION_JSON)
-                .post(Entity.entity(obj,MediaType.APPLICATION_JSON_TYPE));
+                .post(Entity.entity(obj,MediaType.APPLICATION_JSON_TYPE));*/
 
         return Response
                 .status(Response.Status.OK)
