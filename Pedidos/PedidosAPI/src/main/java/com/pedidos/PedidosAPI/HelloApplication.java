@@ -1,6 +1,6 @@
 package com.pedidos.PedidosAPI;
 
-import com.pedidos.PedidosAPI.Controladores.ControladorCrearPedido;
+import com.pedidos.PedidosAPI.endpoints.ControladorCrearPedido;
 
 
 
@@ -15,8 +15,6 @@ public class HelloApplication extends Application {
     private Set<Object> singletons = new HashSet<Object>();
     public HelloApplication() {
         // Register our hello service
-        singletons.add(new HelloResource());
-        //singletons.add(new VerEstadoPedidoGETController());
         singletons.add(new ControladorCrearPedido());
         //singletons.add(new VerEstadoPedidoGETController());
     }

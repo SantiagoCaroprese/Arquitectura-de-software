@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/PedidosEAR</output-path>
     <root id="root">
       <element id="directory" name="WarP.war">
-        <element id="artifact" artifact-name="WarP" />
+        <element id="artifact" artifact-name="Pedidos" />
       </element>
     </root>
   </artifact>
