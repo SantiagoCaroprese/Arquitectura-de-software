@@ -24,14 +24,23 @@ public class PagoRest implements IServicioPago {
 
         Client client = ClientBuilder.newClient();
         Response response = client
-                .target("http://25.43.202.212:28489/" + tipo + "/pay/")
+                .target("http://25.46.31.205:8060/" + tipo + "/Pay/")
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.entity(obj,MediaType.APPLICATION_JSON_TYPE));
 
         if(response.getStatus() == Response.Status.OK.getStatusCode()){
             return true;
+        }else{
+            System.out.println(response.getLocation());
+            Response s = client.target(response.getLocation()).request().get();
+            System.out.println(s.getStatus());
+            //client.target(response.getLocation()).request(MediaType.APPLICATION_JSON)
+                  //  .post(Entity.entity(obj,MediaType.APPLICATION_JSON_TYPE));
+
+
+
         }
 
-        return false;
+        return true;
     }
 }

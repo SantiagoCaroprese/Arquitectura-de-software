@@ -50,6 +50,7 @@ public class CrearPedido implements CrearPedidoLocal {
                 );*/
 
         //Se guarda el pedido en base de datos
+        pedido.setProductoSerializado(pedido.getProductoPedidos().toString());
         repository.addPedido(pedido);
         return pedido;
     }
