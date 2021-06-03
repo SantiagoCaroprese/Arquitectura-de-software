@@ -8,6 +8,10 @@ public class ProductoPedido {
     private int precioBase;
     private List<IngredientePedido> ingredientes;
 
+    public ProductoPedido(){
+
+    }
+
     public ProductoPedido(String id, String nombre, int precioBase, int precioTotal, List<IngredientePedido> ingredientes) {
         this.id = id;
         this.nombre = nombre;

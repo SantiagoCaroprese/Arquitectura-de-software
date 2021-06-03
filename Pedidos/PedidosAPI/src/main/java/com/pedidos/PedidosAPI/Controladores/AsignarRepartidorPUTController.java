@@ -1,4 +1,4 @@
-package com.pedidos.PedidosAPI.Controladores;
+/*package com.pedidos.PedidosAPI.Controladores;
 
 
 import InterfazLogica.AsignarRepartidorLocal;
@@ -58,5 +58,5 @@ public class AsignarRepartidorPUTController {
 			<property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/pedidos"/>
 			<property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver"/>
 		</properties>
-     */
-}
+
+}*/

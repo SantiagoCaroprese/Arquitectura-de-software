@@ -55,5 +55,6 @@
     <orderEntry type="library" name="Maven: jakarta.inject:jakarta.inject-api:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.classfilewriter:jboss-classfilewriter:1.2.4.Final" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.47" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.11.4" level="project" />
   </component>
 </module>

@@ -1,8 +1,11 @@
 package modelos;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Pedido {
@@ -18,26 +21,24 @@ public class Pedido {
     private String productoSerializado;
     private String idRepartidor;
 
-    @Transient
-    private String departamento;
-    @Transient
-    private String ciudad;
-    @Transient
-    private String observaciones;
-    @Transient
-    private ArrayList<ProductoPedido> productoPedidos;
 
-    @Transient
-    private String cardNumber;
+    private transient String departamento;
 
-    @Transient
-    private String expDate;
+    private transient String ciudad;
 
-    @Transient
-    private String secCode;
+    private transient String observaciones;
 
-    @Transient
-    private String payments;
+    private transient List<ProductoPedido> productoPedidos;
+
+    private transient String cardNumber;
+
+    private transient String expDate;
+
+    private transient String secCode;
+
+    private transient String payments;
+
+
 
     public Pedido(String idPedido, String idFranquicia, String estado, Timestamp fechaHoraInicio, byte domicilio, String nombreCliente, String correoCliente) {
         this.idPedido = idPedido;
@@ -208,82 +209,67 @@ public class Pedido {
         return result;
     }
 
-    @Transient
+    public String getDepartamento() {
+        return departamento;
+    }
+
     public void setDepartamento(String departamento) {
         this.departamento = departamento;
     }
 
-    @Transient
+    public String getCiudad() {
+        return ciudad;
+    }
+
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
     }
 
-    @Transient
+    public String getObservaciones() {
+        return observaciones;
+    }
+
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
     }
 
     @Transient
-    public void setProductoPedidos(ArrayList<ProductoPedido> productoPedidos) {
-        this.productoPedidos = productoPedidos;
-    }
-
-    @Transient
-    public String getDepartamento() {
-        return departamento;
-    }
-
-    @Transient
-    public String getCiudad() {
-        return ciudad;
-    }
-
-    @Transient
-    public String getObservaciones() {
-        return observaciones;
-    }
-
-    @Transient
-    public ArrayList<ProductoPedido> getProductoPedidos() {
+    public List<ProductoPedido> getProductoPedidos() {
         return productoPedidos;
     }
 
-    @Transient
+    public void setProductoPedidos(List<ProductoPedido> productoPedidos) {
+        this.productoPedidos = productoPedidos;
+    }
+
     public String getCardNumber() {
         return cardNumber;
     }
 
-    @Transient
     public void setCardNumber(String cardNumber) {
         this.cardNumber = cardNumber;
     }
 
-    @Transient
     public String getExpDate() {
         return expDate;
     }
 
-    @Transient
     public void setExpDate(String expDate) {
         this.expDate = expDate;
     }
 
-    @Transient
     public String getSecCode() {
         return secCode;
     }
 
-    @Transient
     public void setSecCode(String secCode) {
         this.secCode = secCode;
     }
 
-    @Transient
     public String getPayments() {
         return payments;
     }
 
-    @Transient
     public void setPayments(String payments) {
         this.payments = payments;
     }

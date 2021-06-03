@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$" />
     <file type="web" url="file://$PROJECT_DIR$/../Conectores" />
     <file type="web" url="file://$PROJECT_DIR$/../Logica" />
     <file type="web" url="file://$PROJECT_DIR$" />

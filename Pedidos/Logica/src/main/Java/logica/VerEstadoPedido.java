@@ -11,18 +11,15 @@ import javax.ejb.Stateless;
 
 @Stateless
 public class VerEstadoPedido implements VerEstadoPedidoLocal {
-    private @EJB
-    IRepositorioPedidos repositorioPedidos;
+    private @EJB IRepositorioPedidos repositorioPedidos;
 
-    private EncontrarPedido encontrarPedido;
 
-    public VerEstadoPedido() {
-        //this.repositorioPedidos = repositorioPedidos;
-        //encontrarPedido = new EncontrarPedido(repositorioPedidos);
-    }
+
+    public VerEstadoPedido(){}
 
     @Override
     public String execute(String idPedido){
+        EncontrarPedido encontrarPedido;
         encontrarPedido = new EncontrarPedido(repositorioPedidos);
         return encontrarPedido.execute(idPedido).getEstado();
     }

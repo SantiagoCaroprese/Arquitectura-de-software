@@ -29,6 +29,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" name="jboss-cli-client" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:4.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.resteasy:resteasy-servlet-initializer:4.6.0.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.resteasy:resteasy-core:4.6.0.Final" level="project" />
@@ -74,6 +76,16 @@
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
     <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.6.2" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
-    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.weld.se:weld-se-core:3.1.6.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.weld.environment:weld-environment-common:3.1.6.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.weld:weld-core-impl:3.1.6.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.weld:weld-api:3.1.SP3" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.weld:weld-spi:3.1.SP3" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.spec.javax.el:jboss-el-api_3.0_spec:2.0.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.spec.javax.interceptor:jboss-interceptors-api_1.2_spec:2.0.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.weld.probe:weld-probe-core:3.1.6.Final" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.enterprise:jakarta.enterprise.cdi-api:2.0.2" level="project" />
+    <orderEntry type="library" name="Maven: jakarta.inject:jakarta.inject-api:1.0" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.classfilewriter:jboss-classfilewriter:1.2.4.Final" level="project" />
   </component>
 </module>

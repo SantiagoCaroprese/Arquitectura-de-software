@@ -6,6 +6,10 @@ public class IngredientePedido {
     private int precio;
     private int cantidad;
 
+    public IngredientePedido(){
+
+    }
+
     public IngredientePedido(String id, String nombre, int precio, int cantidad) {
         this.id = id;
         this.nombre = nombre;
