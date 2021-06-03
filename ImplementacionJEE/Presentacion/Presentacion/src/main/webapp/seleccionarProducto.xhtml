@@ -7,6 +7,50 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link href="./resources/css/default.css" rel="stylesheet" type="text/css" />
 <style>
+	.center {
+	  margin: auto;
+	  width: 50%;
+	  padding:5px;
+	}
+	.button {
+	  border-radius: 4px;
+	  background-color: #4CAF50; /* Green */
+	  border: none;
+	  color: white;
+	  padding: 16px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  transition-duration: 0.4s;
+	  cursor: pointer;
+	  float: right;
+	  margin-right: 215px;
+	}
+	.button2 {
+	  background-color: white; 
+	  color: black; 
+	  border: 2px solid #008CBA;
+	}
+	
+	.button2:hover {
+	  background-color: #008CBA;
+	  color: white;
+	}
+	table {
+	  width:20%;
+	  margin-left: auto;
+	  margin-right: auto;
+	}
+	.header {
+	  padding: 20px;
+	  text-align: center;
+	  background: #1abc9c;
+	  color: white;
+	  font-size: 15px;
+	  border: 2px solid black;
+	}
 	body {
 	  margin: 0;
 	  font-family: Arial, Helvetica, sans-serif;
@@ -77,13 +121,17 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 	    <i class="fa fa-bars"></i>
 	  </a>
 	</div>
+	<div class="header">
+	<h1>Información</h1>
+	<p>Personalice su orden</p>
+</div>
 </h:form>
-	<h1>Seleccionar Producto</h1>
+<div class="center">
 	<br/>
 	<br/>
 		<h:dataTable var="item" value="#{controladorVerProducto.producto}">
 		 	<h:column>
-	   			<img src="#{item.imagen}" style="max-width: 200px; max-height: 300px; object-fit: scale-down;"/>
+	   			<img src="#{item.imagen}" style="max-width: 600px; max-height: 600px; object-fit: scale-down;"/>
 				<br/>
 				<h:outputLabel value="#{item.nombre}" style="font-size: 30px;"/>
 				<br/>
@@ -93,21 +141,29 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 		  	</h:column>
 		</h:dataTable>
 	<br/>
-	<h:form id="fomra">
-		<h:dataTable var="item" value="#{controladorVerProducto.adicionales}" id="tablas">
-          	<h:column>
-         		<c:facet name="header">
-		        	<h:outputLabel value="Agregar"></h:outputLabel>
-		     	 </c:facet>
-          		<h:selectBooleanCheckbox value="#{controladorCarrito.checked[item.id]}">
-          			<c:ajax event="valueChange" render=":fomra:tablas"/>
-          		</h:selectBooleanCheckbox>
-          	</h:column>
+</div>
+<div class="center">
+	<h:form>
+		<h:selectManyCheckbox  value="#{controladorCarrito.selected}" style="margin: auto; width: 75%;">
+   			<c:selectItems value="#{controladorCarrito.complementos}" var="item" itemLabel="#{item.nombre}" itemValue="#{item.id}" />
+   		</h:selectManyCheckbox>
+   		<br/>
+   		<br/>
+	<h:commandButton styleClass="button button2" value="Aregar Producto a Carrito" action="#{controladorCarrito.agregarProducto()}" ></h:commandButton>
+    </h:form>
+	<br/>
+	<br/>
+	<br/>
+</div >
+	<br/>
+	<br/>
+	<br/>
+<div>
+		<h:dataTable styleClass="table" var="item" value="#{controladorVerProducto.adicionales}" id="tablas" border="1">
 		 	<h:column>
 		 		<c:facet name="header">
 		        	<h:outputLabel value="Adicional"></h:outputLabel>
-		     	 </c:facet>
-		     	 <h:outputLabel value="#{item.id}"/>		
+		     	 </c:facet>		
 	   			<h:outputLabel value="#{item.nombre}"/>				
 		  </h:column>
 		  <h:column>
@@ -118,7 +174,6 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 		  </h:column>
 	</h:dataTable>
 	<br/>
-	<h:commandButton value="Aregar Producto a Carrito" action="#{controladorCarrito.agregarProducto()}"></h:commandButton>
-    </h:form>
+</div>
 </h:body>
 </html>

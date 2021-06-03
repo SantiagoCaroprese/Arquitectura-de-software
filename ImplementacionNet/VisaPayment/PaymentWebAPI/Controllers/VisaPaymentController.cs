@@ -20,6 +20,7 @@ namespace PaymentWebAPI.Controllers
     }
 
     [ApiController]
+    [RequireHttps]
     [Route("[controller]")]
     public class VisaPaymentController : ControllerBase
     {
@@ -30,6 +31,7 @@ namespace PaymentWebAPI.Controllers
             _logger = logger;
         }
 
+        [RequireHttps]
         [HttpPost("Pay")]
         public HttpResponseMessage GetUserByUsername(PaymentRequest request)
         {

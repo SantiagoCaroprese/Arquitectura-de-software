@@ -2,6 +2,7 @@ C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\Entities\bin\Debug\net5.0\Entities.dll
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\Entities\bin\Debug\net5.0\ref\Entities.dll
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\Entities\bin\Debug\net5.0\Entities.pdb
+C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\Entities\obj\Debug\net5.0\Entities.csprojAssemblyReference.cache
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\Entities\obj\Debug\net5.0\Entities.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\Entities\obj\Debug\net5.0\Entities.AssemblyInfoInputs.cache
 C:\Users\Danny\Documents\Arquitectura-de-software\ImplementacionNet\VisaPayment\Entities\obj\Debug\net5.0\Entities.AssemblyInfo.cs
