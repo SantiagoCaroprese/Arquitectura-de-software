@@ -78,8 +78,8 @@ public class ControladorVerProducto {
 				adicionales2.add(ing2);	
 				this.adicionales=adicionales2;
 			}			
-			session.setAttribute("adicionales", this.adicionales);
 		}
+		session.setAttribute("adicionales", this.adicionales);
 	}
 
 	public Producto getProducto() {

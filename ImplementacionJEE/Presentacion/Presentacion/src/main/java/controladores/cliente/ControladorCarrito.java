@@ -2,7 +2,10 @@ package controladores.cliente;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
@@ -20,6 +23,7 @@ import entidadesPedidos.ProductoPedido;
 public class ControladorCarrito {
 	 private Map<Integer, Boolean> checked=new HashMap<Integer, Boolean>();
 	 private Pedido carrito=null;
+	 
 	 
 	 public ControladorCarrito() {
 		 this.carrito=cargarPedido();
@@ -61,14 +65,17 @@ public class ControladorCarrito {
 	
 	@SuppressWarnings("unchecked")
 	private void agregarAdiciones() {
+		List<Integer> checkedItems = checked.entrySet().stream()
+	            .filter(Entry::getValue)
+	            .map(Entry::getKey)
+	            .collect(Collectors.toList());
+		checked.clear();
 		FacesContext context = FacesContext.getCurrentInstance();
 		HttpSession session = (HttpSession) context.getExternalContext().getSession(false);
 		ArrayList<Ingrediente> adicionales=(ArrayList<Ingrediente>) session.getAttribute("adicionales");
     	for (Ingrediente p : adicionales) {
-    		p.getId();
-    		for (Map.Entry<Integer, Boolean> c : this.checked.entrySet()) {
-    			c.getKey();
-    			this.carrito.setTotalPrecio(this.carrito.getTotalPrecio()+1);
+    		for (int i : checkedItems) {
+    			this.carrito.setTotalPrecio(this.carrito.getTotalPrecio()+i);
 			}
     		
     		
@@ -133,14 +140,18 @@ public class ControladorCarrito {
 	}
 
 	public Map<Integer, Boolean> getChecked() {
+		FacesContext context = FacesContext.getCurrentInstance();
+		HttpSession session = (HttpSession) context.getExternalContext().getSession(false);
+		ArrayList<Ingrediente> adicionales=(ArrayList<Ingrediente>) session.getAttribute("adicionales");
+		for (Ingrediente ingrediente : adicionales) {
+			checked.put(ingrediente.getId(), false);
+		}
 		return checked;
 	}
 
 	public void setChecked(Map<Integer, Boolean> checked) {
 		this.checked = checked;
 	}
-	
-	
 	
 	
 }
