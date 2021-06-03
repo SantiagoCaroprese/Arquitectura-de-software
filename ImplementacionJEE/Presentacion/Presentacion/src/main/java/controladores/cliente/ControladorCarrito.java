@@ -18,7 +18,7 @@ import entidadesPedidos.ProductoPedido;
 @ManagedBean
 @ViewScoped
 public class ControladorCarrito {
-	 private Map<Integer, Boolean> checked = new HashMap<Integer, Boolean>();
+	 private Map<Integer, Boolean> checked=new HashMap<Integer, Boolean>();
 	 private Pedido carrito=null;
 	 
 	 public ControladorCarrito() {
@@ -52,11 +52,43 @@ public class ControladorCarrito {
 		HttpSession session = (HttpSession) context.getExternalContext().getSession(false);
 		if(session==null) {
 			return "false";
-		}
+		}		
+		agregarAdiciones();
+		
 		session.setAttribute("pedido", carrito);
 		return "true";
 	}
 	
+	@SuppressWarnings("unchecked")
+	private void agregarAdiciones() {
+		FacesContext context = FacesContext.getCurrentInstance();
+		HttpSession session = (HttpSession) context.getExternalContext().getSession(false);
+		ArrayList<Ingrediente> adicionales=(ArrayList<Ingrediente>) session.getAttribute("adicionales");
+    	for (Ingrediente p : adicionales) {
+    		p.getId();
+    		for (Map.Entry<Integer, Boolean> c : this.checked.entrySet()) {
+    			c.getKey();
+    			this.carrito.setTotalPrecio(this.carrito.getTotalPrecio()+1);
+			}
+    		
+    		
+    		/*
+    		if(/*this.checked.get(p.getId())!=null && this.checked.get(p.getId())) {
+    			ProductoPedido productoPedido=convertirIngrediente(p);
+				if(productoPedido!=null) {
+					this.carrito.getProductoPedidos().add(productoPedido);
+					this.carrito.setTotalPrecio(this.carrito.getTotalPrecio()+productoPedido.calcularPrecioProducto());
+				}
+    		}*/
+		}
+		
+	}
+
+	private ProductoPedido convertirIngrediente(Ingrediente ingrediente) {
+		ProductoPedido pedido=new ProductoPedido(Integer.toString(ingrediente.getId()), ingrediente.getNombre(), ingrediente.getPrecioAdicion().intValue(), new ArrayList<>());
+		return pedido;
+	}
+
 	public String eliminarProducto(String idProducto) {
 		if(carrito==null) {
 			return "false";
@@ -99,6 +131,16 @@ public class ControladorCarrito {
 	public void setCarrito(Pedido carrito) {
 		this.carrito = carrito;
 	}
+
+	public Map<Integer, Boolean> getChecked() {
+		return checked;
+	}
+
+	public void setChecked(Map<Integer, Boolean> checked) {
+		this.checked = checked;
+	}
+	
+	
 	
 	
 }

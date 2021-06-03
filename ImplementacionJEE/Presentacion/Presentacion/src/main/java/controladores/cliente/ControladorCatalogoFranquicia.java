@@ -39,18 +39,24 @@ public class ControladorCatalogoFranquicia {
 		ArrayList<Producto> productos=new ArrayList<>();
 		try {
 			productos=(ArrayList<Producto>) session.getAttribute("productosFranquicia");
+			if(session.getAttribute("inicio").equals(1)) {
+				session.setAttribute("inicio", "0");
+			}else {
+				productos=null;
+			}
 		}catch(NullPointerException e) {
 			
 		}catch(Exception e) {
 			e.printStackTrace();
 			return null;
 		}
-		if(productos==null) {
+		if(productos==null || productos.isEmpty()) {
 			//Obtener productos por bean
 			ObtenerCatalogoFranquiciaBean bean=new ObtenerCatalogoFranquiciaBean();
 			ArrayList<Producto> productos2=new ArrayList<>();
 			productos2=bean.obtenerCatalogoFranquicia(idFranquicia);
 			if(productos2==null || productos2.isEmpty()) {
+				productos2=new ArrayList<>();
 				Producto pr=new Producto();
 				pr.setDescripcion("yummi");
 				pr.setId(0);
@@ -84,8 +90,8 @@ public class ControladorCatalogoFranquicia {
 				pr2.setNombre("Viscososos");
 				pr2.setTipo("Magico");
 				productos2.add(pr2);
-				session.setAttribute("productosFranquicia", productos2);
 			}
+			session.setAttribute("productosFranquicia", productos2);
 			for (Producto producto : productos2) {
 				if(producto.getImagen()==null||producto.getImagen().isBlank()||producto.getImagen().isEmpty()) {
 					producto.setImagen("resource/Sand2.png");

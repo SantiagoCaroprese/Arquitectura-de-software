@@ -25,8 +25,8 @@ public class ObtenerCatalogoFranquiciaBean {
 			return productos;
 		}catch(Exception e) {
 			e.printStackTrace();
-			return null;
 		}
+		return null;
 	}
 
 }

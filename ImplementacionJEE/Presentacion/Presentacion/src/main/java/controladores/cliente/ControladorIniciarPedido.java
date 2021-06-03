@@ -1,8 +1,5 @@
 package controladores.cliente;
 
-import java.sql.Timestamp;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
@@ -26,11 +23,11 @@ public class ControladorIniciarPedido {
 		try {
 			boolean vIn = false;
 			byte vOut = (byte)(vIn?1:0);
-			Double precio=(double) 0;
 			Pedido pedido=new Pedido("idPedido", idFranquicia, "", null,vOut, "", "");
 			FacesContext context = FacesContext.getCurrentInstance();
 			HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
 			session.setAttribute("pedido", pedido);
+			session.setAttribute("inicio", "1");
 			return "true";
 		}catch(Exception e) {
 			e.printStackTrace();

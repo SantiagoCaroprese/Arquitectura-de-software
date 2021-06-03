@@ -93,18 +93,21 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 		  	</h:column>
 		</h:dataTable>
 	<br/>
-	<h:form>
-		<h:dataTable var="item" value="#{controladorVerProducto.adicionales}">
+	<h:form id="fomra">
+		<h:dataTable var="item" value="#{controladorVerProducto.adicionales}" id="tablas">
           	<h:column>
          		<c:facet name="header">
 		        	<h:outputLabel value="Agregar"></h:outputLabel>
 		     	 </c:facet>
-          		<h:selectBooleanCheckbox value="controlador.checked[item.id]"></h:selectBooleanCheckbox>
+          		<h:selectBooleanCheckbox value="#{controladorCarrito.checked[item.id]}">
+          			<c:ajax event="valueChange" render=":fomra:tablas"/>
+          		</h:selectBooleanCheckbox>
           	</h:column>
 		 	<h:column>
 		 		<c:facet name="header">
 		        	<h:outputLabel value="Adicional"></h:outputLabel>
 		     	 </c:facet>
+		     	 <h:outputLabel value="#{item.id}"/>		
 	   			<h:outputLabel value="#{item.nombre}"/>				
 		  </h:column>
 		  <h:column>

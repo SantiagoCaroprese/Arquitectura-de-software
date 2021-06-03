@@ -6,6 +6,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.view.ViewScoped;
 
 import entidadesFranquicia.Franquicia;
+import modelos.franquicias.ObtenerFranquiciasBean;
 
 @ManagedBean
 @ViewScoped
@@ -20,14 +21,19 @@ public class ControladorObtenerFranquicias {
 	public ArrayList<Franquicia> getFranquicias() {
 		if(franquicias.isEmpty()) {
 			//obtener franquicia por bean
-			for(int i=0;i<4;i++) {
-				Franquicia f=new Franquicia();
-				f.setCiudad("Ciudad "+i);
-				f.setDepartamento("Departamento "+i);
-				f.setDireccion("Dirección "+i);
-				f.setId(i);
-				f.setNombre("Frank "+i);
-				franquicias.add(f);
+			ObtenerFranquiciasBean bean=new ObtenerFranquiciasBean();
+			this.franquicias=bean.ObtenerFranquicias();
+			if(this.franquicias==null || this.franquicias.isEmpty()) {
+				this.franquicias=new ArrayList<>();
+				for(int i=0;i<4;i++) {
+					Franquicia f=new Franquicia();
+					f.setCiudad("Ciudad "+i);
+					f.setDepartamento("Departamento "+i);
+					f.setDireccion("Dirección "+i);
+					f.setId(i);
+					f.setNombre("Frank "+i);
+					franquicias.add(f);
+				}
 			}
 		}
 		return franquicias;

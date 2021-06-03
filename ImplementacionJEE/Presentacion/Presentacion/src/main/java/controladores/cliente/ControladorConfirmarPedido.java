@@ -8,6 +8,7 @@ import javax.faces.view.ViewScoped;
 import javax.servlet.http.HttpSession;
 
 import entidadesPedidos.Pedido;
+import modelos.pedidos.ConfirmarPedidosBean;
 
 @ManagedBean
 @ViewScoped
@@ -47,6 +48,10 @@ public class ControladorConfirmarPedido {
 		}
 		pedido.setExpDate(year+"-"+mes+"-"+"01");
 		//lamarBean
+		ConfirmarPedidosBean bean=new ConfirmarPedidosBean();
+		if(!bean.confirmarPedido(pedido)) {
+			return "false";
+		}
 		return "true";
 	}
 
