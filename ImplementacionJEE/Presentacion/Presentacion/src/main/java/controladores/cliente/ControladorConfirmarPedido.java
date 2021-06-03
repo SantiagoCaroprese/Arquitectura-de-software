@@ -34,12 +34,12 @@ public class ControladorConfirmarPedido {
 		if(pedido.getCardNumber().length()!=16 &&pedido.getCardNumber().length()!=19) {
 			return "false";
 		}
-		if(pedido.getCorreoCliente().length()<5) {
+		/*if(pedido.getCorreoCliente().length()<5) {
 			return "false";
 		}
 		if(pedido.getNombreCliente().length()<5) {
 			return "false";
-		}
+		}*/
 		if(Integer.valueOf(mes)<1 || Integer.valueOf(mes)>12 || mes.length()!=2) {
 			return "false";
 		}
@@ -48,10 +48,10 @@ public class ControladorConfirmarPedido {
 		}
 		pedido.setExpDate(year+"-"+mes+"-"+"01");
 		//lamarBean
-		ConfirmarPedidosBean bean=new ConfirmarPedidosBean();
+		/*ConfirmarPedidosBean bean=new ConfirmarPedidosBean();
 		if(!bean.confirmarPedido(pedido)) {
 			return "false";
-		}
+		}*/
 		return "true";
 	}
 

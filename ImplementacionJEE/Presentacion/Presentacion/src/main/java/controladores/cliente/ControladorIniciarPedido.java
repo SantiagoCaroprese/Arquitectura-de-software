@@ -1,6 +1,9 @@
 package controladores.cliente;
 
 
+import java.nio.charset.Charset;
+import java.util.Random;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 import javax.faces.view.ViewScoped;
@@ -21,9 +24,12 @@ public class ControladorIniciarPedido {
 	
 	public String iniciarPedidoRecoger(String idFranquicia) {
 		try {
+			byte[] array = new byte[7]; 
+			new Random().nextBytes(array);
+		    String generatedString = new String(array, Charset.forName("UTF-8"));
 			boolean vIn = false;
 			byte vOut = (byte)(vIn?1:0);
-			Pedido pedido=new Pedido("idPedido", idFranquicia, "", null,vOut, "", "");
+			Pedido pedido=new Pedido(generatedString, idFranquicia, "", null,vOut, "", "");
 			FacesContext context = FacesContext.getCurrentInstance();
 			HttpSession session = (HttpSession) context.getExternalContext().getSession(true);
 			session.setAttribute("pedido", pedido);
