@@ -143,7 +143,7 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 			<c:facet name="header">
 				<h:outputLabel value=""></h:outputLabel>
 			</c:facet>
-			<h:commandLink value="Eliminar" action="#{controladorCarrito.eliminarProducto(item.id,item.calcularPrecioProducto())}"></h:commandLink>
+			<h:commandLink rendered="#{item.calcularPrecioProducto() gt 0.0}" value="Eliminar" action="#{controladorCarrito.eliminarProducto(item.id,item.calcularPrecioProducto())}"></h:commandLink>
 		</h:column>
 	</h:dataTable>
 	<br/>
