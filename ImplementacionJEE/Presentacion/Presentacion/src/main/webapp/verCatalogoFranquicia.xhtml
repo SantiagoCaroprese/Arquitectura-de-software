@@ -7,8 +7,13 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link href="./resources/css/default.css" rel="stylesheet" type="text/css" />
 <style>
+		.center {
+		  margin: auto;
+		  width: 50%;
+		  padding:5px;
+		}
 		table {
-		  width:40%;
+		  width:45%;
 		  margin-left: auto;
   		  margin-right: auto;
 		}
@@ -137,9 +142,10 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 	<br/>
 	<br/>
 	<h:form>
-	<h:dataTable styleClass="table" var="item" value="#{controladorCatalogoFranquicia.productosFranquicia()}">
+	<div class="center">
+	<h:dataTable var="item" value="#{controladorCatalogoFranquicia.productosFranquicia()}">
 	 	<h:column>
-   			<img src="#{item.imagen}" style="max-width: 500px; max-height: 500px; object-fit: scale-down;"/>
+   			<img src="#{item.imagen}" style="max-width: 600px; max-height: 600px; object-fit: scale-down;"/>
 			<br/>
 			<h:outputLabel value="#{item.nombre}" style="font-size: 30px;"/>
 			<br/>
@@ -154,6 +160,7 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 	  		<br/>
 	  	</h:column>
 	</h:dataTable>
+	</div>
 	</h:form>
 </h:body>
 </html>

@@ -7,6 +7,39 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<link href="./resources/css/default.css" rel="stylesheet" type="text/css" />
 	<style>
+		.button {
+		  background-color: #4CAF50; /* Green */
+		  border: none;
+		  color: white;
+		  padding: 16px 32px;
+		  text-align: center;
+		  text-decoration: none;
+		  display: inline-block;
+		  font-size: 16px;
+		  margin: 4px 2px;
+		  transition-duration: 0.4s;
+		  cursor: pointer;
+		}
+		.button3 {
+		  background-color: white; 
+		  color: black; 
+		  border: 2px solid #f44336;
+		}
+		
+		.button3:hover {
+		  background-color: #f44336;
+		  color: white;
+		}
+		.center {
+		  margin: auto;
+		  width: 50%;
+		  padding:5px;
+		}
+		table {
+			  width:50%;
+			  margin-left: auto;
+	  		  margin-right: auto;
+		}
 		.header {
 		  padding: 20px;
 		  text-align: center;
@@ -90,17 +123,10 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 <div class="header">
 	<h1>Carrito</h1>
 </div>
+<br/>
+<br/>
 <h:form>
-	<h:dataTable var="item" value="#{controladorCarrito.carrito.productoPedidos}">
-		<h:column>
-			<h:outputText value="#{nested.rowIndex}" />
-        </h:column>
-		<h:column>
-			<c:facet name="header">
-				<h:outputLabel value="Eliminar"></h:outputLabel>
-			</c:facet>
-			<h:commandLink value="Eliminar" action="#{controladorCarrito.eliminarProducto(item.id,item.calcularPrecioProducto())}"></h:commandLink>
-		</h:column>
+	<h:dataTable var="item" value="#{controladorCarrito.carrito.productoPedidos}" border="2">
 	 	<h:column>
 	 		<c:facet name="header">
 	        	<h:outputLabel value="Producto"></h:outputLabel>
@@ -113,14 +139,23 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 	     	 </c:facet>
    			<h:outputLabel value="#{item.calcularPrecioProducto()}"/>				
 		</h:column>
+		<h:column>
+			<c:facet name="header">
+				<h:outputLabel value=""></h:outputLabel>
+			</c:facet>
+			<h:commandLink value="Eliminar" action="#{controladorCarrito.eliminarProducto(item.id,item.calcularPrecioProducto())}"></h:commandLink>
+		</h:column>
 	</h:dataTable>
 	<br/>
-	<h:outputText value="Precio Total: "></h:outputText>
-	<h:outputText value="#{controladorCarrito.carrito.totalPrecio}"></h:outputText>
+	<div class="center">
+		<h:outputText style="font-size: 25px;" value="Precio Total: "></h:outputText>
+		<h:outputText style="font-size: 25px;" value="#{controladorCarrito.carrito.totalPrecio}"></h:outputText>
+	</div>
 </h:form>
-<br/>
-<h:form>
-	<h:commandButton value="Completar Pedido" action="confirmarPedido"></h:commandButton>
-</h:form>
+<div class="center">
+	<h:form>
+		<h:commandButton styleClass="button button3" value="Proceder con Pago" action="confirmarPedido"></h:commandButton>
+	</h:form>
+</div>
 </h:body>
 </html>
