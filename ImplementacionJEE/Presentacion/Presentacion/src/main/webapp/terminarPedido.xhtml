@@ -6,6 +6,14 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <style>
+	.header {
+	  padding: 20px;
+	  text-align: center;
+	  background: #ccccff;
+	  color: white;
+	  font-size: 15px;
+	  border: 2px solid black;
+	}
 	body {
 	  margin: 0;
 	  font-family: Arial, Helvetica, sans-serif;
@@ -78,7 +86,7 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 		.centerbutton {
 		  white-space:normal;
 		  width:200px;
-		  background-color: #ffcc66;
+		  background-color:  #ccccff;
 		  border: 2px solid black;
 		  color: black;
 		  text-align: center;
@@ -104,7 +112,10 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 	  </a>
 	</div>
 </h:form>
-<h1>Pedido Completado</h1>
+<div class="header">
+	<h1>Pedido Completado</h1>
+	<p>Su orden esta siendo procesada</p>
+</div>
 	<div class="center2" style="background-image:url('resource/Sand1.png');height: 800px;background-attachment: fixed;">
 		<h:form>
 		<h:commandButton styleClass="centerbutton" value="Realizar nuevo Pedido" action="inicio"></h:commandButton>

@@ -118,10 +118,6 @@ public class ControladorCarrito {
 
 	private ProductoPedido convertirProducto(Producto producto) {
 		ProductoPedido pedido=new ProductoPedido(Integer.toString(producto.getId()), producto.getNombre(), producto.getPrecio().intValue(), new ArrayList<>());
-		for (Ingrediente ingrediente: producto.getIngredientes()) {
-			IngredientePedido ip=new IngredientePedido(Integer.toString(ingrediente.getId()), ingrediente.getNombre(), ingrediente.getPrecioAdicion().intValue(), 1);
-			pedido.getIngredientes().add(ip);
-		}
 		return pedido;
 	}
 
