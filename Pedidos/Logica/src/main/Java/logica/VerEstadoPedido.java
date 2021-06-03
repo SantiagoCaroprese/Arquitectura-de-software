@@ -2,11 +2,9 @@ package logica;
 
 import IRepositorioPedidos.IRepositorioPedidos;
 import InterfazLogica.VerEstadoPedidoLocal;
-import utils.EncontrarPedido;
+import logica.utils.EncontrarPedido;
 
 import javax.ejb.EJB;
-import javax.ejb.Local;
-import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 
 @Stateless

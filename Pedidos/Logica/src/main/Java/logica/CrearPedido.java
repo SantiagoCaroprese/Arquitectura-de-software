@@ -4,14 +4,13 @@ import IRepositorioPedidos.IRepositorioPedidos;
 import InterfazLogica.CrearPedidoLocal;
 import com.pedidos.Conectores.ServiciosExternosPedidosLocal.IServicioExternoNotificacionesLocal;
 import com.pedidos.Conectores.ServiciosExternosPedidosLocal.IServicioExternoPagosLocal;
+import logica.utils.CreadorMensajes;
+import modelos.IngredientePedido;
 import modelos.Pedido;
 import modelos.ProductoPedido;
-import utils.CreadorMensajes;
-import utils.TipoTarjeta;
 
 import javax.ejb.EJB;
 import javax.ejb.Local;
-import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import java.sql.Timestamp;
 import java.time.LocalDateTime;
@@ -45,12 +44,27 @@ public class CrearPedido implements CrearPedidoLocal {
         }*/
 
         //Se envia la confirmación del pedido en base de datos
-        /*servicioExternoNotificacionesLocal.enviarCorreo(pedido.getCorreoCliente(),"Pedido confirmado!",
+        servicioExternoNotificacionesLocal.enviarCorreo(pedido.getCorreoCliente(),"Pedido confirmado!",
                 CreadorMensajes.crearHtmlConfirmacion(pedido.getNombreCliente(), pedido.getTotalPrecio())
-                );*/
+                );
 
         //Se guarda el pedido en base de datos
-        repository.addPedido(pedido);
+        String todo = "";
+        for(ProductoPedido p : pedido.getProductoPedidos()){
+            todo = todo + p.getNombre() + p.getId() + p.getPrecioBase() + "I: ";
+            for(IngredientePedido i : p.getIngredientes()){
+                todo = todo + i.getNombre() + i.getId() + i.getPrecio() + i.getCantidad();
+            }
+            todo = " | ";
+        }
+        pedido.setProductoSerializado(todo);
+        try{
+            repository.addPedido(pedido);
+        }catch (Exception e){
+            System.out.println("Ha ocurrido un problema almacenando el pedido");
+            return null;
+        }
+
         return pedido;
     }
 
