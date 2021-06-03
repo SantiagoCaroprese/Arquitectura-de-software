@@ -87,10 +87,13 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:form>
 	<h:dataTable var="item" value="#{controladorCarrito.carrito.productoPedidos}">
 		<h:column>
+			<h:outputText value="#{nested.rowIndex}" />
+        </h:column>
+		<h:column>
 			<c:facet name="header">
 				<h:outputLabel value="Eliminar"></h:outputLabel>
 			</c:facet>
-			<h:commandLink value="Eliminar" action="#{controladorCarrito.eliminarProducto(item.id)}"></h:commandLink>
+			<h:commandLink value="Eliminar" action="#{controladorCarrito.eliminarProducto(item.id,item.calcularPrecioProducto())}"></h:commandLink>
 		</h:column>
 	 	<h:column>
 	 		<c:facet name="header">

@@ -21,13 +21,25 @@ import entidadesPedidos.ProductoPedido;
 @ManagedBean
 @ViewScoped
 public class ControladorCarrito {
-	 private Map<Integer, Boolean> checked=new HashMap<Integer, Boolean>();
 	 private Pedido carrito=null;
+	 private Integer[] selected;
+	 private ArrayList<Ingrediente> complementos;
 	 
 	 
 	 public ControladorCarrito() {
 		 this.carrito=cargarPedido();
+		 this.complementos=cargarComplementos();		 
 	 }
+
+	@SuppressWarnings("unchecked")
+	private ArrayList<Ingrediente> cargarComplementos() {
+		FacesContext context = FacesContext.getCurrentInstance();
+		HttpSession session = (HttpSession) context.getExternalContext().getSession(false);
+		if(session==null) {
+			return null;
+		}
+		return (ArrayList<Ingrediente>) session.getAttribute("adicionales");
+	}
 
 	private Pedido cargarPedido() {
 		FacesContext context = FacesContext.getCurrentInstance();
@@ -50,6 +62,7 @@ public class ControladorCarrito {
 		if(productoPedido==null) {
 			return "false";
 		}
+		agregarAdiciones(productoPedido);
 		this.carrito.getProductoPedidos().add(productoPedido);
 		this.carrito.setTotalPrecio(this.carrito.getTotalPrecio()+productoPedido.calcularPrecioProducto());
 		FacesContext context = FacesContext.getCurrentInstance();
@@ -57,52 +70,40 @@ public class ControladorCarrito {
 		if(session==null) {
 			return "false";
 		}		
-		agregarAdiciones();
 		
 		session.setAttribute("pedido", carrito);
 		return "true";
 	}
 	
 	@SuppressWarnings("unchecked")
-	private void agregarAdiciones() {
-		List<Integer> checkedItems = checked.entrySet().stream()
-	            .filter(Entry::getValue)
-	            .map(Entry::getKey)
-	            .collect(Collectors.toList());
-		checked.clear();
+	private void agregarAdiciones(ProductoPedido producto) {
+		if(this.selected==null || this.selected.length==0) {
+			return;
+		}
 		FacesContext context = FacesContext.getCurrentInstance();
 		HttpSession session = (HttpSession) context.getExternalContext().getSession(false);
 		ArrayList<Ingrediente> adicionales=(ArrayList<Ingrediente>) session.getAttribute("adicionales");
-    	for (Ingrediente p : adicionales) {
-    		for (int i : checkedItems) {
-    			this.carrito.setTotalPrecio(this.carrito.getTotalPrecio()+i);
-			}
-    		
-    		
-    		/*
-    		if(/*this.checked.get(p.getId())!=null && this.checked.get(p.getId())) {
-    			ProductoPedido productoPedido=convertirIngrediente(p);
-				if(productoPedido!=null) {
-					this.carrito.getProductoPedidos().add(productoPedido);
-					this.carrito.setTotalPrecio(this.carrito.getTotalPrecio()+productoPedido.calcularPrecioProducto());
+		for (Integer sel : this.selected) {
+			for (Ingrediente p : adicionales) {
+				if(sel==p.getId()) {
+					producto.getIngredientes().add(convertirIngrediente(p));
 				}
-    		}*/
-		}
-		
+			}
+		}		
 	}
 
-	private ProductoPedido convertirIngrediente(Ingrediente ingrediente) {
-		ProductoPedido pedido=new ProductoPedido(Integer.toString(ingrediente.getId()), ingrediente.getNombre(), ingrediente.getPrecioAdicion().intValue(), new ArrayList<>());
-		return pedido;
+	private IngredientePedido convertirIngrediente(Ingrediente ingrediente) {
+		IngredientePedido ing=new IngredientePedido(Integer.toString(ingrediente.getId()), ingrediente.getNombre(), ingrediente.getPrecioAdicion().intValue(), 1);
+		return ing;
 	}
 
-	public String eliminarProducto(String idProducto) {
+	public String eliminarProducto(String idProducto,int precio) {
 		if(carrito==null) {
 			return "false";
 		}
 		ProductoPedido pp=null;
 		for (ProductoPedido producto : this.carrito.getProductoPedidos()) {
-			if(producto.getId().equals(idProducto)) {
+			if(producto.getId().equals(idProducto) && precio==producto.calcularPrecioProducto()) {
 				pp=producto;
 				break;
 			}
@@ -139,19 +140,20 @@ public class ControladorCarrito {
 		this.carrito = carrito;
 	}
 
-	public Map<Integer, Boolean> getChecked() {
-		FacesContext context = FacesContext.getCurrentInstance();
-		HttpSession session = (HttpSession) context.getExternalContext().getSession(false);
-		ArrayList<Ingrediente> adicionales=(ArrayList<Ingrediente>) session.getAttribute("adicionales");
-		for (Ingrediente ingrediente : adicionales) {
-			checked.put(ingrediente.getId(), false);
-		}
-		return checked;
+	public Integer[] getSelected() {
+		return selected;
 	}
 
-	public void setChecked(Map<Integer, Boolean> checked) {
-		this.checked = checked;
+	public void setSelected(Integer[] selected) {
+		this.selected = selected;
 	}
-	
+
+	public ArrayList<Ingrediente> getComplementos() {
+		return complementos;
+	}
+
+	public void setComplementos(ArrayList<Ingrediente> complementos) {
+		this.complementos = complementos;
+	}
 	
 }

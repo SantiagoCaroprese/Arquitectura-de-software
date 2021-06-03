@@ -93,21 +93,20 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 		  	</h:column>
 		</h:dataTable>
 	<br/>
-	<h:form id="fomra">
+	<h:form>
+		<h:selectManyCheckbox  value="#{controladorCarrito.selected}">
+   			<c:selectItems value="#{controladorCarrito.complementos}" var="item" itemLabel="#{item.nombre}" itemValue="#{item.id}" />
+   		</h:selectManyCheckbox>
+	<h:commandButton value="Aregar Producto a Carrito" action="#{controladorCarrito.agregarProducto()}"></h:commandButton>
+    </h:form>
+	<br/>
+	<br/>
+	<br/>
 		<h:dataTable var="item" value="#{controladorVerProducto.adicionales}" id="tablas">
-          	<h:column>
-         		<c:facet name="header">
-		        	<h:outputLabel value="Agregar"></h:outputLabel>
-		     	 </c:facet>
-          		<h:selectBooleanCheckbox value="#{controladorCarrito.checked[item.id]}">
-          			<c:ajax event="valueChange" render=":fomra:tablas"/>
-          		</h:selectBooleanCheckbox>
-          	</h:column>
 		 	<h:column>
 		 		<c:facet name="header">
 		        	<h:outputLabel value="Adicional"></h:outputLabel>
-		     	 </c:facet>
-		     	 <h:outputLabel value="#{item.id}"/>		
+		     	 </c:facet>		
 	   			<h:outputLabel value="#{item.nombre}"/>				
 		  </h:column>
 		  <h:column>
@@ -118,7 +117,5 @@ xmlns:ui="http://java.sun.com/jsf/facelets">
 		  </h:column>
 	</h:dataTable>
 	<br/>
-	<h:commandButton value="Aregar Producto a Carrito" action="#{controladorCarrito.agregarProducto()}"></h:commandButton>
-    </h:form>
 </h:body>
 </html>
