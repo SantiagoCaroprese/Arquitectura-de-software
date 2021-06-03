@@ -31,6 +31,9 @@ public class ControladorConfirmarPedido {
 	}
 	
 	public String confirmarPedido() {
+		/*if(pedido.getTotalPrecio()<1) {
+			return "false";
+		}*/
 		if(pedido.getCardNumber().length()!=16 &&pedido.getCardNumber().length()!=19) {
 			return "false";
 		}
@@ -48,10 +51,10 @@ public class ControladorConfirmarPedido {
 		}
 		pedido.setExpDate(year+"-"+mes+"-"+"01");
 		//lamarBean
-		/*ConfirmarPedidosBean bean=new ConfirmarPedidosBean();
+		ConfirmarPedidosBean bean=new ConfirmarPedidosBean();
 		if(!bean.confirmarPedido(pedido)) {
 			return "false";
-		}*/
+		}
 		return "true";
 	}
 
