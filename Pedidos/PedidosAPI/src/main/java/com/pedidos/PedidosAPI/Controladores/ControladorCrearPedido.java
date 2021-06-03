@@ -50,8 +50,8 @@ public class ControladorCrearPedido {
         Context context = new InitialContext();
 
         try{
-            CrearPedidoLocal mbean = (CrearPedidoLocal) context.lookup("java:module/CrearPedido");
-            mbean.execute(pedido);
+            //CrearPedidoLocal mbean = (CrearPedidoLocal) context.lookup("java:module/CrearPedido");
+            //mbean.execute(pedido);
         }catch (Exception e){
                 System.out.println("Esta null");
                 System.out.println(context.getEnvironment());
@@ -72,11 +72,11 @@ public class ControladorCrearPedido {
 
 
 
-        /*Client client = ClientBuilder.newClient();
+        Client client = ClientBuilder.newClient();
 
 
         Response response = client
-                .target("http://25.46.31.205:8060/VisaPayment/Pay")
+                .target("http://localhost:8060/VisaPayment/Pay")
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.entity(obj,MediaType.APPLICATION_JSON_TYPE))
                 ;
@@ -85,13 +85,10 @@ public class ControladorCrearPedido {
         }else{
             String url = response.getLocation().toString();
 
-            if(url.contains("^https://")){
-                url = url.replace("https://","http://");
-            }
-            url = "http://25.46.31.205:8061/VisaPayment/Pay";
-            System.out.println(url);
-            Response s = client.target(url).request().get();
-            System.out.println(s.getStatus());
+
+            System.out.println(response.getStatus());
+            //Response s = client.target(url).request().get();
+            //System.out.println(s.getStatus());
             //client.target(response.getLocation()).request(MediaType.APPLICATION_JSON)
             //  .post(Entity.entity(obj,MediaType.APPLICATION_JSON_TYPE));
 

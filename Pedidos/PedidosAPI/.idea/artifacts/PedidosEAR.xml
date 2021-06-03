@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-ear" name="PedidosEAR">
+    <output-path>$PROJECT_DIR$/out/artifacts/PedidosEAR</output-path>
+    <root id="root">
+      <element id="directory" name="WarP.war">
+        <element id="artifact" artifact-name="WarP" />
+      </element>
+    </root>
+  </artifact>
+</component>

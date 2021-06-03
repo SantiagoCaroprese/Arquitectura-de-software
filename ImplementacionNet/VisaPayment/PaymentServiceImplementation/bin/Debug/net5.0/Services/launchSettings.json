@@ -1,0 +1,13 @@
+﻿{
+  "profiles": {
+    "PaymentServiceImplementation": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "launchBrowser": true,
+      "applicationUrl": "http://localhost:8060;https://localhost8061",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
